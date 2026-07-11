@@ -4,7 +4,12 @@
     (function() {
         const overlay = document.getElementById('introOverlay');
         const canvas = document.getElementById('introCanvas');
+
+        if (!overlay || !canvas) return;
+
         const ctx = canvas.getContext('2d');
+        if (!ctx) return;
+
         const lines = [
             document.getElementById('introLine1'),
             document.getElementById('introLine2'),
@@ -202,6 +207,7 @@
             cancelAnimationFrame(animId);
             overlay.style.opacity = '0';
             overlay.style.transform = 'scale(1.05)';
+            overlay.style.pointerEvents = 'none';
             setTimeout(() => {
                 overlay.style.display = 'none';
             }, 1200);
@@ -281,25 +287,29 @@
     // ══════════════════════════════════════
     // 4. CUSTOM CURSOR
     // ══════════════════════════════════════
-    const cursor = document.getElementById('cursor');
+    const cursor = document.getElementById('customCursor');
     const cursorDot = document.getElementById('cursorDot');
     let mouseX = -100, mouseY = -100;
     let cursorX = -100, cursorY = -100;
 
-    document.addEventListener('mousemove', e => {
-        mouseX = e.clientX;
-        mouseY = e.clientY;
-        // Dot follows instantly
-        cursorDot.style.left = mouseX + 'px';
-        cursorDot.style.top = mouseY + 'px';
-    });
+    if (cursorDot) {
+        document.addEventListener('mousemove', e => {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+            // Dot follows instantly
+            cursorDot.style.left = mouseX + 'px';
+            cursorDot.style.top = mouseY + 'px';
+        });
+    }
 
     // Smooth cursor follow
     function animateCursor() {
         cursorX += (mouseX - cursorX) * 0.15;
         cursorY += (mouseY - cursorY) * 0.15;
-        cursor.style.left = cursorX + 'px';
-        cursor.style.top = cursorY + 'px';
+        if (cursor) {
+            cursor.style.left = cursorX + 'px';
+            cursor.style.top = cursorY + 'px';
+        }
         requestAnimationFrame(animateCursor);
     }
     animateCursor();
@@ -459,13 +469,15 @@
     document.addEventListener('click', () => initAudio(), { once: true });
 
     // Sound toggle
-    soundToggle.addEventListener('click', () => {
-        initAudio();
-        soundEnabled = !soundEnabled;
-        soundToggle.textContent = soundEnabled ? '🔊' : '🔇';
-        soundToggle.classList.toggle('muted', !soundEnabled);
-        if (soundEnabled) playSuccess();
-    });
+    if (soundToggle) {
+        soundToggle.addEventListener('click', () => {
+            initAudio();
+            soundEnabled = !soundEnabled;
+            soundToggle.textContent = soundEnabled ? '🔊' : '🔇';
+            soundToggle.classList.toggle('muted', !soundEnabled);
+            if (soundEnabled) playSuccess();
+        });
+    }
 
     // Attach sounds to interactive elements
     document.querySelectorAll('.btn-primary, .btn-outline, .nav-cta').forEach(el => {

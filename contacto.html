@@ -1,15 +1,198 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="refresh" content="0; url=soluciones-ia-completo/contacto.html">
-  <link rel="canonical" href="soluciones-ia-completo/contacto.html">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Redirigiendo...</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto — IA Solutions</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <p>Redirigiendo a la versión principal del sitio...</p>
-  <p><a href="soluciones-ia-completo/contacto.html">Abrir la página principal</a></p>
-  <script>window.location.replace('soluciones-ia-completo/contacto.html');</script>
+    <!-- Background Elements -->
+    <div class="bg-grid"></div>
+    <div class="bg-orb-1"></div>
+    <div class="bg-orb-2"></div>
+    <div class="bg-orb-3"></div>
+    <div class="bg-orb-4"></div>
+    <div class="particles" id="particles"></div>
+    <div class="mouse-glow" id="mouseGlow"></div>
+    <div class="custom-cursor" id="customCursor"></div>
+    <div class="cursor-dot" id="cursorDot"></div>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">IA Solutions</a>
+            <div class="nav-links">
+                <a href="index.html">Inicio</a>
+                <a href="servicios.html">Servicios</a>
+                <a href="casos.html">Casos</a>
+                <a href="nosotros.html">Nosotros</a>
+                <a href="presupuesto.html">Presupuesto</a>
+                <a href="contacto.html" class="active">Contacto</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sound Toggle -->
+    <div class="sound-toggle" id="soundToggle">🔊</div>
+
+    <!-- Contacto Section -->
+    <section id="contacto">
+        <div class="section-label fade-up">Contacto</div>
+        <h2 class="section-title fade-up">Hablemos de tu proyecto</h2>
+
+        <div class="contact-grid">
+            <!-- Left: Form -->
+            <div class="contact-form-wrapper fade-up">
+                <form id="contactForm" onsubmit="event.preventDefault(); alert('¡Gracias por tu mensaje! Te responderemos en menos de 24 horas.');">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="nombre">Nombre completo *</label>
+                            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="empresa">Empresa</label>
+                            <input type="text" id="empresa" name="empresa" placeholder="Tu empresa (opcional)">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" placeholder="tu@email.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="telefono">Teléfono / WhatsApp</label>
+                            <input type="tel" id="telefono" name="telefono" placeholder="+54 9 11 1234-5678">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="servicio">¿Qué necesitás?</label>
+                        <select id="servicio" name="servicio">
+                            <option value="">Seleccioná un servicio</option>
+                            <option value="automatizacion">Automatización</option>
+                            <option value="chatbot">Chatbot</option>
+                            <option value="analisis-datos">Análisis de datos</option>
+                            <option value="desarrollo-app">Desarrollo de app</option>
+                            <option value="contenido-ia">Contenido IA</option>
+                            <option value="plataforma-educativa">Plataforma educativa</option>
+                            <option value="diseno-web">Diseño web</option>
+                            <option value="sistema-auxiliar">Sistema auxiliar / CRM</option>
+                            <option value="produccion-multimedia">Producción multimedia</option>
+                            <option value="otra">Otra</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="descripcion">Descripción del caso *</label>
+                        <textarea id="descripcion" name="descripcion" rows="5" placeholder="Contanos qué necesitás. Sin tecnicismos, en tus palabras..." required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="usuarios">Usuarios involucrados</label>
+                        <textarea id="usuarios" name="usuarios" rows="3" placeholder="¿Quién va a usar el sistema? ¿Cuántos? ¿Desde dónde?"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">🚀 Solicitar Presupuesto</button>
+
+                    <p class="form-note">📋 Te responderemos en menos de 24 horas con un presupuesto estimativo en 2-5 días hábiles.</p>
+                </form>
+            </div>
+
+            <!-- Right: Info -->
+            <div class="contact-info-wrapper">
+                <div class="contact-info-card fade-up">
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon">◊</div>
+                        <div>
+                            <h4>Email</h4>
+                            <p>hola@iasolutions.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon">◐</div>
+                        <div>
+                            <h4>WhatsApp</h4>
+                            <p>Envianos un mensaje directo</p>
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon">◎</div>
+                        <div>
+                            <h4>Tiempo de respuesta</h4>
+                            <p>&lt;24 horas</p>
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon">◯</div>
+                        <div>
+                            <h4>Cobertura</h4>
+                            <p>Remoto / Global</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-guarantee fade-up">
+                    <h4>🛡️ Garantías por contrato</h4>
+                    <ul>
+                        <li>Diagnóstico sin costo ni compromiso</li>
+                        <li>Presupuesto claro y detallado</li>
+                        <li>Modificaciones incluidas</li>
+                        <li>Tiempos de entrega garantizados</li>
+                        <li>Soporte post-entrega incluido</li>
+                        <li>Tus datos son 100% tuyos</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="cta">
+        <div class="cta-content fade-up">
+            <h2>¿Listo para transformar tu negocio?</h2>
+            <p>No necesitás ser experto en tecnología. Nosotros nos encargamos de eso. Vos concentrate en lo tuyo.</p>
+            <a href="#contacto" class="btn btn-primary">🚀 Empezar ahora</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-col">
+                <h4>IA Solutions</h4>
+                <p>Tecnología accesible para negocios reales.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Servicios</h4>
+                <ul>
+                    <li><a href="servicios.html">Automatización</a></li>
+                    <li><a href="servicios.html">Chatbots</a></li>
+                    <li><a href="servicios.html">Análisis de datos</a></li>
+                    <li><a href="servicios.html">Desarrollo web</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Empresa</h4>
+                <ul>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="casos.html">Casos de éxito</a></li>
+                    <li><a href="presupuesto.html">Presupuesto</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contacto</h4>
+                <ul>
+                    <li>📧 hola@iasolutions.com</li>
+                    <li>💬 WhatsApp</li>
+                    <li>🌎 Remoto / Global</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
 </body>
 </html>
