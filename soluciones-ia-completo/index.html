@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soluciones IA — Ingeniería Inteligente para tu Negocio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!-- ═══ INTRO CINEMÁTICA ═══ -->
+<div id="introOverlay" style="
+    position: fixed; inset: 0; z-index: 99999;
+    background: #050510;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    transition: opacity 1.2s ease, transform 1.2s ease;
+    overflow: hidden;
+">
+    <canvas id="introCanvas" style="position:absolute;inset:0;width:100%;height:100%;"></canvas>
+    <div id="introContent" style="position:relative;z-index:2;text-align:center;max-width:800px;padding:0 24px;">
+        <div class="intro-line" id="introLine1" style="opacity:0;transform:translateY(30px);transition:all 1s cubic-bezier(0.16,1,0.3,1);font-size:clamp(0.9rem,2vw,1.1rem);color:rgba(0,229,160,0.8);font-weight:600;letter-spacing:4px;text-transform:uppercase;margin-bottom:20px;">EL TIEMPO ES TU RECURSO MÁS VALIOSO</div>
+        <div class="intro-line" id="introLine2" style="opacity:0;transform:translateY(30px);transition:all 1s cubic-bezier(0.16,1,0.3,1);font-size:clamp(2rem,5vw,3.5rem);font-weight:900;letter-spacing:-2px;line-height:1.1;margin-bottom:24px;background:linear-gradient(135deg,#6C3AFF 0%,#00E5A0 50%,#00B4D8 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">Es hora de implementar<br>soluciones tecnológicas</div>
+        <div class="intro-line" id="introLine3" style="opacity:0;transform:translateY(30px);transition:all 1s cubic-bezier(0.16,1,0.3,1);font-size:clamp(1rem,2.5vw,1.3rem);color:rgba(232,232,240,0.6);font-weight:400;line-height:1.6;margin-bottom:16px;">Para no quedarse obsoleto.<br>Cada persona maneja la velocidad en que el tiempo fluye.</div>
+        <div class="intro-line" id="introLine4" style="opacity:0;transform:translateY(30px);transition:all 1s cubic-bezier(0.16,1,0.3,1);font-size:clamp(1.1rem,2.5vw,1.5rem);color:#00E5A0;font-weight:700;margin-bottom:40px;">Hacé que cada segundo rinda más.</div>
+        <div class="intro-line" id="introLine5" style="opacity:0;transform:translateY(20px);transition:all 0.8s cubic-bezier(0.16,1,0.3,1);">
+            <button id="introBtn" style="background:linear-gradient(135deg,#6C3AFF,#00E5A0);border:none;color:#fff;padding:16px 48px;border-radius:50px;font-size:1.1rem;font-weight:700;cursor:pointer;font-family:'Inter',sans-serif;transition:all 0.3s;">Comenzar →</button>
+        </div>
+        <div class="intro-line" id="introSkip" style="opacity:0;transition:opacity 1s;margin-top:20px;">
+            <span style="font-size:0.8rem;color:rgba(255,255,255,0.25);cursor:pointer;" id="skipBtn">Omitir intro ▸</span>
+        </div>
+    </div>
+</div>
+
+<!-- Animated Background -->
+<div class="bg-grid"></div>
+<div class="bg-orb bg-orb-1"></div>
+<div class="bg-orb bg-orb-2"></div>
+<div class="bg-orb bg-orb-3"></div>
+<div class="bg-orb bg-orb-4"></div>
+<div class="particles" id="particles"></div>
+<div class="mouse-glow" id="mouseGlow"></div>
+
+<!-- Custom Cursor -->
+<div class="custom-cursor" id="cursor"></div>
+<div class="custom-cursor-dot" id="cursorDot"></div>
+
+<!-- Nav -->
+<nav>
+    <div class="container">
+        <a href="index.html" class="logo">⚡ IA Solutions</a>
+        <ul class="nav-links">
+            <li><a href="index.html#showcase">Antes/Después</a></li>
+            <li><a href="servicios.html">Servicios</a></li>
+            <li><a href="casos.html">Casos</a></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="presupuesto.html">Presupuesto</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+        <a href="contacto.html" class="nav-cta">Hablemos →</a>
+    </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+    <div class="container">
+        <div class="hero-content fade-up">
+            <div class="hero-badge"><span class="dot"></span> +50 negocios ya confían en nosotros</div>
+            <h1>
+                Menos trabajo manual,<br>
+                <span class="gradient">más tiempo para crecer</span>
+            </h1>
+            <p>
+                Automatizamos tus procesos, potenciamos tu equipo y construimos
+                herramientas que trabajan por vos. Desde un chatbot que vende por WhatsApp
+                hasta plataformas que gestionan tu negocio entero.
+                <strong style="color:var(--accent);">Arrancamos sin que inviertas un peso.</strong>
+            </p>
+            <div class="hero-buttons">
+                <a href="contacto.html" class="btn-primary">Quiero saber cómo funciona 🚀</a>
+                <a href="casos.html" class="btn-outline">Ver casos reales</a>
+            </div>
+        </div>
+    </div>
+    <div class="hero-visual"></div>
+</section>
+
+<!-- Stats -->
+<div class="container">
+    <div class="stats fade-up">
+        <div class="stat">
+            <div class="stat-num">3+</div>
+            <div class="stat-label">Rubros de Experiencia</div>
+        </div>
+        <div class="stat">
+            <div class="stat-num">100%</div>
+            <div class="stat-label">Comprometidos con tu Crecimiento</div>
+        </div>
+        <div class="stat">
+            <div class="stat-num">24/7</div>
+            <div class="stat-label">Soporte Continuo</div>
+        </div>
+        <div class="stat">
+            <div class="stat-num">∞</div>
+            <div class="stat-label">Escalabilidad</div>
+        </div>
+    </div>
+</div>
+
+<!-- Trust / Client Logos -->
+<div class="trust-section fade-up">
+    <div class="container">
+        <div class="trust-title">Confían en nosotros</div>
+        <div class="trust-logos">
+            <div class="trust-logo">🏪 Red de Quiscos Ariel</div>
+            <div class="trust-logo">💅 Estética Cecilia</div>
+            <div class="trust-logo">🎓 Instituto Paola</div>
+            <div class="trust-logo">🛒 Tienda Multi-Vendedor</div>
+            <div class="trust-logo">🎬 Jano Producciones</div>
+            <div class="trust-logo">🔧 Corp. Sistema Auxiliar</div>
+            <div class="trust-logo">📦 Distribuidora Norte</div>
+            <div class="trust-logo">🍕 Cadena Gourmet Express</div>
+        </div>
+    </div>
+</div>
+
+<!-- Before/After Showcase -->
+<section class="showcase-section" id="showcase">
+    <div class="container">
+        <div class="fade-up">
+            <div class="section-label">Transformación Real</div>
+            <div class="showcase-title">El antes y después de cada solución</div>
+            <p class="showcase-sub">Mira cómo transformamos procesos manuales y lentos en flujos automáticos e inteligentes.</p>
+        </div>
+        <div class="ba-grid">
+            <!-- Producto → Video -->
+            <div class="ba-card fade-up">
+                <div class="ba-header">
+                    <div class="ba-header-icon" style="background:rgba(255,77,141,0.2);">🎬</div>
+                    <div><h4>Producto → Video para Redes</h4><p>De foto estática a contenido viral</p></div>
+                </div>
+                <div class="ba-body">
+                    <div class="ba-compare">
+                        <div class="ba-side ba-before">
+                            <div class="ba-label">❌ Antes</div>
+                            <div class="ba-visual">
+                                <div class="ba-line"></div><div class="ba-line"></div>
+                                <div style="font-size:0.8rem;color:#FF4D4D;margin-top:8px;">📸 Foto estática sin contexto</div>
+                                <div class="ba-icon-row"><span>📷</span><span>😴</span><span>📉</span></div>
+                                <div style="font-size:0.75rem;color:var(--text-muted);margin-top:6px;">• Contratar videógrafo ($$$)<br>• Horas de edición manual<br>• 1 video por día máximo</div>
+                            </div>
+                        </div>
+                        <div class="ba-arrow"><div class="ba-arrow-icon">→</div><div class="ba-arrow-text">IA</div></div>
+                        <div class="ba-side ba-after">
+                            <div class="ba-label">✅ Después</div>
+                            <div class="ba-visual">
+                                <div class="ba-process">
+                                    <span class="ba-step">📸 Foto</span><span class="ba-step-arrow">→</span>
+                                    <span class="ba-step">🧠 IA</span><span class="ba-step-arrow">→</span>
+                                    <span class="ba-step">🎬 Video</span><span class="ba-step-arrow">→</span>
+                                    <span class="ba-step">📱 Publica</span>
+                                </div>
+                                <div style="font-size:0.75rem;color:var(--text-muted);margin-top:10px;">• 50 videos automáticos/día<br>• Voz, música, texto animado<br>• Publicación programada</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ba-metrics">
+                        <div class="ba-metric"><div class="ba-metric-val">50x</div><div class="ba-metric-label">Más contenido</div></div>
+                        <div class="ba-metric"><div class="ba-metric-val">95%</div><div class="ba-metric-label">Ahorro de tiempo</div></div>
+                        <div class="ba-metric"><div class="ba-metric-val">$0</div><div class="ba-metric-label">Costo producción</div></div>
+                    </div>
+                </div>
+            </div>
+            <!-- Factura → ERP -->
+            <div class="ba-card fade-up">
+                <div class="ba-header">
+                    <div class="ba-header-icon" style="background:rgba(0,180,216,0.2);">🧾</div>
+                    <div><h4>Factura Física → Registro en ERP</h4><p>De captura manual a cero errores</p></div>
+                </div>
+                <div class="ba-body">
+                    <div class="ba-compare">
+                        <div class="ba-side ba-before">
+                            <div class="ba-label">❌ Antes</div>
+                            <div class="ba-visual">
+                                <div class="ba-line"></div><div class="ba-line"></div>
+                                <div style="font-size:0.8rem;color:#FF4D4D;margin-top:8px;">⌨️ Captura manual de datos</div>
+                                <div style="font-size:0.75rem;color:var(--text-muted);margin-top:6px;">• 15 min por factura<br>• 8% de errores de captura<br>• Pérdida de facturas físicas</div>
+                            </div>
+                        </div>
+                        <div class="ba-arrow"><div class="ba-arrow-icon">→</div><div class="ba-arrow-text">OCR+IA</div></div>
+                        <div class="ba-side ba-after">
+                            <div class="ba-label">✅ Después</div>
+                            <div class="ba-visual">
+                                <div class="ba-process">
+                                    <span class="ba-step">📱 Foto</span><span class="ba-step-arrow">→</span>
+                                    <span class="ba-step">🔍 OCR</span><span class="ba-step-arrow">→</span>
+                                    <span class="ba-step">✅ Validar</span><span class="ba-step-arrow">→</span>
+                                    <span class="ba-step">📊 ERP</span>
+                                </div>
+                                <div style="font-size:0.75rem;color:var(--text-muted);margin-top:10px;">• Foto = 10 segundos<br>• Extracción automática<br>• Importación directa</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ba-metrics">
+                        <div class="ba-metric"><div class="ba-metric-val">90x</div><div class="ba-metric-label">Más rápido</div></div>
+                        <div class="ba-metric"><div class="ba-metric-val">0%</div><div class="ba-metric-label">Errores captura</div></div>
+                        <div class="ba-metric"><div class="ba-metric-val">100%</div><div class="ba-metric-label">Rastreable</div></div>
+                    </div>
+                </div>
+            </div>
+            <!-- WhatsApp → Lead -->
+            <div class="ba-card fade-up">
+                <div class="ba-header">
+                    <div class="ba-header-icon" style="background:rgba(0,229,160,0.2);">💬</div>
+                    <div><h4>WhatsApp → Lead + CRM</h4><p>De chat perdido a venta automatizada</p></div>
+                </div>
+                <div class="ba-body">
+                    <div class="ba-compare">
+                        <div class="ba-side ba-before">
+                            <div class="ba-label">❌ Antes</div>
+                            <div class="ba-visual">
+                                <div class="ba-line"></div><div class="ba-line"></div>
+                                <div style="font-size:0.8rem;color:#FF4D4D;margin-top:8px;">📱 Mensajes sin responder</div>
+                                <div style="font-size:0.75rem;color:var(--text-muted);margin-top:6px;">• Lead se enfría<br>• Datos no se registran<br>• Horas de respuesta</div>
+                            </div>
+                        </div>
+                        <div class="ba-arrow"><div class="ba-arrow-icon">→</div><div class="ba-arrow-text">Bot</div></div>
+                        <div class="ba-side ba-after">
+                            <div class="ba-label">✅ Después</div>
+                            <div class="ba-visual">
+                                <div class="ba-process">
+                                    <span class="ba-step">💬 Chat</span><span class="ba-step-arrow">→</span>
+                                    <span class="ba-step">🧠 Califica</span><span class="ba-step-arrow">→</span>
+                                    <span class="ba-step">📊 CRM</span>
+                                </div>
+                                <div style="font-size:0.75rem;color:var(--text-muted);margin-top:10px;">• Respuesta instantánea 24/7<br>• Lead en CRM con toda la info<br>• Propuesta en &lt; 5 min</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ba-metrics">
+                        <div class="ba-metric"><div class="ba-metric-val">24/7</div><div class="ba-metric-label">Disponibilidad</div></div>
+                        <div class="ba-metric"><div class="ba-metric-val">&lt;1min</div><div class="ba-metric-label">Respuesta</div></div>
+                        <div class="ba-metric"><div class="ba-metric-val">3x</div><div class="ba-metric-label">Conversiones</div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="text-align:center;margin-top:32px;">
+            <a href="servicios.html" class="btn-primary">Ver todos los servicios →</a>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<div class="container">
+    <div class="cta-section fade-up">
+        <h2>¿Listo para transformar tu negocio?</h2>
+        <p>Cuéntanos tu reto y te mostraremos cómo la IA y la ingeniería pueden resolverlo. Sin compromiso. Sin inversión inicial.</p>
+        <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;position:relative;">
+            <a href="contacto.html" class="btn-primary">Agendar Diagnóstico Gratuito →</a>
+            <a href="https://wa.me/1234567890" target="_blank" class="btn-outline" style="border-color:var(--accent);color:var(--accent);">💬 Escribir por WhatsApp</a>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="footer-grid fade-up">
+            <div class="footer-col">
+                <h4>⚡ IA Solutions</h4>
+                <p>Soluciones inteligentes con ingeniería aplicada. Democratizamos la tecnología para que cada negocio pueda crecer.</p>
+                <div class="footer-social">
+                    <a href="#" title="LinkedIn">in</a>
+                    <a href="#" title="Instagram">📷</a>
+                    <a href="#" title="TikTok">🎵</a>
+                    <a href="#" title="YouTube">▶</a>
+                    <a href="#" title="WhatsApp">💬</a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Servicios</h4>
+                <a href="servicios.html">Catálogo completo</a>
+                <a href="servicios.html#innovadoras">Soluciones innovadoras</a>
+                <a href="servicios.html#educacion">Plataformas educativas</a>
+            </div>
+            <div class="footer-col">
+                <h4>Recursos</h4>
+                <a href="casos.html">Casos de éxito</a>
+                <a href="nosotros.html">Quiénes somos</a>
+                <a href="presupuesto.html">Cómo presupuestar</a>
+                <a href="contacto.html">Contacto</a>
+            </div>
+            <div class="footer-col">
+                <h4>Contacto</h4>
+                <p>📧 hola@tusitio.com</p>
+                <p>💬 +54 9 11 1234-5678</p>
+                <p>🌎 Latinoamérica y el mundo</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p style="margin-bottom:8px;">© 2025 IA Solutions — Soluciones Inteligentes con Ingeniería Aplicada</p>
+            <p class="footer-legal">Todos los proyectos se rigen por contrato claro. Garantías incluidas. Tus datos son tuyos.</p>
+        </div>
+    </div>
+</footer>
+
+<div class="sound-toggle" id="soundToggle" title="Activar/Desactivar sonidos">🔊</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>

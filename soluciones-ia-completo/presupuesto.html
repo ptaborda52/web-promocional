@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presupuesto — IA Solutions</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Background Elements -->
+    <div class="bg-grid"></div>
+    <div class="bg-orb-1"></div>
+    <div class="bg-orb-2"></div>
+    <div class="bg-orb-3"></div>
+    <div class="bg-orb-4"></div>
+    <div class="particles" id="particles"></div>
+    <div class="mouse-glow" id="mouseGlow"></div>
+    <div class="custom-cursor" id="customCursor"></div>
+    <div class="cursor-dot" id="cursorDot"></div>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">IA Solutions</a>
+            <div class="nav-links">
+                <a href="index.html">Inicio</a>
+                <a href="servicios.html">Servicios</a>
+                <a href="casos.html">Casos</a>
+                <a href="nosotros.html">Nosotros</a>
+                <a href="presupuesto.html" class="active">Presupuesto</a>
+                <a href="contacto.html">Contacto</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sound Toggle -->
+    <div class="sound-toggle" id="soundToggle">🔊</div>
+
+    <!-- Presupuesto Section -->
+    <section id="presupuesto">
+        <div class="section-label fade-up">Presupuesto</div>
+        <h2 class="section-title fade-up">¿Cómo armamos tu presupuesto?</h2>
+
+        <div class="budget-steps">
+            <div class="budget-step fade-up">
+                <div class="budget-step-icon">📝</div>
+                <div class="budget-step-number">1.</div>
+                <h4>Descripción del caso</h4>
+                <p>Nos contás qué necesitás. Sin tecnicismos, en tus palabras. Si usás WhatsApp, mejor.</p>
+            </div>
+            <div class="budget-step fade-up">
+                <div class="budget-step-icon">👥</div>
+                <div class="budget-step-number">2.</div>
+                <h4>Usuarios involucrados</h4>
+                <p>¿Quién va a usar el sistema? ¿Cuántos? ¿Desde dónde? Esto define la escala.</p>
+            </div>
+            <div class="budget-step fade-up">
+                <div class="budget-step-icon">🔍</div>
+                <div class="budget-step-number">3.</div>
+                <h4>Análisis de procesos</h4>
+                <p>Mapeamos tus procesos actuales para entender qué automatizar y qué mejorar.</p>
+            </div>
+            <div class="budget-step fade-up">
+                <div class="budget-step-icon">📞</div>
+                <div class="budget-step-number">4.</div>
+                <h4>Contacto permanente</h4>
+                <p>Te mantenemos en el loop durante todo el proceso. Sin sorpresas al final.</p>
+            </div>
+            <div class="budget-step fade-up">
+                <div class="budget-step-icon">📊</div>
+                <div class="budget-step-number">5.</div>
+                <h4>Presupuesto estimativo</h4>
+                <p>Recibís un presupuesto claro con entregables, tiempos y costos. Sin letra chica.</p>
+            </div>
+        </div>
+
+        <div class="info-box fade-up">
+            <h4>📋 Para armar tu presupuesto necesitamos:</h4>
+            <ol>
+                <li>Descripción clara de tu negocio y qué problema querés resolver</li>
+                <li>Cantidad de usuarios que van a usar el sistema</li>
+                <li>Herramientas que usás actualmente (Excel, WhatsApp, etc.)</li>
+                <li>Tus tiempos esperados (¿lo necesitás para ayer o es un proyecto a futuro?)</li>
+                <li>Tu presupuesto estimado (así ajustamos la solución a tu realidad)</li>
+            </ol>
+        </div>
+    </section>
+
+    <!-- SLA Section -->
+    <section id="sla">
+        <div class="sla-header fade-up">
+            <h3>⏱️ Tiempos de respuesta garantizados</h3>
+        </div>
+
+        <div class="sla-cards">
+            <div class="sla-card fade-up">
+                <div class="sla-time">&lt;24h</div>
+                <h4>Primera respuesta</h4>
+                <p>Te respondemos en menos de 24 horas. Siempre.</p>
+            </div>
+            <div class="sla-card fade-up">
+                <div class="sla-time">2-5 días</div>
+                <h4>Presupuesto estimativo</h4>
+                <p>Tu presupuesto listo en 2 a 5 días hábiles.</p>
+            </div>
+            <div class="sla-card fade-up">
+                <div class="sla-time">&lt;4h</div>
+                <h4>Soporte crítico</h4>
+                <p>Si algo se rompe, estamos en menos de 4 horas.</p>
+            </div>
+            <div class="sla-card fade-up">
+                <div class="sla-time">Permanente</div>
+                <h4>Comunicación durante proyecto</h4>
+                <p>Canal abierto mientras dure el desarrollo.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq">
+        <h2 class="section-title fade-up">Resolvemos tus dudas</h2>
+
+        <div class="faq-list">
+            <div class="faq-item fade-up">
+                <button class="faq-question">
+                    <span>¿Cuánto cuesta un proyecto?</span>
+                    <span class="faq-toggle">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Cada proyecto es único. Depende de la complejidad, los usuarios involucrados y los procesos a automatizar. Lo que sí te garantizamos: el presupuesto es claro, sin sorpresas, y lo armamos juntos. Contactanos y te damos una estimación en 2-5 días.</p>
+                </div>
+            </div>
+
+            <div class="faq-item fade-up">
+                <button class="faq-question">
+                    <span>¿Es verdad que puedo empezar con $0 de inversión?</span>
+                    <span class="faq-toggle">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Sí. Trabajamos con modelos de comisión sobre resultados. Si no generás ingresos extra, no nos pagás. Es así de simple. Vea el caso de Cecilia en nuestros casos de éxito.</p>
+                </div>
+            </div>
+
+            <div class="faq-item fade-up">
+                <button class="faq-question">
+                    <span>¿Necesito saber de tecnología?</span>
+                    <span class="faq-toggle">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Para nada. Vos nos contás qué necesitás en tus palabras. Nosotros nos encargamos de la parte técnica. Si sabés usar WhatsApp, podés usar nuestros sistemas.</p>
+                </div>
+            </div>
+
+            <div class="faq-item fade-up">
+                <button class="faq-question">
+                    <span>¿Cuánto tiempo tarda un proyecto?</span>
+                    <span class="faq-toggle">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Depende de la envergadura. Un chatbot puede estar listo en 1 semana. Un sistema de gestión completo puede llevar 1-3 meses. Siempre te damos un cronograma realista antes de empezar.</p>
+                </div>
+            </div>
+
+            <div class="faq-item fade-up">
+                <button class="faq-question">
+                    <span>¿Mis datos están seguros?</span>
+                    <span class="faq-toggle">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>100%. Tus datos son tuyos. Usamos encriptación, backups automáticos y nunca compartimos tu información con terceros. Si querés, podemos trabajar con datos anonimizados durante el desarrollo.</p>
+                </div>
+            </div>
+
+            <div class="faq-item fade-up">
+                <button class="faq-question">
+                    <span>¿Qué pasa si no funciona?</span>
+                    <span class="faq-toggle">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Incluimos modificaciones razonables en el presupuesto. Si algo no funciona como esperabas, lo ajustamos. Además, te damos un período de garantía post-entrega.</p>
+                </div>
+            </div>
+
+            <div class="faq-item fade-up">
+                <button class="faq-question">
+                    <span>¿Puedo empezar con algo chico?</span>
+                    <span class="faq-toggle">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>¡Absolutamente! De hecho, lo recomendamos. Empezamos con un módulo o proceso específico, validamos que funcione, y después escalamos. No necesitás hacer todo de una.</p>
+                </div>
+            </div>
+
+            <div class="faq-item fade-up">
+                <button class="faq-question">
+                    <span>¿Qué pasa después del entregable?</span>
+                    <span class="faq-toggle">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Te acompañamos. Ofrecemos soporte post-entrega, mantenimiento y evolución del sistema. Tu negocio crece, tu sistema crece con él.</p>
+                </div>
+            </div>
+
+            <div class="faq-item fade-up">
+                <button class="faq-question">
+                    <span>¿Trabajan de forma remota?</span>
+                    <span class="faq-toggle">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Sí. Trabajamos 100% remoto. No importa dónde estés. Tenemos clientes en diferentes ciudades y países. Las reuniones son por videollamada o WhatsApp.</p>
+                </div>
+            </div>
+
+            <div class="faq-item fade-up">
+                <button class="faq-question">
+                    <span>¿Tengo que cambiar mis sistemas actuales?</span>
+                    <span class="faq-toggle">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>No necesariamente. Muchas veces construimos sistemas auxiliares que se conectan a lo que ya usás. Si tu ERP funciona, lo potenciamos. Si querés migrar, te acompañamos en el proceso.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-col">
+                <h4>IA Solutions</h4>
+                <p>Tecnología accesible para negocios reales.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Servicios</h4>
+                <ul>
+                    <li><a href="servicios.html">Automatización</a></li>
+                    <li><a href="servicios.html">Chatbots</a></li>
+                    <li><a href="servicios.html">Análisis de datos</a></li>
+                    <li><a href="servicios.html">Desarrollo web</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Empresa</h4>
+                <ul>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="casos.html">Casos de éxito</a></li>
+                    <li><a href="presupuesto.html">Presupuesto</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contacto</h4>
+                <ul>
+                    <li>📧 hola@iasolutions.com</li>
+                    <li>💬 WhatsApp</li>
+                    <li>🌎 Remoto / Global</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

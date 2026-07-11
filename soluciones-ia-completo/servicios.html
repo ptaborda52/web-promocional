@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios — Soluciones IA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!-- Animated Background -->
+<div class="bg-grid"></div>
+<div class="bg-orb bg-orb-1"></div>
+<div class="bg-orb bg-orb-2"></div>
+<div class="bg-orb bg-orb-3"></div>
+<div class="bg-orb bg-orb-4"></div>
+<div class="particles" id="particles"></div>
+<div class="mouse-glow" id="mouseGlow"></div>
+
+<!-- Custom Cursor -->
+<div class="custom-cursor" id="cursor"></div>
+<div class="custom-cursor-dot" id="cursorDot"></div>
+
+<!-- Nav -->
+<nav>
+    <div class="container">
+        <a href="index.html" class="logo">⚡ IA Solutions</a>
+        <ul class="nav-links">
+            <li><a href="index.html#showcase">Antes/Después</a></li>
+            <li><a href="servicios.html">Servicios</a></li>
+            <li><a href="casos.html">Casos</a></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="presupuesto.html">Presupuesto</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+        <a href="contacto.html" class="nav-cta">Hablemos →</a>
+    </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero" style="min-height:60vh;">
+    <div class="container">
+        <div class="hero-content fade-up">
+            <div class="section-label">Catálogo Completo de Servicios</div>
+            <h1>Todo lo que la IA y la <span class="gradient">ingeniería pueden hacer por ti</span></h1>
+            <p>Desde automatización de WhatsApp hasta producción de video con IA. Cada solución diseñada para ahorrarte tiempo, reducir costos y escalar sin límites.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ═══ CATEGORÍA 1: Desarrollo de Software ═══ -->
+<section>
+    <div class="container">
+        <div class="category-header cat-dev fade-up">
+            <div class="category-icon">💻</div>
+            <div>
+                <h2>Desarrollo de Software</h2>
+                <p>Aplicaciones, sistemas y plataformas a medida</p>
+            </div>
+        </div>
+        <div class="services-grid">
+            <div class="service-card fade-up">
+                <div class="service-icon">📱</div>
+                <h3>Aplicaciones Móviles</h3>
+                <p>Apps nativas e híbridas para iOS y Android con UX optimizada.</p>
+                <div class="example"><strong>Ejemplo:</strong> App de gestión de delivery para una cadena de restaurantes con tracking en tiempo real.</div>
+                <div class="service-tags"><span>React Native</span><span>Flutter</span><span>iOS</span><span>Android</span></div>
+            </div>
+            <div class="service-card fade-up">
+                <div class="service-icon">🖥️</div>
+                <h3>Sistemas de Gestión (ERP)</h3>
+                <p>Software integral para administrar inventario, ventas, compras y contabilidad.</p>
+                <div class="example"><strong>Ejemplo:</strong> ERP personalizado para red de quioscos con control de stock y reportes automáticos.</div>
+                <div class="service-tags"><span>Python</span><span>PostgreSQL</span><span>Docker</span></div>
+            </div>
+            <div class="service-card fade-up">
+                <div class="service-icon">🔗</div>
+                <h3>APIs e Integraciones</h3>
+                <p>Conectamos tus sistemas existentes entre sí y con servicios externos.</p>
+                <div class="example"><strong>Ejemplo:</strong> Integración entre sistema de ventas, WhatsApp Business API y contabilidad.</div>
+                <div class="service-tags"><span>REST</span><span>GraphQL</span><span>Webhooks</span></div>
+            </div>
+            <div class="service-card fade-up">
+                <div class="service-icon">🛒</div>
+                <h3>E-commerce Personalizado</h3>
+                <p>Tiendas online con catálogo, pasarela de pago y panel de administración.</p>
+                <div class="example"><strong>Ejemplo:</strong> Tienda multi-vendedor con comisiones automáticas y envíos integrados.</div>
+                <div class="service-tags"><span>Next.js</span><span>Stripe</span><span>MP</span></div>
+            </div>
+            <div class="service-card fade-up">
+                <div class="service-icon">🔐</div>
+                <h3>Sistemas de Autenticación</h3>
+                <p>Login seguro, roles, permisos y single sign-on para tu plataforma.</p>
+                <div class="example"><strong>Ejemplo:</strong> Sistema de login con roles (admin, vendedor, cliente) para plataforma educativa.</div>
+                <div class="service-tags"><span>OAuth</span><span>JWT</span><span>RBAC</span></div>
+            </div>
+            <div class="service-card fade-up">
+                <div class="service-icon">☁️</div>
+                <h3>Cloud & DevOps</h3>
+                <p>Despliegue, escalabilidad y monitoreo de tus aplicaciones en la nube.</p>
+                <div class="example"><strong>Ejemplo:</strong> Migración de servidor local a AWS con auto-scaling y backups automáticos.</div>
+                <div class="service-tags"><span>AWS</span><span>Docker</span><span>CI/CD</span></div>
+            </div>
+            <div class="service-card fade-up">
+                <div class="service-icon">📊</div>
+                <h3>Paneles de Control (Admin)</h3>
+                <p>Dashboards administrativos para gestionar cualquier aspecto de tu negocio.</p>
+                <div class="example"><strong>Ejemplo:</strong> Panel de administración de contenido para red social interna de empresa.</div>
+                <div class="service-tags"><span>React</span><span>Tailwind</span><span>Charts</span></div>
+            </div>
+            <div class="service-card fade-up">
+                <div class="service-icon">🔄</div>
+                <h3>Migración de Sistemas</h3>
+                <p>Pasamos tu sistema legacy a tecnología moderna sin perder datos.</p>
+                <div class="example"><strong>Ejemplo:</strong> Migración de sistema en Excel a plataforma web con base de datos relacional.</div>
+                <div class="service-tags"><span>ETL</span><span>PostgreSQL</span><span>Legacy</span></div>
+            </div>
+            <div class="service-card fade-up">
+                <div class="service-icon">🧪</div>
+                <h3>Testing & QA</h3>
+                <p>Pruebas automatizadas y manuales para garantizar la calidad de tu software.</p>
+                <div class="example"><strong>Ejemplo:</strong> Suite de tests end-to-end para plataforma de e-commerce antes de lanzamiento.</div>
+                <div class="service-tags"><span>Jest</span><span>Cypress</span><span>Selenium</span></div>
+            </div>
+        </div>
+
+        <!-- ═══ CATEGORÍA 2: IA & ML ═══ -->
+        <div class="category-header cat-ia fade-up">
+            <div class="category-icon">🧠</div>
+            <div>
+                <h2>Inteligencia Artificial & ML</h2>
+                <p>Modelos, bots y automatización inteligente</p>
+            </div>
+        </div>
+        <div class="services-grid">
+            <div class="service-card fade-up">
+                <div class="service-icon">💬</div>
+                <h3>Chatbots & Asistentes Virtuales</h3>
+                <p>Bots conversacionales para WhatsApp, web o redes que atienden 24/7.</p>
+                <div class="example"><strong>Ejemplo:</strong> Bot de WhatsApp que agenda turnos, responde consultas y envía propuestas comerciales.</div>
+                <div class="service-tags"><span>WhatsApp API</span><span>NLP</span><span>LLM</span></div>
+            </div>
+            <div class="service-card fade-up">
+                <div class="service-icon">🔍</div>
+                <h3>OCR & Visión por Computadora</h3>
+                <p>Extracción de texto e información de imágenes, facturas y documentos.</p>
+                <div class="example"><strong>Ejemplo:</strong> Lectura automática de facturas físicas para importar datos al sistema contable.</div>
+                <div class="service-tags"><span>Tesseract</span><span>GPT-4V</span><span>OCR</span></div>
+            </div>
+            <div class="service-card fade-up">
+                <div class="service-icon">🎯</div>
+                <h3>Modelos Predictivos</h3>
+                <p>IA que predice ventas, demanda, churn o cualquier patrón en tus datos.</p>
+                <div class="example"><strong>Ejemplo:</strong> Modelo que predice qué productos se agotarán en los próximos 7 días.</div>
+                <div class="service-tags"><span>Scikit-learn</span><span>TensorFlow</span><span>Time Series</span></div>
+            </div>
+            <div class="service-card fade-up">
+                <div class="service-icon">📝</div>
+                <h3>Procesamiento de Lenguaje Natural</h3>
+                <p>Análisis de sentimientos, clasificación de textos y extracción de entidades.</p>
+                <div class="example"><strong>Ejemplo:</strong> Análisis automático de reseñas de Google para detectar problemas recurrentes.</div>
+                <div class="service-tags"><span>spaCy</span><span>BERT</span><span>Sentiment</span></div>
+            </div>
+            <div class="service-card fade-up">
+                <div class="service-icon">🎙️</div>
+                <h3>Texto a Voz & Voz a Texto</h3>
+                <p>Conversión de texto a audio natural y transcripción automática de audio.</p>
+                <div class="example"><strong>Ejemplo:</strong> Transcripción automática de reuniones y generación de actas con puntos de acción.</div>
+                <div class="service-tags"><span>TTS</span><span>Whisper</span><span>ElevenLabs</span></div>
+            </div>
+            <div class="service-card fade-up">
+                <div class="service-icon">🖼️</div>
+                <h3>Generación de Imágenes</h3>
+                <p>Creación de imágenes, logos, mockups y contenido visual con IA generativa.</p>
+                <div class="example"><strong>Ejemplo:</strong> Generación de catálogo de productos con fondos profesionales desde fotos del celular.</div>
+                <div class="service-tags"><span>DALL-E</span><span>Stable Diffusion</span><span>Midjourney</span></div>
+            </div>
+            <div class="service-card fade-up">
+                <div class="service-icon">🤖</div>
+                <h3>Agentes Autónomos</h3>
+                <p>IA que ejecuta tareas complejas de forma autónoma: investigar, escribir, programar.</p>
+                <div class="example"><strong>Ejemplo:</strong> Agente que investiga competidores, genera reportes y envía alertas automáticas.</div>
+                <div class="service-tags"><span>LangChain</span><span>Agents</span><span>RAG</span></div>
+            </div>
+            <div class="service-card fade-up">
+                <div class="service-icon">📊</div>
+                <h3>Recomendación Personalizada</h3>
+                <p>Sistemas que sugieren productos, contenido o acciones basados en comportamiento.</p>
+                <div class="example"><strong>Ejemplo:</strong> Motor de recomendación de productos en tienda online basado en historial de compra.</div>
+                <div class="service-tags"><span>Collaborative Filtering</span><span>Embeddings</span></div>
+            </div>
+            <div class="service-card fade-up">
+                <div class="service-icon">🔒</div>
+                <h3>Detección de Fraude & Anomalías</h3>
+                <p>IA que identifica patrones anómalos en transacciones o comportamientos.</p>
+                <div class="example"><strong>Ejemplo:</strong> Sistema que detecta transacciones sospechosas en tiempo real y alerta al equipo.</div>
+                <div class="service-tags"><span>Anomaly Detection</span><span>Real-time</span><span>Alerts</span></div>
+            </div>
+        </div>
+
+        <!-- ═══ CATEGORÍA 3: Análisis de Datos & BI ═══ -->
+        <div class="category-header cat-data fade-up">
+            <div class="category-icon">📊</div>
+            <div>
+                <h2>Análisis de Datos & BI</h2>
+                <p>Datos que se convierten en decisiones</p>
+            </div>
+        </div>
+        <div class="services-grid">
+            <div class="service-card fade-up">
+                <div class="service-icon">📈</div>
+                <h3>Dashboards Interactivos</h3>
+                <p>Paneles visuales con KPIs en tiempo real para tomar decisiones informadas.</p>
+                <div class="example"><strong>Ejemplo:</strong> Dashboard de ventas diarias con gráficos de tendencia y comparativas mensuales.</div>
+                <div class="service-tags"><span>Power BI</span><span>Grafana</span><span>Custom</span></div>
+            </div>
+            <div class="service-card fade-up">
+                <div class="service-icon">🔄</div>
+                <h3>ETL & Pipelines de Datos</h3>
+                <p>Extracción, transformación y carga de datos desde múltiples fuentes.</p>
+                <div class="example"><strong>Ejemplo:</strong> Pipeline que consolida datos de ventas de 5 sucursales en un solo reporte diario.</div>
+                <div class="service-tags"><span>Python</span><span>Airflow</span><span>SQL</span></div>
+            </div>
+            <div class="service-card fade-up">
+                <div class="service-icon">📋</div>
+                <h3>Reportes Automáticos</h3>
+                <p>Generación programada de reportes en PDF, Excel o email con los datos que necesitas.</p>
+                <div class="example"><strong>Ejemplo:</strong> Reporte semanal de inventario enviado automáticamente por email al gerente.</div>
+                <div class="service-tags"><span>Pandas</span><span>PDF</span><span>Cron</span></div>
+            </div>
+            <div class="service-card fade-up">
+                <div class="service-icon">🗄️</div>
+                <h3>Data Warehousing</h3>
+                <p>Diseño y construcción de almacenes de datos centralizados para análisis histórico.</p>
+                <div class="example"><strong>Ejemplo:</strong> Data warehouse que consolida 3 años de ventas para análisis de tendencias estacionales.</div>
+                <div class="service-tags"><span>BigQuery</span><span>Redshift</span><span>Star Schema</span></div>
+            </div>
+            <div class="service-card fade-up">
+                <div class="service-icon">🧹</div>
+                <h3>Limpieza & Calidad de Datos</h3>
+                <p>Procesos para detectar duplicados, errores y asegurar la integridad de tus datos.</p>
+                <div class="example"><strong>Ejemplo:</strong> Limpieza de base de 50,000 clientes eliminando duplicados y corrigiendo formatos.</div>
+                <div class="service-tags"><span>Python</span><span>Great Expectations</span><span>SQL</span></div>
+            </div>
+            <div class="service-card fade-up">
+                <div class="service-icon">🗺️</div>
+                <h3>Análisis Geoespacial</h3>
+                <p>Visualización y análisis de datos geográficos para optimizar rutas y cobertura.</p>
+                <div class="example"><strong>Ejemplo:</strong> Mapa de calor de ventas por zona para decidir dónde abrir la próxima sucursal.</div>
+                <div class="service-tags"><span>Leaflet</span><span>GeoJSON</span><span>PostGIS</span></div>
+            </div>
+            <div class="service-card fade-up">
+                <div class="service-icon">🧪</div>
+                <h3>A/B Testing & Experimentación</h3>
+                <p>Diseño y análisis de experimentos para optimizar conversiones y engagement.</p>
+                <div class="example"><strong>Ejemplo:</strong> Test A/B de 3 versiones de landing page para maximizar registros.</div>
+                <div class="service-tags"><span>Stats</span><span>Optimizely</span><span>Custom</span></div>
+            </div>
+            <div class="service-card fade-up">
+                <div class="service-icon">📱</div>
+                <h3>Analytics de Redes Sociales</h3>
+                <p>Monitoreo de métricas de redes sociales y generación de insights accionables.</p>
+                <div class="example"><strong>Ejemplo:</strong> Dashboard que consolida métricas de Instagram, TikTok y Facebook en un solo lugar.</div>
+                <div class="service-tags"><span>Meta API</span><span>TikTok API</span><span>Charts</span></div>
+            </div>
+        </div>
+
+        <!-- ═══ CATEGORÍA 4: Automatización & Procesos ═══ -->
+        <div class="category-header cat-auto fade-up">
+            <div class="category-icon">⚙️</div>
+            <div>
+                <h2>Automatización & Procesos</h2>
+                <p>Eliminamos tareas repetitivas de tu día a día</p>
+            </div>
+        </div>
+        <div class="services-grid">
+            <div class="service-card fade-up">
+                <div class="service-icon">📱</div>
+                <h3>Automatización WhatsApp</h3>
+                <p>Bots que atienden, venden, agenda y dan seguimiento por WhatsApp automáticamente.</p>
+                <div class="example"><strong>Ejemplo:</strong> Bot que responde consultas frecuentes y agenda turnos sin intervención humana.</div>
+                <div class="service-tags"><span>WhatsApp Business</span><span>Bot</span><span>Flows</span></div>
+            </div>
+            <div class="service-card fade-up">
+                <div class="service-icon">📧</div>
+                <h3>Email Marketing Automatizado</h3>
+                <p>Secuencias de email personalizadas según comportamiento del usuario.</p>
+                <div class="example"><strong>Ejemplo:</strong> Secuencia de bienvenida + recordatorio + oferta para nuevos registros en la web.</div>
+                <div class="service-tags"><span>Mailchimp</span><span>SendGrid</span><span>Automation</span></div>
+            </div>
+            <div class="service-card fade-up">
+                <div class="service-icon">🔄</div>
+                <h3>Workflows entre Apps</h3>
+                <p>Conectamos tus aplicaciones para que compartan datos automáticamente.</p>
+                <div class="example"><strong>Ejemplo:</strong> Cuando llega un WhatsApp → crea lead en CRM → notifica al vendedor → envía propuesta.</div>
+                <div class="service-tags"><span>Make</span><span>Zapier</span><span>n8n</span></div>
+            </div>
+            <div class="service-card fade-up">
+                <div class="service-icon">🧾</div>
+                <h3>Facturación Automática</h3>
+                <p>Generación, envío y registro automático de facturas y comprobantes.</p>
+                <div class="example"><strong>Ejemplo:</strong> Factura se genera automáticamente al confirmar un pedido y se envía por email.</div>
+                <div class="service-tags"><span>AFIP</span><span>PDF</span><span>Email</span></div>
+            </div>
+            <div class="service-card fade-up">
+                <div class="service-icon">📅</div>
+                <h3>Gestión de Turnos & Citas</h3>
+                <p>Sistemas de agenda online con confirmación automática y recordatorios.</p>
+                <div class="example"><strong>Ejemplo:</strong> Sistema de turnos para estética con confirmación por WhatsApp y recordatorio 24h antes.</div>
+                <div class="service-tags"><span>Calendar API</span><span>WhatsApp</span><span>SMS</span></div>
+            </div>
+            <div class="service-card fade-up">
+                <div class="service-icon">📦</div>
+                <h3>Control de Inventario</h3>
+                <p>Monitoreo automático de stock con alertas de reabastecimiento.</p>
+                <div class="example"><strong>Ejemplo:</strong> Alerta automática cuando un producto baja del mínimo con sugerencia de pedido.</div>
+                <div class="service-tags"><span>IoT</span><span>Barcodes</span><span>Alerts</span></div>
+            </div>
+            <div class="service-card fade-up">
+                <div class="service-icon">💰</div>
+                <h3>Cobros & Pagos Automatizados</h3>
+                <p>Sistemas de cobro recurrente, recordatorios de pago y conciliación bancaria.</p>
+                <div class="example"><strong>Ejemplo:</strong> Cobro automático de cuotas mensuales con generación de recibo y registro contable.</div>
+                <div class="service-tags"><span>MercadoPago</span><span>Stripe</span><span>Cron</span></div>
+            </div>
+            <div class="service-card fade-up">
+                <div class="service-icon">📊</div>
+                <h3>Reportes Programados</h3>
+                <p>Generación y envío automático de reportes en el día y hora que elijas.</p>
+                <div class="example"><strong>Ejemplo:</strong> Reporte de ventas del día enviado a los gerentes cada noche a las 22:00.</div>
+                <div class="service-tags"><span>Cron</span><span>PDF</span><span>Email</span></div>
+            </div>
+            <div class="service-card fade-up">
+                <div class="service-icon">🔔</div>
+                <h3>Sistema de Alertas Inteligentes</h3>
+                <p>Notificaciones automáticas cuando ocurren eventos importantes en tu negocio.</p>
+                <div class="example"><strong>Ejemplo:</strong> Alerta cuando un cliente VIP hace un pedido grande o cuando stock está por debajo del mínimo.</div>
+                <div class="service-tags"><span>Push</span><span>SMS</span><span>Webhook</span></div>
+            </div>
+        </div>
+
+        <!-- ═══ CATEGORÍA 5: Contenido & Marketing ═══ -->
+        <div class="category-header cat-content fade-up">
+            <div class="category-icon">🎨</div>
+            <div>
+                <h2>Contenido & Marketing</h2>
+                <p>Creación y distribución de contenido inteligente</p>
+            </div>
+        </div>
+        <div class="services-grid">
+            <div class="service-card fade-up">
+                <div class="service-icon">✍️</div>
+                <h3>Copywriting con IA</h3>
+                <p>Textos persuasivos para web, emails, ads y redes sociales generados con IA.</p>
+                <div class="example"><strong>Ejemplo:</strong> 50 variantes de copy para testear en campañas de Facebook Ads.</div>
+                <div class="service-tags"><span>GPT-4</span><span>Copywriting</span><span>A/B Test</span></div>
+            </div>
+            <div class="service-card fade-up">
+                <div class="service-icon">📱</div>
+                <h3>Gestión de Redes Sociales</h3>
+                <p>Creación, programación y análisis de contenido para todas tus redes.</p>
+                <div class="example"><strong>Ejemplo:</strong> Calendario mensual de contenido con 30 posts generados y programados automáticamente.</div>
+                <div class="service-tags"><span>Content Calendar</span><span>Analytics</span><span>Scheduling</span></div>
+            </div>
+            <div class="service-card fade-up">
+                <div class="service-icon">🎨</div>
+                <h3>Diseño Gráfico con IA</h3>
+                <p>Creación de banners, flyers, posts y material visual usando herramientas de IA.</p>
+                <div class="example"><strong>Ejemplo:</strong> Kit de 20 posts para Instagram con estilo visual consistente de la marca.</div>
+                <div class="service-tags"><span>DALL-E</span><span>Canva</span><span>Figma</span></div>
+            </div>
+            <div class="service-card fade-up">
+                <div class="service-icon">📰</div>
+                <h3>Blog & SEO Automatizado</h3>
+                <p>Artículos optimizados para buscadores generados y publicados automáticamente.</p>
+                <div class="example"><strong>Ejemplo:</strong> 4 artículos SEO mensuales sobre tu sector con keywords investigadas automáticamente.</div>
+                <div class="service-tags"><span>SEO</span><span>WordPress</span><span>Keywords</span></div>
+            </div>
+            <div class="service-card fade-up">
+                <div class="service-icon">🎬</div>
+                <h3>Video Marketing</h3>
+                <p>Creación de videos cortos para redes sociales, presentaciones y publicidad.</p>
+                <div class="example"><strong>Ejemplo:</strong> 15 videos cortos de productos con voz en off y subtítulos automáticos.</div>
+                <div class="service-tags"><span>Video AI</span><span>Reels</span><span>TikTok</span></div>
+            </div>
+            <div class="service-card fade-up">
+                <div class="service-icon">📧</div>
+                <h3>Newsletters Inteligentes</h3>
+                <p>Newsletters personalizadas según los intereses de cada suscriptor.</p>
+                <div class="example"><strong>Ejemplo:</strong> Newsletter semanal que selecciona contenido relevante según historial de lectura.</div>
+                <div class="service-tags"><span>Mailchimp</span><span>Personalization</span><span>AI</span></div>
+            </div>
+            <div class="service-card fade-up">
+                <div class="service-icon">🎯</div>
+                <h3>Publicidad Digital</h3>
+                <p>Gestión y optimización de campañas en Google, Facebook, Instagram y TikTok.</p>
+                <div class="example"><strong>Ejemplo:</strong> Campaña de Google Ads con optimización automática de pujas y presupuesto.</div>
+                <div class="service-tags"><span>Google Ads</span><span>Meta Ads</span><span>TikTok Ads</span></div>
+            </div>
+            <div class="service-card fade-up">
+                <div class="service-icon">🎙️</div>
+                <h3>Podcasts & Audio Content</h3>
+                <p>Producción de podcasts con edición automática y distribución multiplataforma.</p>
+                <div class="example"><strong>Ejemplo:</strong> Conversión automática de artículos del blog a episodios de podcast con voz natural.</div>
+                <div class="service-tags"><span>TTS</span><span>Spotify</span><span>Apple Podcasts</span></div>
+            </div>
+        </div>
+
+        <!-- ═══ CATEGORÍA 6: Multimedia & Producción ═══ -->
+        <div class="category-header cat-multi fade-up">
+            <div class="category-icon">🎬</div>
+            <div>
+                <h2>Multimedia & Producción</h2>
+                <p>Contenido audiovisual de nivel profesional</p>
+            </div>
+        </div>
+        <div class="services-grid">
+            <div class="service-card fade-up">
+                <div class="service-icon">🎥</div>
+                <h3>Edición de Video con IA</h3>
+                <p>Edición automática de videos: cortes, subtítulos, efectos y transiciones.</p>
+                <div class="example"><strong>Ejemplo:</strong> Edición automática de 20 videos de productos con subtítulos y música de fondo.</div>
+                <div class="service-tags"><span>Premiere</span><span>CapCut</span><span>Auto-edit</span></div>
+            </div>
+            <div class="service-card fade-up">
+                <div class="service-icon">🎵</div>
+                <h3>Producción de Audio</h3>
+                <p>Creación de jingles, locuciones, efectos de sonido y audio para publicidad.</p>
+                <div class="example"><strong>Ejemplo:</strong> Locución profesional de 10 spots de radio con voces generadas por IA.</div>
+                <div class="service-tags"><span>ElevenLabs</span><span>Audacity</span><span>Voice AI</span></div>
+            </div>
+            <div class="service-card fade-up">
+                <div class="service-icon">📸</div>
+                <h3>Retoque Fotográfico con IA</h3>
+                <p>Mejora, restauración y transformación de fotos usando inteligencia artificial.</p>
+                <div class="example"><strong>Ejemplo:</strong> Fondo profesional automático para 100 fotos de productos tomadas con celular.</div>
+                <div class="service-tags"><span>Photoshop AI</span><span>Remove.bg</span><span>Enhance</span></div>
+            </div>
+            <div class="service-card fade-up">
+                <div class="service-icon">🎨</div>
+                <h3>Motion Graphics</h3>
+                <p>Animaciones y gráficos en movimiento para videos, presentaciones y redes.</p>
+                <div class="example"><strong>Ejemplo:</strong> Intro animada de 5 segundos para canal de YouTube con logo y efectos.</div>
+                <div class="service-tags"><span>After Effects</span><span>Lottie</span><span>CSS Animations</span></div>
+            </div>
+            <div class="service-card fade-up">
+                <div class="service-icon">🎙️</div>
+                <h3>Streaming & Producción en Vivo</h3>
+                <p>Configuración y producción de transmisiones en vivo profesionales.</p>
+                <div class="example"><strong>Ejemplo:</strong> Setup completo para streamings de lanzamiento de productos con overlays y chat.</div>
+                <div class="service-tags"><span>OBS</span><span>Restream</span><span>Twitch</span></div>
+            </div>
+            <div class="service-card fade-up">
+                <div class="service-icon">🕹️</div>
+                <h3>Contenido 360° & VR</h3>
+                <p>Creación de experiencias inmersivas para tours virtuales y presentaciones.</p>
+                <div class="example"><strong>Ejemplo:</strong> Tour virtual 360° de local comercial para Google Maps y sitio web.</div>
+                <div class="service-tags"><span>360°</span><span>VR</span><span>Google Maps</span></div>
+            </div>
+        </div>
+
+        <!-- ═══ CATEGORÍA 7: Diseño Web & UX/UI ═══ -->
+        <div class="category-header cat-web fade-up">
+            <div class="category-icon">🌐</div>
+            <div>
+                <h2>Diseño Web & UX/UI</h2>
+                <p>Experiencias digitales que convierten</p>
+            </div>
+        </div>
+        <div class="services-grid">
+            <div class="service-card fade-up">
+                <div class="service-icon">🖥️</div>
+                <h3>Landing Pages de Alta Conversión</h3>
+                <p>Páginas diseñadas para convertir visitantes en leads o ventas.</p>
+                <div class="example"><strong>Ejemplo:</strong> Landing page para lanzamiento de producto con formulario de pre-venta integrado.</div>
+                <div class="service-tags"><span>Next.js</span><span>A/B Test</span><span>CRO</span></div>
+            </div>
+            <div class="service-card fade-up">
+                <div class="service-icon">📱</div>
+                <h3>Diseño UX/UI</h3>
+                <p>Diseño de interfaces intuitivas y atractivas basadas en investigación de usuario.</p>
+                <div class="example"><strong>Ejemplo:</strong> Rediseño de app móvil mejorando la retención de usuarios en un 40%.</div>
+                <div class="service-tags"><span>Figma</span><span>Prototyping</span><span>User Research</span></div>
+            </div>
+            <div class="service-card fade-up">
+                <div class="service-icon">⚡</div>
+                <h3>Sitios Web Corporativos</h3>
+                <p>Webs profesionales con diseño moderno, rápido y optimizado para SEO.</p>
+                <div class="example"><strong>Ejemplo:</strong> Sitio web institucional de 8 páginas con blog y formulario de contacto.</div>
+                <div class="service-tags"><span>WordPress</span><span>Next.js</span><span>SEO</span></div>
+            </div>
+            <div class="service-card fade-up">
+                <div class="service-icon">🛒</div>
+                <h3>Tiendas Online</h3>
+                <p>E-commerce completo con catálogo, carrito, pasarela de pago y gestión.</p>
+                <div class="example"><strong>Ejemplo:</strong> Tienda online con 500 productos, filtros avanzados y checkout optimizado.</div>
+                <div class="service-tags"><span>Shopify</span><span>WooCommerce</span><span>Custom</span></div>
+            </div>
+            <div class="service-card fade-up">
+                <div class="service-icon">🔍</div>
+                <h3>Optimización Web (Performance)</h3>
+                <p>Mejora de velocidad, Core Web Vitals y rendimiento de tu sitio existente.</p>
+                <div class="example"><strong>Ejemplo:</strong> Optimización de sitio que pasó de 3.2s a 0.8s de tiempo de carga.</div>
+                <div class="service-tags"><span>Lighthouse</span><span>CDN</span><span>Lazy Loading</span></div>
+            </div>
+            <div class="service-card fade-up">
+                <div class="service-icon">♿</div>
+                <h3>Accesibilidad Web</h3>
+                <p>Adecuación de tu sitio a estándares WCAG para que sea usable por todos.</p>
+                <div class="example"><strong>Ejemplo:</strong> Auditoría y corrección de accesibilidad para sitio de servicios gubernamentales.</div>
+                <div class="service-tags"><span>WCAG</span><span>ARIA</span><span>Screen Reader</span></div>
+            </div>
+        </div>
+
+        <!-- ═══ CATEGORÍA 8: Consultoría & Estrategia ═══ -->
+        <div class="category-header cat-consult fade-up">
+            <div class="category-icon">🎯</div>
+            <div>
+                <h2>Consultoría & Estrategia</h2>
+                <p>Planificación y dirección tecnológica</p>
+            </div>
+        </div>
+        <div class="services-grid">
+            <div class="service-card fade-up">
+                <div class="service-icon">🗺️</div>
+                <h3>Roadmap Tecnológico</h3>
+                <p>Plan estratégico de implementación tecnológica adaptado a tu negocio.</p>
+                <div class="example"><strong>Ejemplo:</strong> Roadmap de 12 meses para digitalización completa de cadena de locales.</div>
+                <div class="service-tags"><span>Strategy</span><span>Planning</span><span>ROI</span></div>
+            </div>
+            <div class="service-card fade-up">
+                <div class="service-icon">🔍</div>
+                <h3>Auditoría Digital</h3>
+                <p>Análisis completo de tu presencia digital, herramientas y procesos actuales.</p>
+                <div class="example"><strong>Ejemplo:</strong> Auditoría que identificó 7 automatizaciones posibles ahorrando 20h/semana.</div>
+                <div class="service-tags"><span>Audit</span><span>Analysis</span><span>Report</span></div>
+            </div>
+            <div class="service-card fade-up">
+                <div class="service-icon">📊</div>
+                <h3>Análisis de Competencia</h3>
+                <p>Investigación de competidores: qué hacen, cómo lo hacen y dónde puedes superarlos.</p>
+                <div class="example"><strong>Ejemplo:</strong> Análisis de 10 competidores directos con matriz comparativa de funcionalidades.</div>
+                <div class="service-tags"><span>Research</span><span>SWOT</span><span>Benchmark</span></div>
+            </div>
+            <div class="service-card fade-up">
+                <div class="service-icon">💡</div>
+                <h3>Innovación & Product Discovery</h3>
+                <p>Identificación de oportunidades de producto y validación de ideas de negocio.</p>
+                <div class="example"><strong>Ejemplo:</strong> Workshop de discovery que definió el MVP de una app en 2 días.</div>
+                <div class="service-tags"><span>Design Thinking</span><span>MVP</span><span>Lean</span></div>
+            </div>
+            <div class="service-card fade-up">
+                <div class="service-icon">🎓</div>
+                <h3>Capacitación Tecnológica</h3>
+                <p>Entrenamiento de tu equipo en herramientas digitales, IA y nuevas tecnologías.</p>
+                <div class="example"><strong>Ejemplo:</strong> Taller de 4 horas sobre uso de ChatGPT y automatizaciones para equipo de ventas.</div>
+                <div class="service-tags"><span>Training</span><span>Workshop</span><span>Hands-on</span></div>
+            </div>
+            <div class="service-card fade-up">
+                <div class="service-icon">🛡️</div>
+                <h3>Seguridad & Compliance</h3>
+                <p>Auditoría de seguridad y adecuación a normativas de protección de datos.</p>
+                <div class="example"><strong>Ejemplo:</strong> Implementación de RGPD/LPD para plataforma de e-commerce con datos de clientes.</div>
+                <div class="service-tags"><span>Security</span><span>GDPR</span><span>Audit</span></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══ SOLUCIONES INNOVADORAS ═══ -->
+<section id="innovadoras">
+    <div class="container">
+        <div class="category-header cat-innov fade-up">
+            <div class="category-icon">🚀</div>
+            <div>
+                <h2>Soluciones Innovadoras</h2>
+                <p>Transformaciones que parecen magia pero son ingeniería</p>
+            </div>
+        </div>
+        <div class="services-grid">
+            <div class="service-card fade-up">
+                <div class="service-icon">🎬</div>
+                <h3>Producto → Video</h3>
+                <p>De una foto estática a un video profesional con voz, música y texto animado en minutos.</p>
+                <div class="example"><strong>Ejemplo:</strong> Foto de un producto → video de 30 segundos listo para Instagram Reels y TikTok.</div>
+                <div class="service-tags"><span>Video AI</span><span>TTS</span><span>Auto-edit</span></div>
+            </div>
+            <div class="service-card fade-up">
+                <div class="service-icon">🧾</div>
+                <h3>Factura → ERP</h3>
+                <p>Foto de una factura física → datos extraídos por OCR → importados automáticamente al ERP.</p>
+                <div class="example"><strong>Ejemplo:</strong> Tomar foto de factura de proveedor y que los datos aparezcan en el sistema en 10 segundos.</div>
+                <div class="service-tags"><span>OCR</span><span>API</span><span>Automation</span></div>
+            </div>
+            <div class="service-card fade-up">
+                <div class="service-icon">📸</div>
+                <h3>Foto → Catálogo</h3>
+                <p>Fotos del celular → fondos profesionales → catálogo digital listo para compartir.</p>
+                <div class="example"><strong>Ejemplo:</strong> 50 fotos de productos con fondo blanco profesional generadas automáticamente.</div>
+                <div class="service-tags"><span>Remove.bg</span><span>Enhance</span><span>Catalog</span></div>
+            </div>
+            <div class="service-card fade-up">
+                <div class="service-icon">🎤</div>
+                <h3>Reunión → Acta</h3>
+                <p>Grabación de reunión → transcripción automática → acta con puntos de acción asignados.</p>
+                <div class="example"><strong>Ejemplo:</strong> Reunión de 1 hora → acta de 2 páginas con tareas asignadas en 5 minutos.</div>
+                <div class="service-tags"><span>Whisper</span><span>GPT-4</span><span>Summary</span></div>
+            </div>
+            <div class="service-card fade-up">
+                <div class="service-icon">🏗️</div>
+                <h3>Plano → Modelo 3D</h3>
+                <p>Planos arquitectónicos 2D → renderizado 3D interactivo para presentación a clientes.</p>
+                <div class="example"><strong>Ejemplo:</strong> Plano de local comercial → recorrido virtual 3D para mostrar a potenciales inquilinos.</div>
+                <div class="service-tags"><span>3D</span><span>Render</span><span>VR</span></div>
+            </div>
+            <div class="service-card fade-up">
+                <div class="service-icon">💬</div>
+                <h3>WhatsApp → Lead</h3>
+                <p>Mensaje de WhatsApp → bot califica automáticamente → lead en CRM con toda la info.</p>
+                <div class="example"><strong>Ejemplo:</strong> Cada mensaje de WhatsApp se convierte en un lead calificado con datos completos.</div>
+                <div class="service-tags"><span>WhatsApp API</span><span>CRM</span><span>Bot</span></div>
+            </div>
+            <div class="service-card fade-up">
+                <div class="service-icon">📊</div>
+                <h3>Datos → Dashboard</h3>
+                <p>Archivos Excel/CSV dispersos → dashboard interactivo con KPIs en tiempo real.</p>
+                <div class="example"><strong>Ejemplo:</strong> 5 archivos de Excel de diferentes sucursales → dashboard unificado con métricas consolidadas.</div>
+                <div class="service-tags"><span>ETL</span><span>Charts</span><span>Real-time</span></div>
+            </div>
+            <div class="service-card fade-up">
+                <div class="service-icon">📝</div>
+                <h3>Texto → Podcast</h3>
+                <p>Artículos de blog o documentos → episodios de podcast con voz natural y musicalización.</p>
+                <div class="example"><strong>Ejemplo:</strong> 10 artículos del blog → 10 episodios de podcast publicados en Spotify automáticamente.</div>
+                <div class="service-tags"><span>TTS</span><span>ElevenLabs</span><span>RSS</span></div>
+            </div>
+            <div class="service-card fade-up">
+                <div class="service-icon">📧</div>
+                <h3>Email → Orden</h3>
+                <p>Email de pedido → datos extraídos → orden creada en sistema → confirmación enviada.</p>
+                <div class="example"><strong>Ejemplo:</strong> Email de cliente con pedido → orden automática en sistema + email de confirmación.</div>
+                <div class="service-tags"><span>NLP</span><span>Parsing</span><span>Automation</span></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══ PLATAFORMAS EDUCATIVAS ═══ -->
+<section id="educacion">
+    <div class="container">
+        <div class="category-header cat-edu fade-up">
+            <div class="category-icon">🎓</div>
+            <div>
+                <h2>Plataformas Educativas</h2>
+                <p>Tecnología al servicio de la educación</p>
+            </div>
+        </div>
+        <div class="services-grid">
+            <div class="service-card fade-up">
+                <div class="service-icon">📹</div>
+                <h3>Material → Audiovisual</h3>
+                <p>Conversión de texto y documentos educativos en videos, presentaciones y animaciones.</p>
+                <div class="example"><strong>Ejemplo:</strong> Apuntes de clase → video explicativo de 10 minutos con animaciones y voz en off.</div>
+                <div class="service-tags"><span>Video AI</span><span>TTS</span><span>Animation</span></div>
+            </div>
+            <div class="service-card fade-up">
+                <div class="service-icon">🎮</div>
+                <h3>Gamificación</h3>
+                <p>Sistemas de puntos, insignias, rankings y desafíos para aumentar el engagement.</p>
+                <div class="example"><strong>Ejemplo:</strong> Sistema de puntos y niveles para plataforma de cursos online con leaderboard.</div>
+                <div class="service-tags"><span>Badges</span><span>Leaderboard</span><span>Points</span></div>
+            </div>
+            <div class="service-card fade-up">
+                <div class="service-icon">📋</div>
+                <h3>Sistema de Evidencias</h3>
+                <p>Plataforma para carga, organización y evaluación de evidencias académicas.</p>
+                <div class="example"><strong>Ejemplo:</strong> Sistema donde alumnos suben trabajos y docentes evalúan con rúbricas digitales.</div>
+                <div class="service-tags"><span>Rubrics</span><span>Upload</span><span>Grading</span></div>
+            </div>
+            <div class="service-card fade-up">
+                <div class="service-icon">🤖</div>
+                <h3>Tutor IA Personalizado</h3>
+                <p>Asistente virtual que responde dudas, explica conceptos y guía el aprendizaje.</p>
+                <div class="example"><strong>Ejemplo:</strong> Tutor IA que adapta explicaciones al nivel del estudiante y sugiere ejercicios.</div>
+                <div class="service-tags"><span>LLM</span><span>RAG</span><span>Adaptive</span></div>
+            </div>
+            <div class="service-card fade-up">
+                <div class="service-icon">📈</div>
+                <h3>Analytics Educativo</h3>
+                <p>Dashboard con métricas de rendimiento, progreso y engagement de estudiantes.</p>
+                <div class="example"><strong>Ejemplo:</strong> Panel que muestra tasa de aprobación, tiempo promedio y módulos más difíciles.</div>
+                <div class="service-tags"><span>Dashboard</span><span>KPIs</span><span>Insights</span></div>
+            </div>
+            <div class="service-card fade-up">
+                <div class="service-icon">🏅</div>
+                <h3>Certificaciones Digitales</h3>
+                <p>Generación automática de certificados y diplomas verificables con blockchain.</p>
+                <div class="example"><strong>Ejemplo:</strong> Certificado digital con QR verificable emitido automáticamente al completar un curso.</div>
+                <div class="service-tags"><span>QR</span><span>PDF</span><span>Blockchain</span></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══ MODELO DE CRECIMIENTO ═══ -->
+<section id="modelo">
+    <div class="container">
+        <div class="category-header cat-model fade-up">
+            <div class="category-icon">🤝</div>
+            <div>
+                <h2>Modelo de Crecimiento</h2>
+                <p>Crecemos juntos, sin que inviertas un peso</p>
+            </div>
+        </div>
+        <div class="services-grid">
+            <div class="service-card fade-up">
+                <div class="service-icon">💰</div>
+                <h3>Cero Inversión Inicial</h3>
+                <p>Arrancamos sin que pongas dinero. Nosotros invertimos en tecnología y vos aportas tu negocio.</p>
+                <div class="example"><strong>Ejemplo:</strong> <strong>Cecilia</strong> no invirtió nada. Implementamos su sistema de turnos online y WhatsApp bot. Hoy gestiona el doble de clientes con la misma cantidad de horas.</div>
+                <div class="service-tags"><span>Sin costo inicial</span><span>Riesgo cero</span><span>Resultados reales</span></div>
+            </div>
+            <div class="service-card fade-up">
+                <div class="service-icon">📈</div>
+                <h3>Escalabilidad Garantizada</h3>
+                <p>Las soluciones crecen con tu negocio. De 10 a 10,000 usuarios sin rehacer nada.</p>
+                <div class="example"><strong>Ejemplo:</strong> Sistema que arrancó para 1 local y hoy gestiona 15 sucursales sin cambios de infraestructura.</div>
+                <div class="service-tags"><span>Cloud</span><span>Auto-scaling</span><span>Multi-tenant</span></div>
+            </div>
+            <div class="service-card fade-up">
+                <div class="service-icon">🎓</div>
+                <h3>Autonomía Total</h3>
+                <p>Te capacitamos para que manejes las soluciones sin depender de nosotros.</p>
+                <div class="example"><strong>Ejemplo:</strong> Equipo de Paola maneja su plataforma educativa de forma independiente después de 2 semanas de capacitación.</div>
+                <div class="service-tags"><span>Training</span><span>Documentación</span><span>Soporte</span></div>
+            </div>
+            <div class="service-card fade-up">
+                <div class="service-icon">☁️</div>
+                <h3>Infraestructura Incluida</h3>
+                <p>Nos encargamos del hosting, servidores, dominios y toda la infraestructura técnica.</p>
+                <div class="example"><strong>Ejemplo:</strong> Hosting, dominio, SSL, backups y monitoreo incluidos sin costo adicional para el cliente.</div>
+                <div class="service-tags"><span>AWS</span><span>Hosting</span><span>SSL</span><span>Backups</span></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<div class="container">
+    <div class="cta-section fade-up">
+        <h2>¿No encontrás lo que necesitás?</h2>
+        <p>Cada solución se diseña a medida. Contanos tu reto y te mostraremos cómo resolverlo.</p>
+        <a href="contacto.html" class="btn-primary">Contanos tu proyecto →</a>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="footer-grid fade-up">
+            <div class="footer-col">
+                <h4>⚡ IA Solutions</h4>
+                <p>Soluciones inteligentes con ingeniería aplicada. Democratizamos la tecnología para que cada negocio pueda crecer.</p>
+                <div class="footer-social">
+                    <a href="#" title="LinkedIn">in</a>
+                    <a href="#" title="Instagram">📷</a>
+                    <a href="#" title="TikTok">🎵</a>
+                    <a href="#" title="YouTube">▶</a>
+                    <a href="#" title="WhatsApp">💬</a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Servicios</h4>
+                <a href="servicios.html">Catálogo completo</a>
+                <a href="servicios.html#innovadoras">Soluciones innovadoras</a>
+                <a href="servicios.html#educacion">Plataformas educativas</a>
+            </div>
+            <div class="footer-col">
+                <h4>Recursos</h4>
+                <a href="casos.html">Casos de éxito</a>
+                <a href="nosotros.html">Quiénes somos</a>
+                <a href="presupuesto.html">Cómo presupuestar</a>
+                <a href="contacto.html">Contacto</a>
+            </div>
+            <div class="footer-col">
+                <h4>Contacto</h4>
+                <p>📧 hola@tusitio.com</p>
+                <p>💬 +54 9 11 1234-5678</p>
+                <p>🌎 Latinoamérica y el mundo</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p style="margin-bottom:8px;">© 2025 IA Solutions — Soluciones Inteligentes con Ingeniería Aplicada</p>
+            <p class="footer-legal">Todos los proyectos se rigen por contrato claro. Garantías incluidas. Tus datos son tuyos.</p>
+        </div>
+    </div>
+</footer>
+
+<div class="sound-toggle" id="soundToggle" title="Activar/Desactivar sonidos">🔊</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
