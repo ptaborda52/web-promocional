@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Soluciones y demostraciones — CuantiLogic</title>
+  <meta name="description" content="Cuatro demostraciones interactivas de lo que construimos: pedidos, tablero, integración e inventario. Interfaces con datos ficticios, identificadas como tales.">
+  <link rel="canonical" href="https://cuantilogic.tech/soluciones.html">
+  <meta name="theme-color" content="#0B1224">
+  <meta name="color-scheme" content="dark">
+  <link rel="icon" href="assets/brand/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="assets/brand/apple-touch-icon.png">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="CuantiLogic">
+  <meta property="og:locale" content="es_AR">
+  <meta property="og:title" content="Soluciones y demostraciones — CuantiLogic">
+  <meta property="og:description" content="Pedidos, tableros, integraciones e inventario: cuatro demostraciones interactivas con datos ficticios.">
+  <meta property="og:url" content="https://cuantilogic.tech/soluciones.html">
+  <meta property="og:image" content="https://cuantilogic.tech/assets/brand/og-cover.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="stylesheet" href="css/styles.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Saltar al contenido</a>
+
+  <nav class="nav" aria-label="Navegación principal">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html">
+        <img src="assets/brand/logo-horizontal.svg" alt="CuantiLogic" width="798" height="120">
+      </a>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="como-trabajamos.html">Cómo trabajamos</a></li>
+        <li><a href="soluciones.html" aria-current="page">Soluciones</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li class="nav-only-mobile"><a href="contacto.html">Contacto</a></li>
+      </ul>
+
+      <a class="nav-cta" href="contacto.html">
+        Hablemos
+        <svg aria-hidden="true"><use href="assets/icons.svg#i-arrow"></use></svg>
+      </a>
+
+      <a class="nav-toggle" href="#nav-links" aria-expanded="false" aria-controls="nav-links" aria-label="Abrir menú de navegación">
+        <svg class="icon-menu" aria-hidden="true"><use href="assets/icons.svg#i-menu"></use></svg>
+        <svg class="icon-close" aria-hidden="true"><use href="assets/icons.svg#i-close"></use></svg>
+      </a>
+    </div>
+  </nav>
+
+  <main id="main">
+    <header class="page-head">
+      <div class="container">
+        <p class="breadcrumb"><a href="index.html">Inicio</a> / Soluciones y demostraciones</p>
+        <h1 class="display">Soluciones y demostraciones.</h1>
+        <p class="lead">
+          Cuatro interfaces que muestran cómo resolvemos pedidos, stock, integraciones y administración.
+          Son demostraciones con datos ficticios: no son trabajos de clientes ni representan resultados.
+        </p>
+      </div>
+    </header>
+
+    <section class="sec" aria-labelledby="demos-title">
+      <div class="container">
+        <div class="sec-head">
+          <div>
+            <p class="eyebrow">Demostraciones</p>
+            <h2 id="demos-title">Tocá las interfaces. Están hechas para eso.</h2>
+            <p class="lead">Cada bloque se puede explorar: cambiar el filtro, elegir un pedido, correr una sincronización.</p>
+          </div>
+        </div>
+
+        <div class="grid grid--2">
+
+          <!-- ===== 1. PEDIDOS ===== -->
+          <article class="demo-shell reveal" data-orders>
+            <div class="demo-shell__bar">
+              <span class="viz-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+              <span>pedidos · tabla y detalle</span>
+              <span class="demo-tag">Demostración</span>
+            </div>
+
+            <div class="demo-stage">
+              <table class="dtable">
+                <caption class="sr-only">Pedidos de ejemplo. Elegí uno para ver su detalle.</caption>
+                <thead>
+                  <tr>
+                    <th scope="col">Pedido</th>
+                    <th scope="col">Cliente</th>
+                    <th scope="col">Estado</th>
+                    <th scope="col" class="num">Total</th>
+                    <th scope="col"><span class="sr-only">Detalle</span></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr data-order data-id="1043" data-client="Comercio Aurora" data-items="Remera talle M · Gorra" data-channel="WhatsApp" data-state="Confirmado" data-total="$ 84.500" class="is-active">
+                    <td data-label="Pedido"><b>#1043</b></td>
+                    <td data-label="Cliente">Comercio Aurora</td>
+                    <td data-label="Estado"><span class="dstate dstate--ok"><i aria-hidden="true"></i>Confirmado</span></td>
+                    <td class="num" data-label="Total">$ 84.500</td>
+                    <td class="cell-action"><button class="row-btn" type="button" aria-pressed="true" aria-label="Ver detalle del pedido 1043">Ver</button></td>
+                  </tr>
+                  <tr data-order data-id="1044" data-client="Almacén del Sur" data-items="Buzo canguro · 2 medias" data-channel="Tienda online" data-state="Pendiente de pago" data-total="$ 46.200">
+                    <td data-label="Pedido"><b>#1044</b></td>
+                    <td data-label="Cliente">Almacén del Sur</td>
+                    <td data-label="Estado"><span class="dstate dstate--wait"><i aria-hidden="true"></i>Pendiente</span></td>
+                    <td class="num" data-label="Total">$ 46.200</td>
+                    <td class="cell-action"><button class="row-btn" type="button" aria-pressed="false" aria-label="Ver detalle del pedido 1044">Ver</button></td>
+                  </tr>
+                  <tr data-order data-id="1045" data-client="Kiosco 9 de Julio" data-items="Campera · Mochila" data-channel="Mostrador" data-state="Listo para entregar" data-total="$ 129.900">
+                    <td data-label="Pedido"><b>#1045</b></td>
+                    <td data-label="Cliente">Kiosco 9 de Julio</td>
+                    <td data-label="Estado"><span class="dstate dstate--wait"><i aria-hidden="true"></i>Listo</span></td>
+                    <td class="num" data-label="Total">$ 129.900</td>
+                    <td class="cell-action"><button class="row-btn" type="button" aria-pressed="false" aria-label="Ver detalle del pedido 1045">Ver</button></td>
+                  </tr>
+                  <tr data-order data-id="1046" data-client="Comercio Aurora" data-items="3 remeras · 1 gorra" data-channel="WhatsApp" data-state="Confirmado" data-total="$ 61.300">
+                    <td data-label="Pedido"><b>#1046</b></td>
+                    <td data-label="Cliente">Comercio Aurora</td>
+                    <td data-label="Estado"><span class="dstate dstate--ok"><i aria-hidden="true"></i>Confirmado</span></td>
+                    <td class="num" data-label="Total">$ 61.300</td>
+                    <td class="cell-action"><button class="row-btn" type="button" aria-pressed="false" aria-label="Ver detalle del pedido 1046">Ver</button></td>
+                  </tr>
+                  <tr data-order data-id="1047" data-client="Depósito Norte" data-items="Buzo · Pantalón" data-channel="Tienda online" data-state="Cancelado" data-total="$ 98.000">
+                    <td data-label="Pedido"><b>#1047</b></td>
+                    <td data-label="Cliente">Depósito Norte</td>
+                    <td data-label="Estado"><span class="dstate dstate--bad"><i aria-hidden="true"></i>Cancelado</span></td>
+                    <td class="num" data-label="Total">$ 98.000</td>
+                    <td class="cell-action"><button class="row-btn" type="button" aria-pressed="false" aria-label="Ver detalle del pedido 1047">Ver</button></td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <div class="dorder" data-order-detail aria-live="polite">
+                <p class="dorder-head">Pedido <b data-field="id">#1043</b><span>detalle</span></p>
+                <dl>
+                  <dt>Cliente</dt><dd data-field="client">Comercio Aurora</dd>
+                  <dt>Ítems</dt><dd data-field="items">Remera talle M · Gorra</dd>
+                  <dt>Canal</dt><dd data-field="channel">WhatsApp</dd>
+                  <dt>Estado</dt><dd data-field="state">Confirmado</dd>
+                  <dt>Total</dt><dd data-field="total">$ 84.500</dd>
+                </dl>
+              </div>
+            </div>
+
+            <div class="demo-foot">
+              <h3>Pedidos con origen y responsable</h3>
+              <p>El pedido entra por donde llega, se registra una vez y descuenta stock. La tabla y el detalle son la misma pantalla.</p>
+              <p class="demo-note"><svg aria-hidden="true"><use href="assets/icons.svg#i-info"></use></svg> Datos ficticios de demostración. Los nombres de comercios son inventados.</p>
+            </div>
+          </article>
+
+          <!-- ===== 2. TABLERO ===== -->
+          <article class="demo-shell reveal" data-chart data-delay="1">
+            <div class="demo-shell__bar">
+              <span class="viz-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+              <span>tablero · indicadores</span>
+              <span class="demo-tag">Demostración</span>
+            </div>
+
+            <div class="demo-stage">
+              <div class="dkpis">
+                <div class="dkpi"><span>Pedidos del mes</span><b>312</b><em>sobre 30 días</em></div>
+                <div class="dkpi"><span>Ticket promedio</span><b>$ 74.100</b><em>por pedido</em></div>
+                <div class="dkpi"><span>Stock crítico</span><b>3</b><em>ítems bajo mínimo</em></div>
+              </div>
+
+              <div class="demo-toolbar">
+                <button class="demo-btn" type="button" data-metric="a" aria-pressed="true">Pedidos</button>
+                <button class="demo-btn" type="button" data-metric="b" aria-pressed="false">Facturación</button>
+              </div>
+
+              <div class="dchart" role="group" aria-label="Evolución semanal">
+                <button class="dbar" type="button" data-bar data-a="42" data-b="58" data-label="Semana 1" style="--h:42%"><span>42</span></button>
+                <button class="dbar" type="button" data-bar data-a="61" data-b="72" data-label="Semana 2" style="--h:61%"><span>61</span></button>
+                <button class="dbar" type="button" data-bar data-a="55" data-b="64" data-label="Semana 3" style="--h:55%"><span>55</span></button>
+                <button class="dbar" type="button" data-bar data-a="88" data-b="94" data-label="Semana 4" data-peak="true" style="--h:88%"><span>88</span></button>
+                <button class="dbar" type="button" data-bar data-a="74" data-b="81" data-label="Semana 5" style="--h:74%"><span>74</span></button>
+                <button class="dbar" type="button" data-bar data-a="92" data-b="100" data-label="Semana 6" style="--h:92%"><span>92</span></button>
+              </div>
+              <div class="dchart-axis" aria-hidden="true">
+                <span>S1</span><span>S2</span><span>S3</span><span>S4</span><span>S5</span><span>S6</span>
+              </div>
+              <p class="small" data-chart-caption>Pedidos por semana. Datos ficticios de la demostración.</p>
+            </div>
+
+            <div class="demo-foot">
+              <h3>Un tablero que se actualiza con la operación</h3>
+              <p>Los indicadores salen del mismo registro que usa el equipo, no de una planilla armada aparte.</p>
+              <p class="demo-note"><svg aria-hidden="true"><use href="assets/icons.svg#i-info"></use></svg> Cifras inventadas con fines ilustrativos.</p>
+            </div>
+          </article>
+
+          <!-- ===== 3. INTEGRACIÓN ===== -->
+          <article class="demo-shell reveal" data-sync>
+            <div class="demo-shell__bar">
+              <span class="viz-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+              <span>integración · sincronización</span>
+              <span class="demo-tag">Demostración</span>
+            </div>
+
+            <div class="demo-stage">
+              <div class="dsync">
+                <div class="dsys">
+                  <b>ERP</b>
+                  <span>catálogo · stock</span>
+                </div>
+                <div class="dlink" data-sync-link aria-hidden="true">
+                  <svg><use href="assets/icons.svg#i-arrow"></use></svg>
+                </div>
+                <div class="dsys">
+                  <b>Tienda online</b>
+                  <span>catálogo · pedidos</span>
+                </div>
+              </div>
+
+              <div class="demo-toolbar">
+                <button class="demo-btn demo-btn--accent" type="button" data-sync-run>Ejecutar sincronización</button>
+              </div>
+
+              <ul class="dlog" data-sync-log aria-live="polite" aria-label="Registro de sincronización">
+                <li data-state="ok"><b>01 · Catálogo: 128 productos</b><span></span><span>OK</span></li>
+                <li data-state="ok"><b>02 · Precios: 12 cambios</b><span></span><span>OK</span></li>
+                <li data-state="warn"><b>03 · Stock: 3 diferencias</b><span></span><span>REVISAR</span></li>
+                <li data-state="ok"><b>04 · Pedidos: 0 pendientes</b><span></span><span>OK</span></li>
+              </ul>
+            </div>
+
+            <div class="demo-foot">
+              <h3>Un solo origen para el catálogo y el stock</h3>
+              <p>El registro muestra qué se sincronizó y qué quedó para revisar. Los conflictos no se resuelven solos: se marcan.</p>
+              <p class="demo-note"><svg aria-hidden="true"><use href="assets/icons.svg#i-info"></use></svg> Simulación local. No se conecta a ningún sistema real.</p>
+            </div>
+          </article>
+
+          <!-- ===== 4. INVENTARIO ===== -->
+          <article class="demo-shell reveal" data-inventory data-delay="1">
+            <div class="demo-shell__bar">
+              <span class="viz-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+              <span>inventario · reposición</span>
+              <span class="demo-tag">Demostración</span>
+            </div>
+
+            <div class="demo-stage">
+              <div class="demo-toolbar">
+                <button class="demo-btn" type="button" data-inv-filter aria-pressed="false">Solo críticos</button>
+                <span class="mono" style="margin-left:auto;"><b data-inv-count>5</b> ítems</span>
+              </div>
+
+              <div class="dinv">
+                <div class="dinv-row" data-inv-row data-level="crit" data-target="24">
+                  <b>A-104 · Remera</b>
+                  <span class="qty">6</span>
+                  <div class="dmeter" style="--v:12%"><i></i></div>
+                  <button class="demo-btn demo-btn--mini" type="button" data-restock aria-label="Reponer A-104 Remera">Reponer</button>
+                </div>
+                <div class="dinv-row" data-inv-row data-level="low" data-target="18">
+                  <b>B-210 · Gorra</b>
+                  <span class="qty">11</span>
+                  <div class="dmeter" style="--v:34%"><i></i></div>
+                  <button class="demo-btn demo-btn--mini" type="button" data-restock aria-label="Reponer B-210 Gorra">Reponer</button>
+                </div>
+                <div class="dinv-row" data-inv-row data-level="ok">
+                  <b>C-318 · Buzo</b>
+                  <span class="qty">34</span>
+                  <div class="dmeter" style="--v:78%"><i></i></div>
+                  <span class="dinv-ok">OK</span>
+                </div>
+                <div class="dinv-row" data-inv-row data-level="ok">
+                  <b>D-402 · Pantalón</b>
+                  <span class="qty">41</span>
+                  <div class="dmeter" style="--v:88%"><i></i></div>
+                  <span class="dinv-ok">OK</span>
+                </div>
+                <div class="dinv-row" data-inv-row data-level="crit" data-target="12">
+                  <b>E-517 · Medias</b>
+                  <span class="qty">2</span>
+                  <div class="dmeter" style="--v:5%"><i></i></div>
+                  <button class="demo-btn demo-btn--mini" type="button" data-restock aria-label="Reponer E-517 Medias">Reponer</button>
+                </div>
+              </div>
+              <p class="dinv-empty" data-inv-empty hidden>No hay ítems en ese estado.</p>
+            </div>
+
+            <div class="demo-foot">
+              <h3>Reponer antes de que falte</h3>
+              <p>El mínimo se define por producto. Cuando el stock baja, aparece la alerta y la reposición queda registrada.</p>
+              <p class="demo-note"><svg aria-hidden="true"><use href="assets/icons.svg#i-info"></use></svg> Datos ficticios. Las cantidades no corresponden a ningún comercio.</p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="sec sec--line" id="totembiz" aria-labelledby="totembiz-title">
+      <div class="container">
+        <div class="product-panel reveal">
+          <div class="product-grid">
+            <div>
+              <p class="eyebrow">Producto propio</p>
+              <h2 id="totembiz-title" style="margin-top:.7rem;">Totembiz</h2>
+              <p class="lead" style="margin-top:1rem;">
+                Totembiz es un producto de software con identidad y desarrollo propios. No forma parte de
+                la oferta de servicios de CuantiLogic y se comunica por separado.
+              </p>
+              <p class="small" style="margin-top:1rem; max-width:36rem;">
+                Esta página solo deja constancia de que existe y de que es un producto distinto. No se
+                publican clientes, métricas ni resultados comerciales porque no corresponde atribuirlos.
+              </p>
+            </div>
+
+            <dl class="product-facts">
+              <div><dt>Producto</dt><dd>Totembiz</dd></div>
+              <div><dt>Relación</dt><dd>Producto propio, independiente de CuantiLogic</dd></div>
+              <div><dt>Estado</dt><dd>En desarrollo activo. Disponibilidad a consultar.</dd></div>
+              <div><dt>Comercialización</dt><dd>No se vende como servicio de CuantiLogic</dd></div>
+              <div><dt>Identidad</dt><dd>Marca separada; no aparece en el logotipo ni como submarca</dd></div>
+            </dl>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec">
+      <div class="container">
+        <div class="cta reveal">
+          <p class="eyebrow eyebrow--plain" style="justify-content:center;">Siguiente paso</p>
+          <h2>¿Querés ver cómo se aplicaría a tu caso?</h2>
+          <p class="lead">Contanos el proceso que tenés hoy y te mostramos qué parte se puede resolver con un sistema.</p>
+          <div class="cta-actions">
+            <a class="btn btn--primary" href="contacto.html">
+              Escribir la consulta
+              <svg aria-hidden="true"><use href="assets/icons.svg#i-arrow"></use></svg>
+            </a>
+            <a class="btn btn--ghost" href="servicios.html">Ver servicios</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a class="footer-brand" href="index.html">
+            <img src="assets/brand/logo-horizontal.svg" alt="CuantiLogic" width="798" height="120">
+          </a>
+          <p>Ingeniería de software y soluciones tecnológicas. Desarrollo a medida, integraciones, automatización y datos para empresas y comercios.</p>
+        </div>
+        <div class="footer-col">
+          <h3>Servicios</h3>
+          <ul>
+            <li><a href="servicios.html#software">Software a medida</a></li>
+            <li><a href="servicios.html#sistemas">ERP y CRM</a></li>
+            <li><a href="servicios.html#automatizacion">Automatización</a></li>
+            <li><a href="servicios.html#datos">Datos y tableros</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Empresa</h3>
+          <ul>
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="como-trabajamos.html">Cómo trabajamos</a></li>
+            <li><a href="soluciones.html">Soluciones y demostraciones</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Contacto</h3>
+          <ul>
+            <li><a href="contacto.html">Formulario de consulta</a></li>
+            <li><a href="privacidad.html">Política de privacidad</a></li>
+            <li><a href="soluciones.html#totembiz">Totembiz</a></li>
+            <!-- Se completan desde js/site-config.js. Sin datos, quedan ocultos. -->
+            <li hidden><a data-contact-email>Email</a></li>
+            <li hidden><a data-contact-whatsapp>WhatsApp</a></li>
+          </ul>
+          <p style="margin-top: 0.9rem;">Respondemos por el mismo medio que nos indiques.</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© <span data-year>2026</span> CuantiLogic. Todos los derechos reservados.</p>
+        <p>Los nombres de productos y marcas mencionados pertenecen a sus respectivos titulares.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/site-config.js" defer></script>
+  <script src="js/main.js" defer></script>
+  <script src="js/interactive.js" defer></script>
+</body>
+</html>
