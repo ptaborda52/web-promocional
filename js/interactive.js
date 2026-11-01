@@ -44,6 +44,47 @@
       reposicion: 'Alerta de reposición'
     };
 
+    /* Cada herramienta aporta operaciones concretas a cada paso del circuito. */
+    var ROLES = {
+      capture: {
+        tienda: ['Detecta una nueva compra', 'La tienda avisa que hay un pedido nuevo y lo trae con su detalle.'],
+        whatsapp: ['Recibe el pedido', 'El mensaje se convierte en un pedido con cliente y fecha.'],
+        planillas: ['Reúne los datos', 'Junta lo que vive en distintas planillas y lo ordena en un registro.'],
+        crm: ['Identifica al cliente', 'Cruza el contacto con su historial antes de cargar el pedido.'],
+        facturacion: ['Toma el comprobante', 'Parte de la factura emitida para no volver a tipear los mismos datos.'],
+        inventario: ['Lee el movimiento', 'Registra la entrada o salida de stock cuando ocurre.']
+      },
+      control: {
+        inventario: ['Consulta disponibilidad', 'Verifica stock antes de confirmar y reserva las unidades.'],
+        facturacion: ['Valida importes y comprobantes', 'Comprueba que la factura coincida con el pedido.'],
+        planillas: ['Controla inconsistencias', 'Detecta diferencias entre lo cargado y el sistema.'],
+        crm: ['Revisa el historial', 'Muestra compras anteriores y saldo del cliente.'],
+        tienda: ['Valida el pago', 'Confirma que el pago esté acreditado antes de preparar el envío.'],
+        whatsapp: ['Confirma con el cliente', 'Pide el dato que falta antes de cerrar el pedido.']
+      },
+      close: {
+        facturacion: ['Emite el comprobante', 'Genera la factura y la deja asociada al pedido.'],
+        inventario: ['Actualiza el inventario', 'Descuenta las unidades y deja el stock al día.'],
+        planillas: ['Genera el tablero', 'Consolida los datos en un reporte que se actualiza solo.'],
+        tienda: ['Publica la disponibilidad', 'Actualiza el catálogo online con el stock real.'],
+        crm: ['Actualiza la ficha del cliente', 'Deja registrada la compra y el próximo contacto.'],
+        whatsapp: ['Envía la confirmación', 'El cliente recibe el comprobante por el mismo canal.']
+      }
+    };
+
+    var PRIORITY = {
+      capture: ['tienda', 'whatsapp', 'planillas', 'crm', 'facturacion', 'inventario'],
+      control: ['inventario', 'facturacion', 'planillas', 'crm', 'tienda', 'whatsapp'],
+      close: ['facturacion', 'inventario', 'planillas', 'tienda', 'crm', 'whatsapp']
+    };
+
+    var FALLBACK = {
+      capture: ['Recibe el dato', 'El dato entra al circuito desde el punto que ya usás.'],
+      control: ['Valida la información', 'Revisa que no falte nada antes de registrarlo.'],
+      close: ['Registra el movimiento', 'Queda asentado con fecha y responsable.']
+    };
+
+    var CANON = ['whatsapp', 'planillas', 'tienda', 'inventario', 'facturacion', 'crm'];
     var DEFAULT = ['whatsapp', 'planillas'];
     var state = DEFAULT.slice();
     var previous = [];
@@ -60,7 +101,23 @@
       return items.slice(0, -1).join(', ') + ' y ' + items[items.length - 1];
     }
 
+    function stepFor(role) {
+      var order = PRIORITY[role];
+      for (var i = 0; i < order.length; i++) {
+        if (state.indexOf(order[i]) !== -1 && ROLES[role][order[i]]) return ROLES[role][order[i]];
+      }
+      return FALLBACK[role];
+    }
+
+    function lower(text) {
+      return text.charAt(0).toLowerCase() + text.slice(1);
+    }
+
     function render() {
+      state.sort(function (a, b) {
+        return CANON.indexOf(a) - CANON.indexOf(b);
+      });
+
       var picked = state.map(function (k) {
         return { key: k, data: SOURCES[k] };
       });
@@ -75,6 +132,8 @@
       var shown = outs.slice(0, 4);
       var extra = outs.length - shown.length;
 
+      var steps = [stepFor('capture'), stepFor('control'), stepFor('close')];
+
       colSources.innerHTML = picked
         .map(function (p) {
           var isNew = previous.indexOf(p.key) === -1;
@@ -86,10 +145,14 @@
         })
         .join('');
 
-      colSteps.innerHTML =
-        '<div class="fnode fnode--step"><b>1</b><span>Captura del dato</span></div>' +
-        '<div class="fnode fnode--step"><b>2</b><span>Validación y reglas</span></div>' +
-        '<div class="fnode fnode--step"><b>3</b><span>Registro único</span></div>';
+      colSteps.innerHTML = steps
+        .map(function (s, i) {
+          return (
+            '<div class="fnode fnode--step"><b>' + (i + 1) + '</b><span>' + s[0] +
+            '<em>' + s[1] + '</em></span></div>'
+          );
+        })
+        .join('');
 
       colOutputs.innerHTML =
         shown
@@ -113,9 +176,9 @@
       });
 
       readout.innerHTML =
-        '<p>Con <b>' + listNames(labels) + '</b> el dato se carga una vez, se valida y queda registrado. ' +
-        'Se actualizan ' + listNames(outLabels) + ' sin volver a escribirlo.</p>' +
-        '<p class="small">Demostración conceptual: no verificamos integraciones con estos productos ni con tus sistemas.</p>';
+        '<p>Con <b>' + listNames(labels) + '</b> el circuito ' +
+        lower(steps[0][0]) + ', ' + lower(steps[1][0]) + ' y ' + lower(steps[2][0]) +
+        '. Quedan al día ' + listNames(outLabels) + ' sin volver a escribirlo.</p>';
 
       if (cta) cta.setAttribute('href', 'contacto.html?flujo=' + state.join(','));
 
@@ -128,8 +191,8 @@
       if (hint) {
         hint.textContent =
           state.length === 6
-            ? 'Están las seis fuentes. El esquema muestra el caso más amplio.'
-            : 'Elegí las fuentes que uses hoy. Cada elección cambia el esquema.';
+            ? 'Están las seis herramientas: el esquema muestra el caso más amplio.'
+            : 'Seleccioná las herramientas que usás hoy. Cada combinación cambia el circuito.';
       }
     }
 
@@ -319,8 +382,8 @@
       if (caption) {
         caption.textContent =
           metric === 'a'
-            ? 'Pedidos por semana. Datos ficticios de la demostración.'
-            : 'Facturación por semana, en miles. Datos ficticios de la demostración.';
+            ? 'Pedidos por semana.'
+            : 'Facturación por semana, en miles de pesos.';
       }
     }
 
@@ -552,6 +615,11 @@
 
     setMode('guiado');
     showStep(1);
+
+    /* Permite que un CTA externo abra el paso de contacto. */
+    wizard.__goToStep = function (n) {
+      if (n >= 1 && n <= 3) showStep(n, true);
+    };
   }
 
   /* ======================================================================
@@ -560,6 +628,36 @@
   (function prefill() {
     if (!/contacto\.html$/.test(location.pathname)) return;
     var params = new URLSearchParams(location.search);
+
+    /* CTA de una demostración: preselecciona el motivo y salta al paso de contacto. */
+    var MOTIVOS = {
+      pedidos: 'Pedidos y ventas',
+      reportes: 'Reportes y datos',
+      conectados: 'Sistemas conectados',
+      stock: 'Stock e inventario'
+    };
+    var motivo = params.get('motivo');
+
+    if (motivo && MOTIVOS[motivo]) {
+      var valor = MOTIVOS[motivo];
+      var radio = document.querySelector('input[name="problema"][value="' + valor + '"]');
+      if (radio) radio.checked = true;
+
+      var wiz = document.querySelector('[data-wizard]');
+      if (wiz && wiz.__goToStep) wiz.__goToStep(3);
+
+      var panel = document.querySelector('[data-wizard]');
+      if (panel) {
+        var aviso = document.createElement('p');
+        aviso.className = 'small';
+        aviso.style.marginTop = '0.8rem';
+        aviso.textContent = 'Tomamos el motivo de tu consulta: ' + valor + '. Solo faltan tus datos.';
+        var formEl = panel.querySelector('[data-contact-form]');
+        if (formEl) panel.insertBefore(aviso, formEl);
+      }
+      return;
+    }
+
     var flujo = params.get('flujo');
     if (!flujo) return;
     var textarea = document.getElementById('mensaje');
