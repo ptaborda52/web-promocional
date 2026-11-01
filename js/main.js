@@ -1,6 +1,7 @@
 /* ==========================================================================
    CuantiLogic — main.js
-   Sin dependencias. Sin efectos invasivos.
+   Navegación, revelado al scroll, formulario y datos de contacto.
+   Sin dependencias.
    ========================================================================== */
 (function () {
   'use strict';
@@ -57,11 +58,11 @@
     });
 
     window.addEventListener('resize', function () {
-      if (window.innerWidth > 760 && toggle.getAttribute('aria-expanded') === 'true') setOpen(false);
+      if (window.innerWidth > 900 && toggle.getAttribute('aria-expanded') === 'true') setOpen(false);
     });
   }
 
-  /* ---------- 2. Reveal al scroll (con red de seguridad) ---------- */
+  /* ---------- 2. Revelado al scroll (con red de seguridad) ---------- */
   var reveals = Array.prototype.slice.call(document.querySelectorAll('.reveal'));
 
   if (reveals.length) {
@@ -102,39 +103,94 @@
   /* ---------- 3. Formulario de contacto ---------- */
   var form = document.querySelector('[data-contact-form]');
 
+  var MSG = {
+    pending:
+      'El envío del formulario todavía no está habilitado: falta configurar su destino. No se envió ningún dato.',
+    error: 'Revisá los campos marcados y volvé a intentar.',
+    network: 'No pudimos enviar el mensaje. Revisá tu conexión y probá de nuevo.',
+    rejected: 'El servicio rechazó el envío. Probá de nuevo en unos minutos.',
+    rate: 'Recibimos varios envíos seguidos. Esperá unos minutos antes de volver a intentar.',
+    server: 'El servicio de envío no está respondiendo. Probá de nuevo más tarde.',
+    ok: 'Mensaje enviado. Te vamos a responder por el medio que nos indicaste.'
+  };
+
+  function setStatus(state, text) {
+    var status = form && form.querySelector('[data-form-status]');
+    if (!status) return;
+    status.setAttribute('data-state', state);
+    status.textContent = text;
+  }
+
+  function clearError(field) {
+    field.removeAttribute('aria-invalid');
+    var err = document.getElementById(field.id + '-error');
+    if (err) err.textContent = '';
+  }
+
+  function setError(field, text) {
+    field.setAttribute('aria-invalid', 'true');
+    var err = document.getElementById(field.id + '-error');
+    if (err) err.textContent = text;
+  }
+
+  /* Un campo oculto (paso no visible del diagnóstico) no bloquea el envío. */
+  function isHidden(el) {
+    return !!el.closest('[hidden]');
+  }
+
+  function validate(scope) {
+    if (!form) return null;
+    var root = scope || form;
+    var firstInvalid = null;
+
+    /* Grupos de radios (rubro, problema). El propio ámbito puede ser un grupo. */
+    var groups = Array.prototype.slice.call(root.querySelectorAll('[data-required-group]'));
+    if (root.matches && root.matches('[data-required-group]')) groups.push(root);
+
+    Array.prototype.forEach.call(groups, function (group) {
+      if (isHidden(group)) return;
+      var checked = group.querySelector('input[type="radio"]:checked');
+      var err = document.getElementById(group.id + '-error');
+      if (!checked) {
+        group.setAttribute('aria-invalid', 'true');
+        if (err) err.textContent = 'Elegí una opción para continuar.';
+        if (!firstInvalid) firstInvalid = group.querySelector('input[type="radio"]') || group;
+      } else {
+        group.removeAttribute('aria-invalid');
+        if (err) err.textContent = '';
+      }
+    });
+
+    Array.prototype.forEach.call(root.querySelectorAll('[data-required]'), function (field) {
+      if (isHidden(field)) return;
+
+      if (field.type === 'checkbox') {
+        if (!field.checked) {
+          setError(field, 'Tenés que aceptar la política de privacidad para enviar.');
+          if (!firstInvalid) firstInvalid = field;
+        } else {
+          clearError(field);
+        }
+        return;
+      }
+
+      var value = (field.value || '').trim();
+      if (!value) {
+        setError(field, 'Este campo es obligatorio.');
+        if (!firstInvalid) firstInvalid = field;
+      } else if (field.type === 'email' && !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(value)) {
+        setError(field, 'Revisá el formato del correo.');
+        if (!firstInvalid) firstInvalid = field;
+      } else {
+        clearError(field);
+      }
+    });
+
+    return firstInvalid;
+  }
+
   if (form) {
-    var status = form.querySelector('[data-form-status]');
     var endpoint = (form.getAttribute('data-endpoint') || CFG.formEndpoint || '').trim();
-
-    var MSG = {
-      pending:
-        'El envío del formulario todavía no está habilitado: falta configurar su destino. No se envió ningún dato.',
-      error: 'Revisá los campos marcados y volvé a intentar.',
-      network: 'No pudimos enviar el mensaje. Revisá tu conexión y probá de nuevo.',
-      rejected: 'El servicio rechazó el envío. Probá de nuevo en unos minutos.',
-      rate: 'Recibimos varios envíos seguidos. Esperá unos minutos antes de volver a intentar.',
-      server: 'El servicio de envío no está respondiendo. Probá de nuevo más tarde.',
-      ok: 'Mensaje enviado. Te vamos a responder por el medio que nos indicaste.'
-    };
-
-    var setStatus = function (state, text) {
-      if (!status) return;
-      status.setAttribute('data-state', state);
-      status.textContent = text;
-    };
-
-    var clearError = function (field) {
-      field.removeAttribute('aria-invalid');
-      var err = document.getElementById(field.id + '-error');
-      if (err) err.textContent = '';
-    };
-
-    var setError = function (field, text) {
-      field.setAttribute('aria-invalid', 'true');
-      var err = document.getElementById(field.id + '-error');
-      if (err) err.textContent = text;
-    };
-
     var fields = Array.prototype.slice.call(form.querySelectorAll('[data-required]'));
     var sending = false;
 
@@ -146,37 +202,23 @@
       field.addEventListener('change', onChange);
     });
 
+    Array.prototype.forEach.call(form.querySelectorAll('[data-required-group] input'), function (input) {
+      input.addEventListener('change', function () {
+        var group = input.closest('[data-required-group]');
+        if (!group) return;
+        group.removeAttribute('aria-invalid');
+        var err = document.getElementById(group.id + '-error');
+        if (err) err.textContent = '';
+      });
+    });
+
     form.addEventListener('submit', function (e) {
       e.preventDefault();
 
       /* Evita envíos duplicados mientras hay una solicitud en curso. */
       if (sending) return;
 
-      var firstInvalid = null;
-
-      fields.forEach(function (field) {
-        /* Casilla de consentimiento: no se valida por valor sino por estado. */
-        if (field.type === 'checkbox') {
-          if (!field.checked) {
-            setError(field, 'Tenés que aceptar la política de privacidad para enviar.');
-            if (!firstInvalid) firstInvalid = field;
-          } else {
-            clearError(field);
-          }
-          return;
-        }
-
-        var value = (field.value || '').trim();
-        if (!value) {
-          setError(field, 'Este campo es obligatorio.');
-          if (!firstInvalid) firstInvalid = field;
-        } else if (field.type === 'email' && !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(value)) {
-          setError(field, 'Revisá el formato del correo.');
-          if (!firstInvalid) firstInvalid = field;
-        } else {
-          clearError(field);
-        }
-      });
+      var firstInvalid = validate(form);
 
       if (firstInvalid) {
         setStatus('error', MSG.error);
@@ -221,6 +263,9 @@
           if (r.res.ok && data.ok !== false) {
             form.reset();
             fields.forEach(clearError);
+            Array.prototype.forEach.call(form.querySelectorAll('[data-required-group]'), function (g) {
+              g.removeAttribute('aria-invalid');
+            });
             setStatus('ok', MSG.ok);
             return;
           }
@@ -259,6 +304,13 @@
         });
     });
   }
+
+  /* API mínima para el diagnóstico por pasos */
+  window.CLForm = {
+    validate: validate,
+    setStatus: setStatus,
+    form: form
+  };
 
   /* ---------- 4. Año del pie ---------- */
   var year = document.querySelector('[data-year]');
