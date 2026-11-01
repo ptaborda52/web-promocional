@@ -132,8 +132,8 @@
 
                 <!-- Núcleo -->
                 <g aria-hidden="true">
-                  <circle cx="232" cy="117" r="54" fill="none" stroke="rgba(24,217,232,.10)"/>
-                  <circle cx="232" cy="117" r="44" fill="none" stroke="rgba(24,217,232,.18)"/>
+                  <circle cx="232" cy="117" r="54" fill="none" stroke="rgba(24,217,232,.14)"/>
+                  <circle cx="232" cy="117" r="44" fill="none" stroke="rgba(24,217,232,.24)"/>
                   <circle cx="232" cy="117" r="33" fill="rgba(24,217,232,.08)" stroke="rgba(24,217,232,.42)"/>
                   <circle class="fig-pulse" cx="232" cy="63" r="3.2" fill="#18D9E8"/>
                   <circle class="fig-pulse fig-pulse--2" cx="286" cy="117" r="3.2" fill="#B9A6FF"/>
@@ -313,8 +313,8 @@
             <p class="eyebrow">Demostración interactiva</p>
             <h2 id="flujo-title">Armá tu flujo.</h2>
             <p class="lead">
-              Elegí con qué trabaja tu negocio hoy. El esquema muestra qué se conectaría y qué dejarías
-              de hacer a mano. No consulta tus sistemas: es una demostración.
+              Seleccioná las herramientas que usás hoy y mirá cómo podrían conectarse en un flujo más
+              simple. Es una simulación: no se conecta a tus sistemas.
             </p>
           </div>
           <div class="sec-head__aside">
@@ -328,7 +328,7 @@
         <div class="builder reveal" data-builder>
           <div class="builder-bar">
             <h3>Tu operación, en un solo circuito</h3>
-            <span class="mono">6 fuentes · 3 pasos · resultados</span>
+            <span class="mono">6 herramientas · 3 pasos</span>
           </div>
 
           <div class="builder-grid">
@@ -357,10 +357,12 @@
                 </button>
               </div>
 
-              <p class="small">
-                Las fuentes son ejemplos de lo que suele aparecer en una PyME. No implican que exista una
-                integración certificada con esos productos.
-              </p>
+              <div class="builder-legend">
+                <span><b>1</b> Lo que ya usás</span>
+                <span><b>2</b> Lo que se automatiza</span>
+                <span><b>3</b> Lo que ves</span>
+              </div>
+
             </div>
 
             <div class="builder-stage">
@@ -378,9 +380,9 @@
                 <div class="flowmap-col">
                   <span class="flowmap-label">Lo que se automatiza</span>
                   <div data-col="steps">
-                    <div class="fnode fnode--step"><b>1</b><span>Captura del dato</span></div>
-                    <div class="fnode fnode--step"><b>2</b><span>Validación y reglas</span></div>
-                    <div class="fnode fnode--step"><b>3</b><span>Registro único</span></div>
+                    <div class="fnode fnode--step"><b>1</b><span>Recibe el pedido<em>El mensaje se convierte en un pedido con cliente, ítems y fecha.</em></span></div>
+                    <div class="fnode fnode--step"><b>2</b><span>Controla inconsistencias<em>Detecta diferencias entre lo cargado y lo que muestra el sistema.</em></span></div>
+                    <div class="fnode fnode--step"><b>3</b><span>Genera el tablero<em>Consolida los datos en un reporte que se actualiza solo.</em></span></div>
                   </div>
                 </div>
 
@@ -398,8 +400,7 @@
               </div>
 
               <div class="builder-readout" data-readout aria-live="polite">
-                <p>Con <b>WhatsApp y Planillas</b> el dato se carga una vez, se valida y queda registrado. Se actualizan <b>pedido registrado, seguimiento del cliente, tablero al día y stock actualizado</b> sin volver a escribirlo.</p>
-                <p class="small">Demostración conceptual: no verificamos integraciones con estos productos ni con tus sistemas.</p>
+                <p>Con <b>WhatsApp y Planillas</b> el circuito recibe el pedido, controla inconsistencias y genera el tablero. Quedan al día pedido registrado, seguimiento del cliente, tablero al día y stock actualizado sin volver a escribirlo.</p>
               </div>
 
               <div class="builder-actions">
@@ -408,7 +409,6 @@
                   Consultar por algo así
                   <svg aria-hidden="true"><use href="assets/icons.svg#i-arrow"></use></svg>
                 </a>
-                <span class="mono">No se envía ningún dato</span>
               </div>
             </div>
           </div>
@@ -713,19 +713,56 @@
     </section>
 
     <!-- ============ TOTEMBIZ ============ -->
-    <section class="sec sec--tight sec--line" aria-labelledby="totembiz-title">
+    <section class="sec sec--line" aria-labelledby="totembiz-title">
       <div class="container">
-        <div class="card reveal" style="max-width: 46rem;">
-          <p class="eyebrow">Producto propio</p>
-          <h2 id="totembiz-title" style="font-size: clamp(1.5rem, 2.4vw, 2rem); margin-top: 0.6rem;">Totembiz</h2>
-          <p>
-            Totembiz es un producto de software con identidad y desarrollo propios. No forma parte de la
-            oferta de servicios de CuantiLogic y se comunica por separado.
-          </p>
-          <a class="card-more" href="soluciones.html#totembiz">
-            Ver ficha del producto
-            <svg aria-hidden="true"><use href="assets/icons.svg#i-arrow"></use></svg>
-          </a>
+        <div class="product-block reveal">
+          <div>
+            <p class="eyebrow">Producto propio</p>
+            <h2 id="totembiz-title">Totembiz</h2>
+            <p class="lead">Software de gestión comercial desarrollado por CuantiLogic.</p>
+            <p class="small" style="margin-top:.9rem; max-width:36rem;">
+              Además de las soluciones a medida, en CuantiLogic creamos Totembiz: una plataforma
+              independiente que reúne ventas, inventario y administración en un mismo sistema, con una
+              arquitectura preparada para seguir evolucionando.
+            </p>
+            <div class="product-tags">
+              <span>Ventas</span><span>Inventario</span><span>Administración</span>
+            </div>
+            <p class="product-state"><i aria-hidden="true"></i> En desarrollo activo · disponibilidad a consultar</p>
+          </div>
+
+          <div class="product-shot" aria-hidden="true">
+            <div class="product-shot__bar">
+              <span class="viz-dots"><i></i><i></i><i></i></span>
+              Totembiz · panel
+            </div>
+            <div class="product-shot__body">
+              <div class="product-nav">
+                <span class="is-on">Ventas</span>
+                <span>Stock</span>
+                <span>Caja</span>
+                <span>Clientes</span>
+              </div>
+              <div class="product-main">
+                <div class="product-kpis">
+                  <div><span>Ventas hoy</span><b>$ 184.500</b></div>
+                  <div><span>Pedidos</span><b>23</b></div>
+                  <div><span>Stock bajo</span><b>4</b></div>
+                </div>
+                <div class="product-bars">
+                  <i style="--h:38%"></i><i style="--h:62%"></i><i style="--h:47%"></i>
+                  <i style="--h:81%"></i><i style="--h:58%"></i><i style="--h:92%"></i>
+                  <i style="--h:70%"></i><i style="--h:55%"></i>
+                </div>
+                <div class="product-rows">
+                  <span>Pedido #1043 <b>Confirmado</b></span>
+                  <span>Pedido #1044 <b>Pendiente</b></span>
+                  <span>Reposición A-104 <b>En curso</b></span>
+                </div>
+              </div>
+            </div>
+            <div class="product-shot__foot">Vista ilustrativa del producto · datos de prueba</div>
+          </div>
         </div>
       </div>
     </section>

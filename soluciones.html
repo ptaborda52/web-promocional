@@ -62,13 +62,18 @@
         <h1 class="display">Soluciones y demostraciones.</h1>
         <p class="lead">
           Cuatro interfaces que muestran cómo resolvemos pedidos, stock, integraciones y administración.
-          Son demostraciones con datos ficticios: no son trabajos de clientes ni representan resultados.
+          Están hechas para tocarlas.
         </p>
       </div>
     </header>
 
     <section class="sec" aria-labelledby="demos-title">
       <div class="container">
+        <div class="demo-banner reveal" role="note" style="margin-bottom: clamp(2rem, 4vw, 3rem);">
+          <strong>Demo interactiva · datos de prueba</strong>
+          <p>Todo lo que sigue funciona con datos de prueba y no está conectado a los sistemas de nadie.</p>
+        </div>
+
         <div class="sec-head">
           <div>
             <p class="eyebrow">Demostraciones</p>
@@ -84,7 +89,6 @@
             <div class="demo-shell__bar">
               <span class="viz-dots" aria-hidden="true"><i></i><i></i><i></i></span>
               <span>pedidos · tabla y detalle</span>
-              <span class="demo-tag">Demostración</span>
             </div>
 
             <div class="demo-stage">
@@ -153,7 +157,7 @@
             <div class="demo-foot">
               <h3>Pedidos con origen y responsable</h3>
               <p>El pedido entra por donde llega, se registra una vez y descuenta stock. La tabla y el detalle son la misma pantalla.</p>
-              <p class="demo-note"><svg aria-hidden="true"><use href="assets/icons.svg#i-info"></use></svg> Datos ficticios de demostración. Los nombres de comercios son inventados.</p>
+              <a class="demo-cta" href="contacto.html?motivo=pedidos">¿Necesitás organizar tus pedidos? <svg aria-hidden="true"><use href="assets/icons.svg#i-arrow"></use></svg></a>
             </div>
           </article>
 
@@ -162,7 +166,6 @@
             <div class="demo-shell__bar">
               <span class="viz-dots" aria-hidden="true"><i></i><i></i><i></i></span>
               <span>tablero · indicadores</span>
-              <span class="demo-tag">Demostración</span>
             </div>
 
             <div class="demo-stage">
@@ -188,13 +191,13 @@
               <div class="dchart-axis" aria-hidden="true">
                 <span>S1</span><span>S2</span><span>S3</span><span>S4</span><span>S5</span><span>S6</span>
               </div>
-              <p class="small" data-chart-caption>Pedidos por semana. Datos ficticios de la demostración.</p>
+              <p class="small" data-chart-caption>Pedidos por semana.</p>
             </div>
 
             <div class="demo-foot">
               <h3>Un tablero que se actualiza con la operación</h3>
               <p>Los indicadores salen del mismo registro que usa el equipo, no de una planilla armada aparte.</p>
-              <p class="demo-note"><svg aria-hidden="true"><use href="assets/icons.svg#i-info"></use></svg> Cifras inventadas con fines ilustrativos.</p>
+              <a class="demo-cta" href="contacto.html?motivo=reportes">¿Querés ver tus números con claridad? <svg aria-hidden="true"><use href="assets/icons.svg#i-arrow"></use></svg></a>
             </div>
           </article>
 
@@ -203,7 +206,6 @@
             <div class="demo-shell__bar">
               <span class="viz-dots" aria-hidden="true"><i></i><i></i><i></i></span>
               <span>integración · sincronización</span>
-              <span class="demo-tag">Demostración</span>
             </div>
 
             <div class="demo-stage">
@@ -236,7 +238,7 @@
             <div class="demo-foot">
               <h3>Un solo origen para el catálogo y el stock</h3>
               <p>El registro muestra qué se sincronizó y qué quedó para revisar. Los conflictos no se resuelven solos: se marcan.</p>
-              <p class="demo-note"><svg aria-hidden="true"><use href="assets/icons.svg#i-info"></use></svg> Simulación local. No se conecta a ningún sistema real.</p>
+              <a class="demo-cta" href="contacto.html?motivo=conectados">¿Tus sistemas trabajan desconectados? <svg aria-hidden="true"><use href="assets/icons.svg#i-arrow"></use></svg></a>
             </div>
           </article>
 
@@ -245,7 +247,6 @@
             <div class="demo-shell__bar">
               <span class="viz-dots" aria-hidden="true"><i></i><i></i><i></i></span>
               <span>inventario · reposición</span>
-              <span class="demo-tag">Demostración</span>
             </div>
 
             <div class="demo-stage">
@@ -292,7 +293,7 @@
             <div class="demo-foot">
               <h3>Reponer antes de que falte</h3>
               <p>El mínimo se define por producto. Cuando el stock baja, aparece la alerta y la reposición queda registrada.</p>
-              <p class="demo-note"><svg aria-hidden="true"><use href="assets/icons.svg#i-info"></use></svg> Datos ficticios. Las cantidades no corresponden a ningún comercio.</p>
+              <a class="demo-cta" href="contacto.html?motivo=stock">¿Querés controlar tu stock? <svg aria-hidden="true"><use href="assets/icons.svg#i-arrow"></use></svg></a>
             </div>
           </article>
 
@@ -302,30 +303,62 @@
 
     <section class="sec sec--line" id="totembiz" aria-labelledby="totembiz-title">
       <div class="container">
-        <div class="product-panel reveal">
-          <div class="product-grid">
-            <div>
-              <p class="eyebrow">Producto propio</p>
-              <h2 id="totembiz-title" style="margin-top:.7rem;">Totembiz</h2>
-              <p class="lead" style="margin-top:1rem;">
-                Totembiz es un producto de software con identidad y desarrollo propios. No forma parte de
-                la oferta de servicios de CuantiLogic y se comunica por separado.
-              </p>
-              <p class="small" style="margin-top:1rem; max-width:36rem;">
-                Esta página solo deja constancia de que existe y de que es un producto distinto. No se
-                publican clientes, métricas ni resultados comerciales porque no corresponde atribuirlos.
-              </p>
+        <div class="product-block reveal">
+          <div>
+            <p class="eyebrow">Producto propio</p>
+            <h2 id="totembiz-title">Totembiz</h2>
+            <p class="lead">Software de gestión comercial desarrollado por CuantiLogic.</p>
+            <p class="small" style="margin-top:.9rem; max-width:36rem;">
+              Además de las soluciones a medida, en CuantiLogic creamos Totembiz: una plataforma
+              independiente que reúne ventas, inventario y administración en un mismo sistema, con una
+              arquitectura preparada para seguir evolucionando.
+            </p>
+            <div class="product-tags">
+              <span>Ventas</span><span>Inventario</span><span>Administración</span>
             </div>
+            <p class="product-state"><i aria-hidden="true"></i> En desarrollo activo · disponibilidad a consultar</p>
+          </div>
 
-            <dl class="product-facts">
-              <div><dt>Producto</dt><dd>Totembiz</dd></div>
-              <div><dt>Relación</dt><dd>Producto propio, independiente de CuantiLogic</dd></div>
-              <div><dt>Estado</dt><dd>En desarrollo activo. Disponibilidad a consultar.</dd></div>
-              <div><dt>Comercialización</dt><dd>No se vende como servicio de CuantiLogic</dd></div>
-              <div><dt>Identidad</dt><dd>Marca separada; no aparece en el logotipo ni como submarca</dd></div>
-            </dl>
+          <div class="product-shot" aria-hidden="true">
+            <div class="product-shot__bar">
+              <span class="viz-dots"><i></i><i></i><i></i></span>
+              Totembiz · panel
+            </div>
+            <div class="product-shot__body">
+              <div class="product-nav">
+                <span class="is-on">Ventas</span>
+                <span>Stock</span>
+                <span>Caja</span>
+                <span>Clientes</span>
+              </div>
+              <div class="product-main">
+                <div class="product-kpis">
+                  <div><span>Ventas hoy</span><b>$ 184.500</b></div>
+                  <div><span>Pedidos</span><b>23</b></div>
+                  <div><span>Stock bajo</span><b>4</b></div>
+                </div>
+                <div class="product-bars">
+                  <i style="--h:38%"></i><i style="--h:62%"></i><i style="--h:47%"></i>
+                  <i style="--h:81%"></i><i style="--h:58%"></i><i style="--h:92%"></i>
+                  <i style="--h:70%"></i><i style="--h:55%"></i>
+                </div>
+                <div class="product-rows">
+                  <span>Pedido #1043 <b>Confirmado</b></span>
+                  <span>Pedido #1044 <b>Pendiente</b></span>
+                  <span>Reposición A-104 <b>En curso</b></span>
+                </div>
+              </div>
+            </div>
+            <div class="product-shot__foot">Vista ilustrativa del producto · datos de prueba</div>
           </div>
         </div>
+
+        <dl class="product-facts reveal" style="margin-top:clamp(1.6rem,3vw,2.4rem); max-width:48rem;">
+          <div><dt>Producto</dt><dd>Totembiz</dd></div>
+          <div><dt>Relación</dt><dd>Producto propio de CuantiLogic, con identidad y comunicación separadas</dd></div>
+          <div><dt>Alcance</dt><dd>Ventas y pedidos · Inventario · Administración</dd></div>
+          <div><dt>Estado</dt><dd>En desarrollo activo. La disponibilidad se informa al consultar.</dd></div>
+        </dl>
       </div>
     </section>
 
@@ -343,7 +376,7 @@
             <a class="btn btn--ghost" href="servicios.html">Ver servicios</a>
           </div>
         </div>
-      </div>
+            </div>
     </section>
 
   </main>

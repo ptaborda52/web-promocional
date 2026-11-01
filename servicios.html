@@ -61,8 +61,8 @@
         <p class="breadcrumb"><a href="index.html">Inicio</a> / Servicios</p>
         <h1 class="display">Lo que construimos y para qué sirve.</h1>
         <p class="lead">
-          Cuatro grupos de problemas y diez servicios. No se contratan todos: se elige el que resuelve
-          el problema. Si el problema no está acá, escribinos igual.
+          Cuatro grupos de problemas y diez servicios. Se elige el que resuelve el problema, no el
+          catálogo completo. Si el problema no está acá, escribinos igual.
         </p>
       </div>
     </header>
@@ -217,16 +217,20 @@
                 </g>
 
                 <rect class="fig-box" x="2" y="18" width="56" height="28" rx="6"/>
-                <text class="fig-mono" x="30" y="36" text-anchor="middle">VENTAS</text>
+                <use href="assets/icons.svg#i-cart" x="8" y="27" width="10" height="10" color="#18D9E8"/>
+                <text class="fig-mono fig-mono--xs" x="22" y="36">VENTAS</text>
 
                 <rect class="fig-box" x="2" y="122" width="56" height="28" rx="6"/>
-                <text class="fig-mono" x="30" y="140" text-anchor="middle">STOCK</text>
+                <use href="assets/icons.svg#i-box" x="8" y="131" width="10" height="10" color="#18D9E8"/>
+                <text class="fig-mono fig-mono--xs" x="22" y="140">STOCK</text>
 
                 <rect class="fig-box" x="262" y="18" width="56" height="28" rx="6"/>
-                <text class="fig-mono" x="290" y="36" text-anchor="middle">CLIENTE</text>
+                <use href="assets/icons.svg#i-users" x="268" y="27" width="10" height="10" color="#18D9E8"/>
+                <text class="fig-mono fig-mono--xs" x="282" y="36">CLIENTE</text>
 
                 <rect class="fig-box" x="262" y="122" width="56" height="28" rx="6"/>
-                <text class="fig-mono" x="290" y="140" text-anchor="middle">ADMIN.</text>
+                <use href="assets/icons.svg#i-grid" x="268" y="131" width="10" height="10" color="#18D9E8"/>
+                <text class="fig-mono fig-mono--xs" x="282" y="140">ADMIN.</text>
 
                 <circle class="fig-node fig-pulse" cx="160" cy="58" r="3"/>
                 <circle class="fig-node--violet" cx="160" cy="104" r="2.5"/>
@@ -238,17 +242,17 @@
             <div class="svc-item" id="software" data-service="software">
               <h3><svg aria-hidden="true"><use href="assets/icons.svg#i-code"></use></svg> Software a medida</h3>
               <p>Cuando el sistema que usás no cubre el proceso, y adaptarlo cuesta más que construirlo bien.</p>
-              <div class="tags"><span class="tag">web</span><span class="tag">escritorio</span><span class="tag">apis</span></div>
+              <div class="tags"><span class="tag">web</span><span class="tag">escritorio</span><span class="tag">integraciones</span></div>
             </div>
             <div class="svc-item" data-service="erp">
               <h3><svg aria-hidden="true"><use href="assets/icons.svg#i-db"></use></svg> ERP y gestión</h3>
               <p>Implementación y adaptación de sistemas de gestión, o módulos a medida sobre el ERP que ya tenés.</p>
-              <div class="tags"><span class="tag">migración</span><span class="tag">módulos</span></div>
+              <div class="tags"><span class="tag">migración</span><span class="tag">módulos</span><span class="tag">datos</span></div>
             </div>
             <div class="svc-item" data-service="crm">
               <h3><svg aria-hidden="true"><use href="assets/icons.svg#i-users"></use></svg> CRM y seguimiento comercial</h3>
               <p>Para que la cartera de clientes no viva en la cabeza del vendedor ni en una libreta.</p>
-              <div class="tags"><span class="tag">oportunidades</span><span class="tag">roles</span></div>
+              <div class="tags"><span class="tag">oportunidades</span><span class="tag">roles</span><span class="tag">historial</span></div>
             </div>
           </div>
 
@@ -264,38 +268,42 @@
 
         <!-- ===== 02 OPERACIÓN ===== -->
         <article class="svc-block reveal" id="operacion">
-          <div class="svc-head">
+          <div class="svc-head svc-head--flip">
             <div class="svc-head__text">
               <p class="svc-kicker">02 — OPERACIÓN · 3 SERVICIOS</p>
               <h2>Que las cosas pasen solas.</h2>
               <p class="lead">
                 Todo lo que hoy depende de que alguien se acuerde, se ejecute y quede registrado.
+                Trabajamos con las plataformas que ya usás —WhatsApp, Mercado Libre, sistemas de
+                facturación— cuando exponen una vía de integración.
               </p>
             </div>
             <figure style="margin:0;">
-              <svg viewBox="0 0 320 168" role="img" aria-label="Esquema de una automatización: un evento dispara tres pasos encadenados y deja un registro.">
-                <circle cx="30" cy="84" r="18" class="fig-box fig-box--accent"/>
-                <path d="M30 76 v9 l-4 4" class="fig-line fig-line--cyan" stroke-width="1.6"/>
-                <text class="fig-mono" x="30" y="120" text-anchor="middle">EVENTO</text>
+              <svg viewBox="0 0 360 168" role="img" aria-label="Esquema de una automatización: un evento dispara tres pasos encadenados y deja un registro.">
+                <circle cx="26" cy="84" r="18" class="fig-box fig-box--accent"/>
+                <use href="assets/icons.svg#i-bolt" x="18" y="76" width="16" height="16" color="#18D9E8"/>
+                <text class="fig-mono fig-mono--xs" x="26" y="122" text-anchor="middle">EVENTO</text>
 
-                <path class="fig-line fig-line--cyan fig-flow" d="M48 84 H76"/>
-                <rect class="fig-box" x="76" y="64" width="58" height="40" rx="7"/>
-                <text class="fig-mono" x="105" y="81" text-anchor="middle">VALIDA</text>
-                <text class="fig-mono" x="105" y="93" text-anchor="middle">DATOS</text>
+                <path class="fig-line fig-line--cyan fig-flow" d="M44 84 H58"/>
+                <rect class="fig-box" x="58" y="62" width="76" height="44" rx="7"/>
+                <use href="assets/icons.svg#i-check" x="66" y="72" width="12" height="12" color="#18D9E8"/>
+                <text class="fig-mono fig-mono--xs" x="82" y="81">VALIDA</text>
+                <text class="fig-mono fig-mono--xs" x="66" y="96" opacity=".7">DATOS</text>
 
-                <path class="fig-line fig-line--cyan fig-flow" d="M134 84 H162"/>
-                <rect class="fig-box" x="162" y="64" width="58" height="40" rx="7"/>
-                <text class="fig-mono" x="191" y="81" text-anchor="middle">EJECUTA</text>
-                <text class="fig-mono" x="191" y="93" text-anchor="middle">TAREA</text>
+                <path class="fig-line fig-line--cyan fig-flow" d="M134 84 H156"/>
+                <rect class="fig-box" x="156" y="62" width="76" height="44" rx="7"/>
+                <use href="assets/icons.svg#i-flow" x="164" y="72" width="12" height="12" color="#18D9E8"/>
+                <text class="fig-mono fig-mono--xs" x="180" y="81">EJECUTA</text>
+                <text class="fig-mono fig-mono--xs" x="164" y="96" opacity=".7">TAREA</text>
 
-                <path class="fig-line fig-line--cyan fig-flow" d="M220 84 H246"/>
-                <rect class="fig-box fig-box--accent" x="246" y="64" width="72" height="40" rx="7"/>
-                <text class="fig-mono" x="282" y="81" text-anchor="middle">REGISTRA</text>
-                <text class="fig-mono" x="282" y="93" text-anchor="middle">RESULTADO</text>
+                <path class="fig-line fig-line--cyan fig-flow" d="M232 84 H254"/>
+                <rect class="fig-box fig-box--accent" x="254" y="62" width="76" height="44" rx="7"/>
+                <use href="assets/icons.svg#i-receipt" x="262" y="72" width="12" height="12" color="#18D9E8"/>
+                <text class="fig-mono fig-mono--xs" x="278" y="81">REGISTRA</text>
+                <text class="fig-mono fig-mono--xs" x="262" y="96" opacity=".7">RESULTADO</text>
 
-                <path class="fig-line fig-line--dash" d="M105 134 H282"/>
-                <text class="fig-mono" x="105" y="150">SIN INTERVENCIÓN MANUAL</text>
-                <circle class="fig-node fig-pulse" cx="30" cy="84" r="2.6"/>
+                <path class="fig-line fig-line--dash" d="M58 134 H330"/>
+                <text class="fig-mono fig-mono--xs" x="58" y="150">SIN INTERVENCIÓN MANUAL</text>
               </svg>
             </figure>
           </div>
@@ -309,12 +317,12 @@
             <div class="svc-item" id="integraciones" data-service="integraciones">
               <h3><svg aria-hidden="true"><use href="assets/icons.svg#i-plug"></use></svg> Integración entre sistemas</h3>
               <p>El mismo dato cargado una sola vez, aunque lo usen cuatro sistemas distintos.</p>
-              <div class="tags"><span class="tag">api</span><span class="tag">webhooks</span><span class="tag">sync</span></div>
+              <div class="tags"><span class="tag">api</span><span class="tag">webhooks</span><span class="tag">sincronización</span></div>
             </div>
             <div class="svc-item" id="datos" data-service="datos">
               <h3><svg aria-hidden="true"><use href="assets/icons.svg#i-chart"></use></svg> Datos, reportes y tableros</h3>
               <p>La información de la operación disponible el mismo día, no cuando alguien la arma a mano.</p>
-              <div class="tags"><span class="tag">tableros</span><span class="tag">exportación</span></div>
+              <div class="tags"><span class="tag">tableros</span><span class="tag">reportes</span><span class="tag">exportación</span></div>
             </div>
           </div>
 
@@ -362,13 +370,16 @@
                 <circle class="fig-node" cx="215" cy="62" r="2.4"/>
 
                 <rect class="fig-box" x="230" y="22" width="66" height="26" rx="7"/>
-                <text class="fig-mono" x="263" y="39" text-anchor="middle">STOCK</text>
+                <use href="assets/icons.svg#i-box" x="237" y="29" width="11" height="11" color="#18D9E8"/>
+                <text class="fig-mono fig-mono--xs" x="252" y="39">STOCK</text>
 
                 <rect class="fig-box" x="230" y="56" width="66" height="26" rx="7"/>
-                <text class="fig-mono" x="263" y="73" text-anchor="middle">FACTURA</text>
+                <use href="assets/icons.svg#i-receipt" x="237" y="63" width="11" height="11" color="#18D9E8"/>
+                <text class="fig-mono fig-mono--xs" x="252" y="73">FACTURA</text>
 
                 <rect class="fig-box" x="230" y="90" width="66" height="26" rx="7"/>
-                <text class="fig-mono" x="263" y="107" text-anchor="middle">ENVÍO</text>
+                <use href="assets/icons.svg#i-arrow" x="237" y="97" width="11" height="11" color="#18D9E8"/>
+                <text class="fig-mono fig-mono--xs" x="252" y="107">ENVÍO</text>
               </svg>
             </figure>
           </div>
@@ -382,7 +393,7 @@
             <div class="svc-item" data-service="portales">
               <h3><svg aria-hidden="true"><use href="assets/icons.svg#i-grid"></use></svg> Plataformas y portales</h3>
               <p>Cuando la empresa necesita un espacio propio para clientes, proveedores o vendedores.</p>
-              <div class="tags"><span class="tag">cuentas</span><span class="tag">permisos</span></div>
+              <div class="tags"><span class="tag">cuentas</span><span class="tag">permisos</span><span class="tag">autogestión</span></div>
             </div>
           </div>
 
@@ -398,7 +409,7 @@
 
         <!-- ===== 04 EVOLUCIÓN ===== -->
         <article class="svc-block reveal" id="evolucion">
-          <div class="svc-head">
+          <div class="svc-head svc-head--flip">
             <div class="svc-head__text">
               <p class="svc-kicker">04 — EVOLUCIÓN · 2 SERVICIOS</p>
               <h2>Lo que ya funciona, mejor.</h2>
@@ -419,13 +430,16 @@
                 <path d="M134 69 l7 5 -7 5" class="fig-line fig-line--cyan" stroke-width="1.6"/>
 
                 <rect class="fig-box fig-box--accent" x="148" y="22" width="166" height="24" rx="6"/>
-                <text class="fig-mono" x="158" y="38">MÓDULO 01 · DOCUMENTADO</text>
+                <use href="assets/icons.svg#i-check" x="155" y="29" width="10" height="10" color="#18D9E8"/>
+                <text class="fig-mono fig-mono--xs" x="170" y="38">MÓDULO 01 · DOCUMENTADO</text>
 
                 <rect class="fig-box fig-box--accent" x="148" y="56" width="166" height="24" rx="6"/>
-                <text class="fig-mono" x="158" y="72">MÓDULO 02 · PROBADO</text>
+                <use href="assets/icons.svg#i-check" x="155" y="63" width="10" height="10" color="#18D9E8"/>
+                <text class="fig-mono fig-mono--xs" x="170" y="72">MÓDULO 02 · PROBADO</text>
 
                 <rect class="fig-box fig-box--accent" x="148" y="90" width="166" height="24" rx="6"/>
-                <text class="fig-mono" x="158" y="106">MÓDULO 03 · MEDIBLE</text>
+                <use href="assets/icons.svg#i-check" x="155" y="97" width="10" height="10" color="#18D9E8"/>
+                <text class="fig-mono fig-mono--xs" x="170" y="106">MÓDULO 03 · MEDIBLE</text>
 
                 <text class="fig-mono" x="148" y="130">ENTREGAS PARCIALES</text>
                 <text class="fig-mono" x="148" y="144">SIN PARAR LA OPERACIÓN</text>
@@ -437,12 +451,12 @@
             <div class="svc-item" id="mantenimiento" data-service="mantenimiento">
               <h3><svg aria-hidden="true"><use href="assets/icons.svg#i-tool"></use></svg> Mantenimiento y modernización</h3>
               <p>Sistemas que funcionan pero quedaron viejos, lentos o sin quien los mantenga.</p>
-              <div class="tags"><span class="tag">refactor</span><span class="tag">migración</span><span class="tag">soporte</span></div>
+              <div class="tags"><span class="tag">modernización</span><span class="tag">migración</span><span class="tag">soporte</span></div>
             </div>
             <div class="svc-item" data-service="ia">
               <h3><svg aria-hidden="true"><use href="assets/icons.svg#i-spark"></use></svg> Inteligencia artificial aplicada</h3>
               <p>IA donde resuelve algo concreto: clasificar, extraer datos de documentos, responder consultas repetitivas.</p>
-              <div class="tags"><span class="tag">documentos</span><span class="tag">clasificación</span></div>
+              <div class="tags"><span class="tag">documentos</span><span class="tag">clasificación</span><span class="tag">extracción</span></div>
             </div>
           </div>
 
