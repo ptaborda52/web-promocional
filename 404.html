@@ -5,75 +5,38 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Página no encontrada — CuantiLogic</title>
   <meta name="robots" content="noindex">
-  <meta name="theme-color" content="#05070D">
-  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
-  <style>
-    :root {
-      --bg: #05070d;
-      --fg: #edfaff;
-      --muted: #91a4b3;
-      --cyan: #00f2fe;
-      --cyan-soft: #8defff;
-    }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      min-height: 100vh;
-      display: grid;
-      align-content: center;
-      background:
-        radial-gradient(ellipse 60% 45% at 12% -5%, rgba(0, 242, 254, 0.1), transparent 60%),
-        radial-gradient(ellipse 55% 45% at 92% 8%, rgba(121, 40, 202, 0.16), transparent 62%),
-        var(--bg);
-      color: var(--fg);
-      font-family: "Inter", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
-      line-height: 1.65;
-      padding: 2rem 1.25rem;
-    }
-    .wrap { max-width: 40rem; margin-inline: auto; width: 100%; }
-    .eyebrow {
-      font-family: ui-monospace, Consolas, monospace;
-      font-size: 0.66rem;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--cyan-soft);
-      display: flex;
-      align-items: center;
-      gap: 0.6rem;
-    }
-    .eyebrow::before { content: ""; width: 1.9rem; height: 1px; background: var(--cyan); }
-    h1 {
-      font-family: Georgia, "Times New Roman", serif;
-      font-weight: 400;
-      letter-spacing: -0.055em;
-      line-height: 0.98;
-      font-size: clamp(2.2rem, 6vw, 3.4rem);
-      margin-top: 1.2rem;
-    }
-    p { margin-top: 1.2rem; color: var(--muted); max-width: 52ch; }
-    .actions { display: flex; flex-wrap: wrap; gap: 0.7rem; margin-top: 2rem; }
-    a.btn {
-      display: inline-flex;
-      align-items: center;
-      padding: 0.85rem 1.15rem;
-      border-radius: 10px;
-      font-size: 0.86rem;
-      font-weight: 600;
-      text-decoration: none;
-      border: 1px solid transparent;
-    }
-    a.primary { background: var(--cyan); color: #041116; box-shadow: 0 0 24px rgba(0, 242, 254, 0.22); }
-    a.ghost { border-color: rgba(255, 255, 255, 0.14); color: var(--fg); }
-    a:focus-visible { outline: 2px solid var(--cyan); outline-offset: 3px; }
-  </style>
+  <meta name="theme-color" content="#0B1224">
+  <meta name="color-scheme" content="dark">
+  <link rel="icon" href="/assets/brand/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
-  <main class="wrap">
-    <p class="eyebrow">Error 404</p>
-    <h1>Esta página no existe.</h1>
-    <p>El enlace puede estar roto o la dirección mal escrita. Desde acá podés volver al inicio o ir directo a lo que estabas buscando.</p>
-    <div class="actions">
-      <a class="btn primary" href="/index.html">Volver al inicio</a>
-      <a class="btn ghost" href="/servicios.html">Ver servicios</a>
+  <main id="main" class="sec" style="min-height: 100vh; display: grid; align-content: center;">
+    <div class="container" style="max-width: 44rem;">
+
+      <a class="brand" href="/index.html" style="margin-bottom: 2.5rem;">
+        <img src="/assets/brand/logo-horizontal.svg" alt="CuantiLogic" width="762" height="139">
+      </a>
+
+      <p class="mono" style="color: var(--cian);">ERROR 404</p>
+      <h1 class="display" style="margin-top: 1rem;">Esta página no existe.</h1>
+      <p class="lead" style="margin-top: 1.2rem;">
+        El enlace que seguiste apunta a una dirección que ya no está o que nunca existió.
+        Podés volver al inicio o ver los servicios.
+      </p>
+
+      <div class="hero-actions" style="margin-top: 2rem;">
+        <a class="btn btn--primary" href="/index.html">
+          Volver al inicio
+          <svg aria-hidden="true"><use href="/assets/icons.svg#i-arrow"></use></svg>
+        </a>
+        <a class="btn btn--ghost" href="/servicios.html">Ver servicios</a>
+      </div>
+
+      <p class="small" style="margin-top: 2.5rem;">
+        Si llegaste acá desde un enlace del sitio, escribinos a
+        <a href="mailto:contacto@cuantilogic.tech">contacto@cuantilogic.tech</a>.
+      </p>
     </div>
   </main>
 </body>

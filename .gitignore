@@ -2,3 +2,13 @@
 .workbuddy-ai/
 .DS_Store
 Thumbs.db
+
+# Material de marca original (se conserva en disco, no se publica)
+kit-cuantilogic/
+Kit-de-marca-CuantiLogic.zip
+Manual-de-marca-CuantiLogic.pdf
+
+# Activos reemplazados por el kit oficial
+assets/fonts/
+assets/favicon.svg
+assets/og-cover.png
