@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>CuantiLogic — Ingeniería de software para empresas y comercios</title>
-  <meta name="description" content="Desarrollamos software a medida, integramos sistemas y automatizamos procesos para empresas y comercios. ERP, CRM, comercio electrónico y datos.">
+  <meta name="description" content="Desarrollamos software a medida, conectamos sistemas y automatizamos procesos para empresas y comercios. Empezamos por entender cómo trabajás hoy.">
   <link rel="canonical" href="https://cuantilogic.tech/">
   <meta name="theme-color" content="#0B1224">
   <meta name="color-scheme" content="dark">
@@ -31,14 +31,14 @@
   <nav class="nav" aria-label="Navegación principal">
     <div class="container nav-inner">
       <a class="brand" href="index.html">
-        <img src="assets/brand/logo-horizontal.svg" alt="CuantiLogic" width="762" height="139">
+        <img src="assets/brand/logo-horizontal.svg" alt="CuantiLogic" width="798" height="120">
       </a>
 
       <ul class="nav-links" id="nav-links">
         <li><a href="index.html" aria-current="page">Inicio</a></li>
         <li><a href="servicios.html">Servicios</a></li>
         <li><a href="como-trabajamos.html">Cómo trabajamos</a></li>
-        <li><a href="proyectos.html">Proyectos</a></li>
+        <li><a href="soluciones.html">Soluciones</a></li>
         <li><a href="nosotros.html">Nosotros</a></li>
         <li class="nav-only-mobile"><a href="contacto.html">Contacto</a></li>
       </ul>
@@ -56,23 +56,22 @@
   </nav>
 
   <main id="main">
-
     <!-- ============ HERO ============ -->
     <section class="hero">
       <div class="container hero-grid">
         <div>
-          <p class="eyebrow">Ingeniería de software · Argentina</p>
-          <h1 class="display">Sistemas que ordenan tu negocio y <span style="color:var(--cian)">te devuelven horas</span>.</h1>
+          <p class="eyebrow">Ingeniería de software · Córdoba, Argentina</p>
+          <h1 class="display">Sistemas que ordenan tu negocio y te devuelven horas.</h1>
           <p class="lead">
-            Desarrollamos, integramos y automatizamos el software que tu empresa necesita para dejar de
-            depender de planillas, mensajes sueltos y memoria. Empezamos por entender cómo trabajás hoy.
+            Desarrollamos el software que conecta ventas, stock, facturación y clientes en un solo
+            circuito. Menos planillas paralelas, menos datos cargados dos veces, menos decisiones a ciegas.
           </p>
           <div class="hero-actions">
             <a class="btn btn--primary" href="contacto.html">
               Contanos qué te está frenando
               <svg aria-hidden="true"><use href="assets/icons.svg#i-arrow"></use></svg>
             </a>
-            <a class="btn btn--ghost" href="servicios.html">Ver servicios</a>
+            <a class="btn btn--ghost" href="#armar-flujo">Armá tu flujo</a>
           </div>
           <p class="hero-tags">
             <span><svg aria-hidden="true"><use href="assets/icons.svg#i-check"></use></svg> Desarrollo a medida</span>
@@ -82,183 +81,181 @@
         </div>
 
         <div class="hero-viz">
-          <div class="viz-frame">
-            <div class="viz-bar">
+          <div class="flowcard">
+            <div class="flowcard-bar">
               <span class="viz-dots" aria-hidden="true"><i></i><i></i><i></i></span>
-              <span class="viz-title">Arquitectura de integración</span>
-              <span class="viz-live"><i aria-hidden="true"></i> En línea</span>
+              <span class="flowcard-title">Circuito de venta</span>
+              <span class="flowcard-live">Demostración</span>
             </div>
 
-            <div class="viz-body">
-              <!-- Variante escritorio -->
-              <svg class="fig viz-wide" viewBox="0 0 520 300" role="img" aria-labelledby="hero-fig-t hero-fig-d">
-                <title id="hero-fig-t">Cómo se conecta la operación de una empresa</title>
-                <desc id="hero-fig-d">Cuatro fuentes dispersas —WhatsApp, planilla, ERP y tienda online— convergen en un núcleo de integración y salen ordenadas como pedido registrado, stock actualizado y reporte emitido. Es un esquema ilustrativo, no un caso real.</desc>
+            <div class="flowcard-body">
+              <!-- Escritorio -->
+              <svg class="fig viz-wide" viewBox="0 0 520 240" role="img" aria-labelledby="hero-fig-t hero-fig-d">
+                <title id="hero-fig-t">Circuito de una venta: cuatro fuentes, un núcleo y tres resultados</title>
+                <desc id="hero-fig-d">WhatsApp, planilla, ERP y tienda online convergen en un núcleo de integración. De ahí salen el pedido registrado, el stock actualizado y el reporte emitido. Es un esquema conceptual, no un caso de cliente.</desc>
 
                 <g class="fig-mono" aria-hidden="true">
-                  <text x="0" y="10">ENTRADAS</text>
-                  <text x="300" y="10">SALIDAS</text>
+                  <text x="0" y="6">LO QUE YA USÁS</text>
+                  <text x="336" y="6">LO QUE VES</text>
                 </g>
 
                 <!-- Fuentes -->
                 <g aria-hidden="true">
-                  <rect class="fig-box" x="0" y="22" width="132" height="40" rx="8"/>
-                  <circle class="fig-node" cx="16" cy="42" r="3"/>
-                  <text class="fig-text" x="28" y="40">WhatsApp</text>
-                  <text class="fig-sub" x="28" y="53">mensajes</text>
+                  <rect class="fig-box" x="0" y="18" width="132" height="42" rx="8"/>
+                  <circle class="fig-node" cx="16" cy="39" r="3"/>
+                  <text class="fig-text" x="28" y="37">WhatsApp</text>
+                  <text class="fig-sub" x="28" y="50">mensajes</text>
 
-                  <rect class="fig-box" x="0" y="72" width="132" height="40" rx="8"/>
-                  <circle class="fig-node" cx="16" cy="92" r="3"/>
-                  <text class="fig-text" x="28" y="90">Planilla</text>
-                  <text class="fig-sub" x="28" y="103">stock manual</text>
+                  <rect class="fig-box" x="0" y="70" width="132" height="42" rx="8"/>
+                  <circle class="fig-node" cx="16" cy="91" r="3"/>
+                  <text class="fig-text" x="28" y="89">Planilla</text>
+                  <text class="fig-sub" x="28" y="102">stock manual</text>
 
-                  <rect class="fig-box" x="0" y="122" width="132" height="40" rx="8"/>
-                  <circle class="fig-node" cx="16" cy="142" r="3"/>
-                  <text class="fig-text" x="28" y="140">ERP</text>
-                  <text class="fig-sub" x="28" y="153">gestión</text>
+                  <rect class="fig-box" x="0" y="122" width="132" height="42" rx="8"/>
+                  <circle class="fig-node" cx="16" cy="143" r="3"/>
+                  <text class="fig-text" x="28" y="141">ERP</text>
+                  <text class="fig-sub" x="28" y="154">gestión</text>
 
-                  <rect class="fig-box" x="0" y="172" width="132" height="40" rx="8"/>
-                  <circle class="fig-node" cx="16" cy="192" r="3"/>
-                  <text class="fig-text" x="28" y="190">Tienda online</text>
-                  <text class="fig-sub" x="28" y="203">pedidos</text>
+                  <rect class="fig-box" x="0" y="174" width="132" height="42" rx="8"/>
+                  <circle class="fig-node" cx="16" cy="195" r="3"/>
+                  <text class="fig-text" x="28" y="193">Tienda online</text>
+                  <text class="fig-sub" x="28" y="206">pedidos</text>
                 </g>
 
                 <!-- Conectores convergentes -->
                 <g aria-hidden="true">
-                  <path class="fig-line fig-line--dash fig-flow" d="M132 42 C172 42 164 111 198 111"/>
-                  <path class="fig-line fig-line--dash fig-flow" d="M132 92 C166 92 168 114 198 114"/>
-                  <path class="fig-line fig-line--dash fig-flow" d="M132 142 C166 142 168 120 198 120"/>
-                  <path class="fig-line fig-line--dash fig-flow" d="M132 192 C172 192 164 123 198 123"/>
+                  <path class="fig-line fig-line--dash fig-flow" d="M132 39 C168 39 162 105 190 111"/>
+                  <path class="fig-line fig-line--dash fig-flow" d="M132 91 C164 91 166 108 190 113"/>
+                  <path class="fig-line fig-line--dash fig-flow" d="M132 143 C164 143 166 122 190 119"/>
+                  <path class="fig-line fig-line--dash fig-flow" d="M132 195 C168 195 162 127 190 121"/>
                 </g>
 
                 <!-- Núcleo -->
                 <g aria-hidden="true">
-                  <circle cx="232" cy="117" r="58" fill="none" stroke="rgba(24,217,232,.12)"/>
-                  <circle cx="232" cy="117" r="46" fill="none" stroke="rgba(24,217,232,.2)"/>
-                  <circle cx="232" cy="117" r="34" fill="rgba(24,217,232,.09)" stroke="rgba(24,217,232,.45)"/>
-                  <circle class="fig-pulse" cx="232" cy="59" r="3.4" fill="#18D9E8"/>
-                  <circle class="fig-pulse fig-pulse--2" cx="290" cy="117" r="3.4" fill="#B9A6FF"/>
-                  <circle class="fig-pulse fig-pulse--3" cx="232" cy="175" r="3.4" fill="#18D9E8"/>
-                  <text x="232" y="112" text-anchor="middle" fill="#F3F8FF" font-family="system-ui, sans-serif" font-size="11.5" font-weight="700" letter-spacing="-.2">Cuanti</text>
-                  <text x="232" y="124" text-anchor="middle" fill="#F3F8FF" font-family="system-ui, sans-serif" font-size="11.5" font-weight="700" letter-spacing="-.2">Logic</text>
-                  <text x="232" y="136" text-anchor="middle" fill="#18D9E8" font-family="ui-monospace, monospace" font-size="7" letter-spacing="1.2">CORE</text>
+                  <circle cx="232" cy="117" r="54" fill="none" stroke="rgba(24,217,232,.10)"/>
+                  <circle cx="232" cy="117" r="44" fill="none" stroke="rgba(24,217,232,.18)"/>
+                  <circle cx="232" cy="117" r="33" fill="rgba(24,217,232,.08)" stroke="rgba(24,217,232,.42)"/>
+                  <circle class="fig-pulse" cx="232" cy="63" r="3.2" fill="#18D9E8"/>
+                  <circle class="fig-pulse fig-pulse--2" cx="286" cy="117" r="3.2" fill="#B9A6FF"/>
+                  <circle class="fig-pulse fig-pulse--3" cx="232" cy="171" r="3.2" fill="#18D9E8"/>
+                  <text x="232" y="113" text-anchor="middle" fill="#F3F8FF" font-family="system-ui, sans-serif" font-size="11.5" font-weight="700" letter-spacing="-.2">Cuanti</text>
+                  <text x="232" y="125" text-anchor="middle" fill="#F3F8FF" font-family="system-ui, sans-serif" font-size="11.5" font-weight="700" letter-spacing="-.2">Logic</text>
+                  <text x="232" y="137" text-anchor="middle" fill="#18D9E8" font-family="ui-monospace, monospace" font-size="6.5" letter-spacing="1.2">NÚCLEO</text>
                 </g>
 
-                <!-- Salida -->
+                <!-- Salidas -->
                 <g aria-hidden="true">
-                  <path class="fig-line fig-line--cyan fig-draw" style="--len:70" d="M290 117 H320"/>
-                  <path class="fig-line fig-line--cyan" d="M320 117 V46 H336" opacity=".55"/>
-                  <path class="fig-line fig-line--cyan" d="M320 117 V117 H336" opacity=".55"/>
-                  <path class="fig-line fig-line--cyan" d="M320 117 V188 H336" opacity=".55"/>
+                  <path class="fig-line fig-line--cyan fig-draw" style="--len:46" d="M274 117 H320"/>
+                  <path class="fig-line fig-line--cyan" d="M320 117 V40 H336" opacity=".5"/>
+                  <path class="fig-line fig-line--cyan" d="M320 117 V120 H336" opacity=".5"/>
+                  <path class="fig-line fig-line--cyan" d="M320 117 V200 H336" opacity=".5"/>
                 </g>
 
                 <g aria-hidden="true">
-                  <rect class="fig-box fig-box--accent" x="336" y="24" width="184" height="44" rx="8"/>
-                  <circle class="fig-node" cx="352" cy="46" r="3"/>
-                  <text class="fig-text" x="364" y="44">Pedido registrado</text>
-                  <text class="fig-sub" x="364" y="57">con fecha y responsable</text>
+                  <g class="fig-out">
+                    <rect class="fig-box fig-box--accent" x="336" y="18" width="184" height="44" rx="8"/>
+                    <circle class="fig-node" cx="352" cy="40" r="3"/>
+                    <text class="fig-text" x="364" y="38">Pedido registrado</text>
+                    <text class="fig-sub" x="364" y="51">fecha y responsable</text>
+                  </g>
 
-                  <rect class="fig-box fig-box--accent" x="336" y="95" width="184" height="44" rx="8"/>
-                  <circle class="fig-node" cx="352" cy="117" r="3"/>
-                  <text class="fig-text" x="364" y="115">Stock actualizado</text>
-                  <text class="fig-sub" x="364" y="128">en el momento</text>
+                  <g class="fig-out fig-out--2">
+                    <rect class="fig-box fig-box--accent" x="336" y="98" width="184" height="44" rx="8"/>
+                    <circle class="fig-node" cx="352" cy="120" r="3"/>
+                    <text class="fig-text" x="364" y="118">Stock actualizado</text>
+                    <text class="fig-sub" x="364" y="131">al instante</text>
+                  </g>
 
-                  <rect class="fig-box fig-box--accent" x="336" y="166" width="184" height="44" rx="8"/>
-                  <circle class="fig-node" cx="352" cy="188" r="3"/>
-                  <text class="fig-text" x="364" y="186">Reporte emitido</text>
-                  <text class="fig-sub" x="364" y="199">sin armarlo a mano</text>
-                </g>
-
-                <!-- Leyenda estructural: describe el esquema, no mide resultados -->
-                <g aria-hidden="true">
-                  <rect x="0" y="236" width="520" height="1" fill="rgba(243,248,255,.09)"/>
-                  <text class="fig-mono" x="0" y="256">ESTRUCTURA DEL ESQUEMA</text>
-                  <circle class="fig-node" cx="4" cy="274" r="3"/>
-                  <text class="fig-mono" x="14" y="277">4 ENTRADAS</text>
-                  <circle class="fig-node--violet" cx="102" cy="274" r="3"/>
-                  <text class="fig-mono" x="112" y="277">1 NÚCLEO</text>
-                  <circle class="fig-node" cx="190" cy="274" r="3"/>
-                  <text class="fig-mono" x="200" y="277">3 SALIDAS</text>
+                  <g class="fig-out fig-out--3">
+                    <rect class="fig-box fig-box--accent" x="336" y="178" width="184" height="44" rx="8"/>
+                    <circle class="fig-node" cx="352" cy="200" r="3"/>
+                    <text class="fig-text" x="364" y="198">Reporte emitido</text>
+                    <text class="fig-sub" x="364" y="211">sin armarlo a mano</text>
+                  </g>
                 </g>
               </svg>
 
-              <!-- Variante móvil: misma idea, composición vertical -->
-              <svg class="fig viz-compact" viewBox="0 0 320 448" role="img" aria-labelledby="hero-fig-t2 hero-fig-d2">
-                <title id="hero-fig-t2">Cómo se conecta la operación de una empresa</title>
-                <desc id="hero-fig-d2">Cuatro fuentes dispersas convergen en un núcleo de integración y salen ordenadas como pedido registrado, stock actualizado y reporte emitido. Esquema ilustrativo.</desc>
+              <!-- Móvil: misma idea, composición vertical -->
+              <svg class="fig viz-compact" viewBox="0 0 320 400" role="img" aria-labelledby="hero-fig-t2 hero-fig-d2">
+                <title id="hero-fig-t2">Circuito de una venta: cuatro fuentes, un núcleo y tres resultados</title>
+                <desc id="hero-fig-d2">WhatsApp, planilla, ERP y tienda online convergen en un núcleo de integración. De ahí salen el pedido registrado, el stock actualizado y el reporte emitido. Esquema conceptual.</desc>
 
-                <g class="fig-mono" aria-hidden="true"><text x="0" y="8">ENTRADAS</text></g>
+                <g class="fig-mono" aria-hidden="true"><text x="0" y="8">LO QUE YA USÁS</text></g>
 
                 <g aria-hidden="true">
-                  <rect class="fig-box" x="0" y="18" width="152" height="44" rx="8"/>
-                  <circle class="fig-node" cx="16" cy="40" r="3"/>
-                  <text class="fig-text" x="28" y="38">WhatsApp</text>
-                  <text class="fig-sub" x="28" y="51">mensajes</text>
+                  <rect class="fig-box" x="0" y="18" width="152" height="42" rx="8"/>
+                  <circle class="fig-node" cx="16" cy="39" r="3"/>
+                  <text class="fig-text" x="28" y="37">WhatsApp</text>
+                  <text class="fig-sub" x="28" y="50">mensajes</text>
 
-                  <rect class="fig-box" x="164" y="18" width="152" height="44" rx="8"/>
-                  <circle class="fig-node" cx="180" cy="40" r="3"/>
-                  <text class="fig-text" x="192" y="38">Planilla</text>
-                  <text class="fig-sub" x="192" y="51">stock manual</text>
+                  <rect class="fig-box" x="168" y="18" width="152" height="42" rx="8"/>
+                  <circle class="fig-node" cx="184" cy="39" r="3"/>
+                  <text class="fig-text" x="196" y="37">Planilla</text>
+                  <text class="fig-sub" x="196" y="50">stock manual</text>
 
-                  <rect class="fig-box" x="0" y="72" width="152" height="44" rx="8"/>
-                  <circle class="fig-node" cx="16" cy="94" r="3"/>
-                  <text class="fig-text" x="28" y="92">ERP</text>
-                  <text class="fig-sub" x="28" y="105">gestión</text>
+                  <rect class="fig-box" x="0" y="68" width="152" height="42" rx="8"/>
+                  <circle class="fig-node" cx="16" cy="89" r="3"/>
+                  <text class="fig-text" x="28" y="87">ERP</text>
+                  <text class="fig-sub" x="28" y="100">gestión</text>
 
-                  <rect class="fig-box" x="164" y="72" width="152" height="44" rx="8"/>
-                  <circle class="fig-node" cx="180" cy="94" r="3"/>
-                  <text class="fig-text" x="192" y="92">Tienda online</text>
-                  <text class="fig-sub" x="192" y="105">pedidos</text>
+                  <rect class="fig-box" x="168" y="68" width="152" height="42" rx="8"/>
+                  <circle class="fig-node" cx="184" cy="89" r="3"/>
+                  <text class="fig-text" x="196" y="87">Tienda online</text>
+                  <text class="fig-sub" x="196" y="100">pedidos</text>
                 </g>
 
                 <g aria-hidden="true">
-                  <path class="fig-line fig-line--dash fig-flow" d="M76 116 V136"/>
-                  <path class="fig-line fig-line--dash fig-flow" d="M240 116 V136"/>
-                  <path class="fig-line fig-line--dash fig-flow" d="M76 136 H240"/>
-                  <path class="fig-line fig-line--dash fig-flow" d="M160 136 V152"/>
+                  <path class="fig-line fig-line--dash fig-flow" d="M76 110 V132"/>
+                  <path class="fig-line fig-line--dash fig-flow" d="M244 110 V132"/>
+                  <path class="fig-line fig-line--dash fig-flow" d="M76 132 H244"/>
+                  <path class="fig-line fig-line--dash fig-flow" d="M160 132 V148"/>
                 </g>
 
                 <g aria-hidden="true">
-                  <circle cx="160" cy="188" r="36" fill="rgba(24,217,232,.09)" stroke="rgba(24,217,232,.45)"/>
-                  <circle class="fig-pulse" cx="160" cy="152" r="3.2" fill="#18D9E8"/>
-                  <text x="160" y="184" text-anchor="middle" fill="#F3F8FF" font-family="system-ui, sans-serif" font-size="12" font-weight="700">Cuanti</text>
-                  <text x="160" y="196" text-anchor="middle" fill="#F3F8FF" font-family="system-ui, sans-serif" font-size="12" font-weight="700">Logic</text>
-                  <text x="160" y="208" text-anchor="middle" fill="#18D9E8" font-family="ui-monospace, monospace" font-size="7.5" letter-spacing="1.2">CORE</text>
+                  <circle cx="160" cy="182" r="34" fill="rgba(24,217,232,.08)" stroke="rgba(24,217,232,.42)"/>
+                  <circle class="fig-pulse" cx="160" cy="148" r="3.2" fill="#18D9E8"/>
+                  <text x="160" y="178" text-anchor="middle" fill="#F3F8FF" font-family="system-ui, sans-serif" font-size="12" font-weight="700">Cuanti</text>
+                  <text x="160" y="190" text-anchor="middle" fill="#F3F8FF" font-family="system-ui, sans-serif" font-size="12" font-weight="700">Logic</text>
+                  <text x="160" y="202" text-anchor="middle" fill="#18D9E8" font-family="ui-monospace, monospace" font-size="7" letter-spacing="1.2">NÚCLEO</text>
                 </g>
 
                 <g aria-hidden="true">
-                  <path class="fig-line fig-line--cyan" d="M160 224 V244"/>
-                  <path class="fig-line fig-line--cyan" d="M76 244 H244" opacity=".55"/>
-                  <path class="fig-line fig-line--cyan" d="M76 244 V258" opacity=".55"/>
-                  <path class="fig-line fig-line--cyan" d="M160 244 V258" opacity=".55"/>
-                  <path class="fig-line fig-line--cyan" d="M244 244 V258" opacity=".55"/>
+                  <path class="fig-line fig-line--cyan" d="M160 216 V236"/>
+                  <path class="fig-line fig-line--cyan" d="M76 236 H244" opacity=".55"/>
+                  <path class="fig-line fig-line--cyan" d="M76 236 V250" opacity=".55"/>
+                  <path class="fig-line fig-line--cyan" d="M160 236 V250" opacity=".55"/>
+                  <path class="fig-line fig-line--cyan" d="M244 236 V250" opacity=".55"/>
                 </g>
 
                 <g aria-hidden="true">
-                  <rect class="fig-box fig-box--accent" x="0" y="258" width="320" height="42" rx="8"/>
-                  <circle class="fig-node" cx="16" cy="279" r="3"/>
-                  <text class="fig-text" x="28" y="277">Pedido registrado</text>
-                  <text class="fig-sub" x="28" y="290">con fecha y responsable</text>
+                  <g class="fig-out">
+                    <rect class="fig-box fig-box--accent" x="0" y="250" width="320" height="42" rx="8"/>
+                    <circle class="fig-node" cx="16" cy="271" r="3"/>
+                    <text class="fig-text" x="28" y="269">Pedido registrado</text>
+                    <text class="fig-sub" x="28" y="282">fecha y responsable</text>
+                  </g>
 
-                  <rect class="fig-box fig-box--accent" x="0" y="308" width="320" height="42" rx="8"/>
-                  <circle class="fig-node" cx="16" cy="329" r="3"/>
-                  <text class="fig-text" x="28" y="327">Stock actualizado</text>
-                  <text class="fig-sub" x="28" y="340">en el momento</text>
+                  <g class="fig-out fig-out--2">
+                    <rect class="fig-box fig-box--accent" x="0" y="300" width="320" height="42" rx="8"/>
+                    <circle class="fig-node" cx="16" cy="321" r="3"/>
+                    <text class="fig-text" x="28" y="319">Stock actualizado</text>
+                    <text class="fig-sub" x="28" y="332">al instante</text>
+                  </g>
 
-                  <rect class="fig-box fig-box--accent" x="0" y="358" width="320" height="42" rx="8"/>
-                  <circle class="fig-node" cx="16" cy="379" r="3"/>
-                  <text class="fig-text" x="28" y="377">Reporte emitido</text>
-                  <text class="fig-sub" x="28" y="390">sin armarlo a mano</text>
-                </g>
-
-                <g aria-hidden="true">
-                  <rect x="0" y="414" width="320" height="1" fill="rgba(243,248,255,.09)"/>
-                  <text class="fig-mono" x="0" y="434">4 ENTRADAS · 1 NÚCLEO · 3 SALIDAS</text>
+                  <g class="fig-out fig-out--3">
+                    <rect class="fig-box fig-box--accent" x="0" y="350" width="320" height="42" rx="8"/>
+                    <circle class="fig-node" cx="16" cy="371" r="3"/>
+                    <text class="fig-text" x="28" y="369">Reporte emitido</text>
+                    <text class="fig-sub" x="28" y="382">sin armarlo a mano</text>
+                  </g>
                 </g>
               </svg>
             </div>
 
-            <p class="viz-foot">Esquema ilustrativo de integración. No representa un caso de cliente.</p>
+            <p class="flowcard-foot">
+              <b>El pedido se carga una vez.</b> De ahí salen el stock, el comprobante y el reporte sin
+              volver a escribirlo.
+            </p>
           </div>
         </div>
       </div>
@@ -308,14 +305,276 @@
       </div>
     </section>
 
-    <!-- ============ SERVICIOS ============ -->
+    <!-- ============ ARMÁ TU FLUJO ============ -->
+    <section class="sec sec--line" id="armar-flujo" aria-labelledby="flujo-title">
+      <div class="container">
+        <div class="sec-head">
+          <div>
+            <p class="eyebrow">Demostración interactiva</p>
+            <h2 id="flujo-title">Armá tu flujo.</h2>
+            <p class="lead">
+              Elegí con qué trabaja tu negocio hoy. El esquema muestra qué se conectaría y qué dejarías
+              de hacer a mano. No consulta tus sistemas: es una demostración.
+            </p>
+          </div>
+          <div class="sec-head__aside">
+            <a class="link-arrow" href="soluciones.html">
+              Ver más demostraciones
+              <svg aria-hidden="true"><use href="assets/icons.svg#i-arrow"></use></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="builder reveal" data-builder>
+          <div class="builder-bar">
+            <h3>Tu operación, en un solo circuito</h3>
+            <span class="mono">6 fuentes · 3 pasos · resultados</span>
+          </div>
+
+          <div class="builder-grid">
+            <div class="builder-picker">
+              <h4 id="flujo-pick">¿Qué usás hoy?</h4>
+              <p id="flujo-hint" data-builder-hint>Elegí las fuentes que uses hoy. Cada elección cambia el esquema.</p>
+
+              <div class="chips" role="group" aria-labelledby="flujo-pick" aria-describedby="flujo-hint">
+                <button class="chip" type="button" data-source="whatsapp" aria-pressed="true">
+                  <svg aria-hidden="true"><use href="assets/icons.svg#i-chat"></use></svg> WhatsApp
+                </button>
+                <button class="chip" type="button" data-source="planillas" aria-pressed="true">
+                  <svg aria-hidden="true"><use href="assets/icons.svg#i-grid"></use></svg> Planillas
+                </button>
+                <button class="chip" type="button" data-source="tienda" aria-pressed="false">
+                  <svg aria-hidden="true"><use href="assets/icons.svg#i-cart"></use></svg> Tienda online
+                </button>
+                <button class="chip" type="button" data-source="inventario" aria-pressed="false">
+                  <svg aria-hidden="true"><use href="assets/icons.svg#i-box"></use></svg> Inventario
+                </button>
+                <button class="chip" type="button" data-source="facturacion" aria-pressed="false">
+                  <svg aria-hidden="true"><use href="assets/icons.svg#i-receipt"></use></svg> Facturación
+                </button>
+                <button class="chip" type="button" data-source="crm" aria-pressed="false">
+                  <svg aria-hidden="true"><use href="assets/icons.svg#i-users"></use></svg> CRM
+                </button>
+              </div>
+
+              <p class="small">
+                Las fuentes son ejemplos de lo que suele aparecer en una PyME. No implican que exista una
+                integración certificada con esos productos.
+              </p>
+            </div>
+
+            <div class="builder-stage">
+              <div class="flowmap" aria-hidden="true">
+                <div class="flowmap-col">
+                  <span class="flowmap-label">Lo que ya usás</span>
+                  <div data-col="sources">
+                    <div class="fnode"><svg aria-hidden="true"><use href="assets/icons.svg#i-chat"></use></svg><span>WhatsApp</span></div>
+                    <div class="fnode"><svg aria-hidden="true"><use href="assets/icons.svg#i-grid"></use></svg><span>Planillas</span></div>
+                  </div>
+                </div>
+
+                <div class="flowmap-link" aria-hidden="true"></div>
+
+                <div class="flowmap-col">
+                  <span class="flowmap-label">Lo que se automatiza</span>
+                  <div data-col="steps">
+                    <div class="fnode fnode--step"><b>1</b><span>Captura del dato</span></div>
+                    <div class="fnode fnode--step"><b>2</b><span>Validación y reglas</span></div>
+                    <div class="fnode fnode--step"><b>3</b><span>Registro único</span></div>
+                  </div>
+                </div>
+
+                <div class="flowmap-link flowmap-link--2" aria-hidden="true"></div>
+
+                <div class="flowmap-col">
+                  <span class="flowmap-label">Lo que ves</span>
+                  <div data-col="outputs">
+                    <div class="fnode fnode--out"><i aria-hidden="true"></i><span>Pedido registrado</span></div>
+                    <div class="fnode fnode--out"><i aria-hidden="true"></i><span>Seguimiento del cliente</span></div>
+                    <div class="fnode fnode--out"><i aria-hidden="true"></i><span>Tablero al día</span></div>
+                    <div class="fnode fnode--out"><i aria-hidden="true"></i><span>Stock actualizado</span></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="builder-readout" data-readout aria-live="polite">
+                <p>Con <b>WhatsApp y Planillas</b> el dato se carga una vez, se valida y queda registrado. Se actualizan <b>pedido registrado, seguimiento del cliente, tablero al día y stock actualizado</b> sin volver a escribirlo.</p>
+                <p class="small">Demostración conceptual: no verificamos integraciones con estos productos ni con tus sistemas.</p>
+              </div>
+
+              <div class="builder-actions">
+                <button class="btn btn--ghost" type="button" data-reset>Reiniciar</button>
+                <a class="btn btn--primary" href="contacto.html?flujo=whatsapp,planillas" data-builder-cta>
+                  Consultar por algo así
+                  <svg aria-hidden="true"><use href="assets/icons.svg#i-arrow"></use></svg>
+                </a>
+                <span class="mono">No se envía ningún dato</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ HOY / CON EL SISTEMA ============ -->
+    <section class="sec sec--line" aria-labelledby="ba-title">
+      <div class="container">
+        <div class="sec-head">
+          <div>
+            <p class="eyebrow">Qué cambia</p>
+            <h2 id="ba-title">Del trabajo manual al proceso registrado.</h2>
+            <p class="lead">Tres escenarios de todos los días, antes y después de que el proceso viva dentro de un sistema.</p>
+          </div>
+          <div class="sec-head__aside">
+            <span class="mono">Ejemplos ilustrativos</span>
+          </div>
+        </div>
+
+        <div class="compare reveal" data-compare>
+          <div class="compare-tabs" role="tablist" aria-label="Escenarios de comparación">
+            <button class="compare-tab" role="tab" id="tab-pedidos" aria-controls="panel-pedidos" aria-selected="true" tabindex="0">
+              Pedidos <span>Del mensaje al comprobante</span>
+            </button>
+            <button class="compare-tab" role="tab" id="tab-stock" aria-controls="panel-stock" aria-selected="false" tabindex="-1">
+              Stock <span>Una cifra, no tres</span>
+            </button>
+            <button class="compare-tab" role="tab" id="tab-admin" aria-controls="panel-admin" aria-selected="false" tabindex="-1">
+              Administración <span>Un cierre, no un rompecabezas</span>
+            </button>
+          </div>
+
+          <!-- PEDIDOS -->
+          <div class="compare-panel" role="tabpanel" id="panel-pedidos" aria-labelledby="tab-pedidos" tabindex="0">
+            <div class="cmp-grid">
+              <div class="cmp-side">
+                <p class="cmp-head cmp-head--before"><i aria-hidden="true"></i> Hoy <em>WhatsApp y memoria</em></p>
+                <div class="mock">
+                  <div class="mock-top">Ventas · WhatsApp <b>3 sin responder</b></div>
+                  <div class="mock-bubble">Hola, ¿tenés el talle M? <span class="mock-time">19:42</span></div>
+                  <div class="mock-bubble mock-bubble--out">Sí, sale $ 12.400 <span class="mock-time">19:44</span></div>
+                  <div class="mock-bubble">Dale, paso mañana <span class="mock-time">19:51</span></div>
+                  <div class="mock-bubble mock-bubble--alert">¿Este pedido se cargó en el sistema? <span class="mock-time">—</span></div>
+                </div>
+                <ul class="cmp-points cmp-points--bad">
+                  <li>El pedido se anota en un cuaderno y se pasa después.</li>
+                  <li>Si el mensaje se pierde, la venta se pierde.</li>
+                </ul>
+              </div>
+
+              <div class="cmp-side cmp-side--after">
+                <p class="cmp-head cmp-head--after"><i aria-hidden="true"></i> Con el sistema <em>Un registro</em></p>
+                <div class="mock-app">
+                  <div class="mock-app-bar">
+                    <span class="dot-row" aria-hidden="true"><i></i><i></i><i></i></span>
+                    Pedido #1043
+                  </div>
+                  <div class="mock-app-body">
+                    <div class="mock-kv"><span>Cliente</span><span>Comercio Aurora</span></div>
+                    <div class="mock-kv"><span>Origen</span><span>WhatsApp</span></div>
+                    <div class="mock-kv"><span>Estado</span><span class="mock-chip">Confirmado</span></div>
+                    <div class="mock-kv"><span>Stock</span><span>−2 · actualizado</span></div>
+                  </div>
+                </div>
+                <ul class="cmp-points cmp-points--good">
+                  <li>Queda con fecha, origen y responsable.</li>
+                  <li>El stock se descuenta en el mismo movimiento.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- STOCK -->
+          <div class="compare-panel" role="tabpanel" id="panel-stock" aria-labelledby="tab-stock" tabindex="0" hidden>
+            <div class="cmp-grid">
+              <div class="cmp-side">
+                <p class="cmp-head cmp-head--before"><i aria-hidden="true"></i> Hoy <em>Tres versiones del archivo</em></p>
+                <div class="mock">
+                  <div class="mock-top">stock_final_final.xlsx <b>3 versiones</b></div>
+                  <div class="mock-sheet">
+                    <span class="is-head">SKU</span><span class="is-head">Depósito</span><span class="is-head">Cant.</span>
+                    <span>A-104</span><span>Norte</span><span>12</span>
+                    <span>A-104</span><span>Norte</span><span class="is-bad">9</span>
+                    <span>A-104</span><span>Norte</span><span class="is-bad">14</span>
+                  </div>
+                  <p class="small">Tres personas editaron el mismo archivo. Nadie sabe cuál es el número bueno.</p>
+                </div>
+                <ul class="cmp-points cmp-points--bad">
+                  <li>El conteo se hace a mano una vez por mes.</li>
+                  <li>La reposición se decide por intuición.</li>
+                </ul>
+              </div>
+
+              <div class="cmp-side cmp-side--after">
+                <p class="cmp-head cmp-head--after"><i aria-hidden="true"></i> Con el sistema <em>Una cifra por depósito</em></p>
+                <div class="mock-app">
+                  <div class="mock-app-bar">Inventario · Depósito Norte</div>
+                  <div class="mock-app-body">
+                    <div class="mock-kv"><span>A-104 · Remera</span><span>12 u.</span></div>
+                    <div class="dmeter" style="--v:26%"><i style="background:#ffb4b4"></i></div>
+                    <div class="mock-kv"><span>B-210 · Gorra</span><span>34 u.</span></div>
+                    <div class="dmeter" style="--v:68%"><i></i></div>
+                    <div class="mock-kv"><span>C-318 · Buzo</span><span>7 u.</span></div>
+                    <div class="dmeter" style="--v:14%"><i style="background:#b9a6ff"></i></div>
+                  </div>
+                </div>
+                <ul class="cmp-points cmp-points--good">
+                  <li>Cada movimiento actualiza el stock por sucursal.</li>
+                  <li>El sistema avisa antes de que falte.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- ADMINISTRACIÓN -->
+          <div class="compare-panel" role="tabpanel" id="panel-admin" aria-labelledby="tab-admin" tabindex="0" hidden>
+            <div class="cmp-grid">
+              <div class="cmp-side">
+                <p class="cmp-head cmp-head--before"><i aria-hidden="true"></i> Hoy <em>Tres planillas, tres criterios</em></p>
+                <div class="mock">
+                  <div class="mock-top">Cierre del mes <b>siempre tarde</b></div>
+                  <div class="mock-steps">
+                    <div class="mock-step"><i>1</i><span>Facturar</span><span>planilla A</span></div>
+                    <div class="mock-step"><i>2</i><span>Cobrar</span><span>planilla B</span></div>
+                    <div class="mock-step"><i>3</i><span>Registrar</span><span>planilla C</span></div>
+                  </div>
+                  <p class="small">El mismo dato se escribe tres veces y cierra distinto cada mes.</p>
+                </div>
+                <ul class="cmp-points cmp-points--bad">
+                  <li>El reporte se arma cruzando tres fuentes.</li>
+                  <li>Cada área tiene su propia versión de los números.</li>
+                </ul>
+              </div>
+
+              <div class="cmp-side cmp-side--after">
+                <p class="cmp-head cmp-head--after"><i aria-hidden="true"></i> Con el sistema <em>Un tablero</em></p>
+                <div class="mock-app">
+                  <div class="mock-app-bar">Cierre del mes</div>
+                  <div class="mock-app-body">
+                    <div class="mock-kv"><span>Facturado</span><span>$ 4.820.000</span></div>
+                    <div class="mock-kv"><span>Cobrado</span><span>$ 4.310.000</span></div>
+                    <div class="mock-kv"><span>Pendiente</span><span class="mock-chip mock-chip--violet">12 facturas</span></div>
+                    <div class="mock-kv"><span>Actualizado</span><span>hoy, 08:05</span></div>
+                  </div>
+                </div>
+                <ul class="cmp-points cmp-points--good">
+                  <li>Un tablero único, actualizado con la operación.</li>
+                  <li>Todos miran la misma cifra.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ GRUPOS DE SERVICIO ============ -->
     <section class="sec sec--line" aria-labelledby="servicios-title">
       <div class="container">
         <div class="sec-head">
           <div>
             <p class="eyebrow">Qué hacemos</p>
-            <h2 id="servicios-title">Ingeniería aplicada a la operación diaria.</h2>
-            <p class="lead">Seis frentes de trabajo. Se combinan según el problema, no según el catálogo.</p>
+            <h2 id="servicios-title">Cuatro grupos de problemas. Diez servicios.</h2>
+            <p class="lead">Se combinan según el problema, no según el catálogo. Cada grupo resuelve una parte distinta de la operación.</p>
           </div>
           <div class="sec-head__aside">
             <a class="link-arrow" href="servicios.html">
@@ -325,133 +584,82 @@
           </div>
         </div>
 
-        <div class="grid grid--3">
-          <a class="card card--link reveal" href="servicios.html#software">
-            <span class="card-icon" aria-hidden="true"><svg><use href="assets/icons.svg#i-code"></use></svg></span>
-            <h3>Software a medida</h3>
-            <p>Aplicaciones y sistemas construidos para tu forma de trabajar, no para la de un manual.</p>
-            <span class="card-more">Ver detalle <svg aria-hidden="true"><use href="assets/icons.svg#i-arrow"></use></svg></span>
-            <span class="card-num" aria-hidden="true">01</span>
+        <div class="groups">
+          <a class="group group--wide reveal" href="servicios.html#sistemas">
+            <div>
+              <p class="group-num">01 — SISTEMAS · 3 SERVICIOS</p>
+              <h3 style="margin-top:.4rem;">El núcleo de la operación</h3>
+              <p style="margin-top:.5rem;">
+                Donde vive la información del negocio. Cuando falta, o quedó chico, todo lo demás se
+                resuelve a mano.
+              </p>
+              <ul class="group-list">
+                <li>Software a medida</li>
+                <li>ERP y gestión</li>
+                <li>CRM y seguimiento</li>
+              </ul>
+            </div>
+            <div class="group-fig" aria-hidden="true">
+              <svg viewBox="0 0 320 168">
+                <rect class="fig-box" x="112" y="58" width="96" height="46" rx="8"/>
+                <text class="fig-text" x="160" y="78" text-anchor="middle" font-size="12">Sistema</text>
+                <text class="fig-sub" x="160" y="92" text-anchor="middle">central</text>
+
+                <g class="fig-line fig-line--cyan" opacity=".5">
+                  <path d="M112 70 H84 V32 H58"/>
+                  <path d="M112 92 H84 V136 H58"/>
+                  <path d="M208 70 H236 V32 H262"/>
+                  <path d="M208 92 H236 V136 H262"/>
+                </g>
+
+                <rect class="fig-box" x="2" y="18" width="56" height="28" rx="6"/>
+                <text class="fig-mono" x="30" y="36" text-anchor="middle" font-size="8.5">VENTAS</text>
+
+                <rect class="fig-box" x="2" y="122" width="56" height="28" rx="6"/>
+                <text class="fig-mono" x="30" y="140" text-anchor="middle" font-size="8.5">STOCK</text>
+
+                <rect class="fig-box" x="262" y="18" width="56" height="28" rx="6"/>
+                <text class="fig-mono" x="290" y="36" text-anchor="middle" font-size="8.5">CLIENTE</text>
+
+                <rect class="fig-box" x="262" y="122" width="56" height="28" rx="6"/>
+                <text class="fig-mono" x="290" y="140" text-anchor="middle" font-size="8.5">ADMIN.</text>
+
+                <circle class="fig-node fig-pulse" cx="160" cy="58" r="3"/>
+                <circle class="fig-node--violet" cx="160" cy="104" r="2.5"/>
+              </svg>
+            </div>
           </a>
 
-          <a class="card card--link reveal" data-delay="1" href="servicios.html#sistemas">
-            <span class="card-icon" aria-hidden="true"><svg><use href="assets/icons.svg#i-db"></use></svg></span>
-            <h3>ERP y CRM</h3>
-            <p>Implementación, adaptación y módulos a medida sobre sistemas de gestión comercial.</p>
-            <span class="card-more">Ver detalle <svg aria-hidden="true"><use href="assets/icons.svg#i-arrow"></use></svg></span>
-            <span class="card-num" aria-hidden="true">02</span>
+          <a class="group reveal" href="servicios.html#operacion">
+            <p class="group-num">02 — OPERACIÓN · 3 SERVICIOS</p>
+            <h3>Que las cosas pasen solas</h3>
+            <p>Todo lo que hoy depende de que alguien se acuerde, se ejecute y quede registrado.</p>
+            <ul class="group-list">
+              <li>Automatización</li>
+              <li>Integraciones</li>
+              <li>Datos y tableros</li>
+            </ul>
           </a>
 
-          <a class="card card--link reveal" data-delay="2" href="servicios.html#automatizacion">
-            <span class="card-icon" aria-hidden="true"><svg><use href="assets/icons.svg#i-bolt"></use></svg></span>
-            <h3>Automatización</h3>
-            <p>Tareas repetitivas que dejan de depender de que alguien se acuerde de hacerlas.</p>
-            <span class="card-more">Ver detalle <svg aria-hidden="true"><use href="assets/icons.svg#i-arrow"></use></svg></span>
-            <span class="card-num" aria-hidden="true">03</span>
+          <a class="group reveal" data-delay="1" href="servicios.html#venta">
+            <p class="group-num">03 — VENTA · 2 SERVICIOS</p>
+            <h3>Vender sin duplicar trabajo</h3>
+            <p>La tienda y el mostrador comparten el mismo stock y la misma administración.</p>
+            <ul class="group-list">
+              <li>Comercio electrónico</li>
+              <li>Plataformas y portales</li>
+            </ul>
           </a>
 
-          <a class="card card--link reveal" href="servicios.html#integraciones">
-            <span class="card-icon" aria-hidden="true"><svg><use href="assets/icons.svg#i-plug"></use></svg></span>
-            <h3>Integraciones</h3>
-            <p>Conectamos sistemas, plataformas y APIs para que el dato se cargue una sola vez.</p>
-            <span class="card-more">Ver detalle <svg aria-hidden="true"><use href="assets/icons.svg#i-arrow"></use></svg></span>
-            <span class="card-num" aria-hidden="true">04</span>
+          <a class="group reveal" data-delay="2" href="servicios.html#evolucion">
+            <p class="group-num">04 — EVOLUCIÓN · 2 SERVICIOS</p>
+            <h3>Lo que ya funciona, mejor</h3>
+            <p>Sistemas que sostienen la operación pero quedaron lentos, sin documentación o sin quien los mantenga.</p>
+            <ul class="group-list">
+              <li>Mantenimiento y modernización</li>
+              <li>IA aplicada</li>
+            </ul>
           </a>
-
-          <a class="card card--link reveal" data-delay="1" href="servicios.html#datos">
-            <span class="card-icon" aria-hidden="true"><svg><use href="assets/icons.svg#i-chart"></use></svg></span>
-            <h3>Datos y tableros</h3>
-            <p>Reportes que se actualizan solos, en lugar de planillas que se arman a mano.</p>
-            <span class="card-more">Ver detalle <svg aria-hidden="true"><use href="assets/icons.svg#i-arrow"></use></svg></span>
-            <span class="card-num" aria-hidden="true">05</span>
-          </a>
-
-          <a class="card card--link reveal" data-delay="2" href="servicios.html#venta">
-            <span class="card-icon" aria-hidden="true"><svg><use href="assets/icons.svg#i-cart"></use></svg></span>
-            <h3>Comercio electrónico</h3>
-            <p>Tiendas y plataformas de venta conectadas al stock y a la administración real.</p>
-            <span class="card-more">Ver detalle <svg aria-hidden="true"><use href="assets/icons.svg#i-arrow"></use></svg></span>
-            <span class="card-num" aria-hidden="true">06</span>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ ANTES / DESPUÉS ============ -->
-    <section class="sec sec--line" aria-labelledby="ba-title">
-      <div class="container">
-        <div class="sec-head">
-          <div>
-            <p class="eyebrow">Qué cambia</p>
-            <h2 id="ba-title">Del trabajo manual al proceso registrado.</h2>
-            <p class="lead">Sin métricas inventadas: esto es lo que cambia en la operación cuando el proceso queda dentro de un sistema.</p>
-          </div>
-        </div>
-
-        <div class="ba reveal">
-          <div class="ba-side">
-            <span class="ba-label ba-label--before"><i aria-hidden="true"></i> Hoy</span>
-            <ul>
-              <li>El pedido llega por mensaje y se anota en un cuaderno.</li>
-              <li>Alguien lo pasa al sistema cuando puede.</li>
-              <li>Si se pierde el mensaje, se pierde la venta.</li>
-            </ul>
-          </div>
-          <div class="ba-divider" aria-hidden="true">
-            <svg><use href="assets/icons.svg#i-arrow"></use></svg>
-          </div>
-          <div class="ba-side ba-side--after">
-            <span class="ba-label ba-label--after"><i aria-hidden="true"></i> Con el sistema</span>
-            <ul>
-              <li>El pedido entra y queda registrado con fecha y responsable.</li>
-              <li>El stock se descuenta en el momento.</li>
-              <li>El comprobante se emite desde el mismo flujo.</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="ba reveal" data-delay="1">
-          <div class="ba-side">
-            <span class="ba-label ba-label--before"><i aria-hidden="true"></i> Hoy</span>
-            <ul>
-              <li>El stock está en una planilla compartida.</li>
-              <li>El conteo se hace a mano y cierra distinto cada vez.</li>
-              <li>La reposición se decide por intuición.</li>
-            </ul>
-          </div>
-          <div class="ba-divider" aria-hidden="true">
-            <svg><use href="assets/icons.svg#i-arrow"></use></svg>
-          </div>
-          <div class="ba-side ba-side--after">
-            <span class="ba-label ba-label--after"><i aria-hidden="true"></i> Con el sistema</span>
-            <ul>
-              <li>Cada movimiento actualiza el stock por sucursal.</li>
-              <li>El sistema avisa antes de que falte.</li>
-              <li>La reposición se decide con el dato a la vista.</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="ba reveal" data-delay="2">
-          <div class="ba-side">
-            <span class="ba-label ba-label--before"><i aria-hidden="true"></i> Hoy</span>
-            <ul>
-              <li>El reporte se arma a mano, cruzando tres fuentes.</li>
-              <li>Llega días después del cierre.</li>
-              <li>Cada área tiene su propia versión de los números.</li>
-            </ul>
-          </div>
-          <div class="ba-divider" aria-hidden="true">
-            <svg><use href="assets/icons.svg#i-arrow"></use></svg>
-          </div>
-          <div class="ba-side ba-side--after">
-            <span class="ba-label ba-label--after"><i aria-hidden="true"></i> Con el sistema</span>
-            <ul>
-              <li>Un tablero único, actualizado con la operación.</li>
-              <li>Disponible el mismo día del cierre.</li>
-              <li>Todos miran la misma cifra.</li>
-            </ul>
-          </div>
         </div>
       </div>
     </section>
@@ -463,7 +671,7 @@
           <div>
             <p class="eyebrow">Cómo trabajamos</p>
             <h2 id="proceso-title">Primero el problema. Después el código.</h2>
-            <p class="lead">No cotizamos una lista de funciones. Entendemos el proceso, proponemos un alcance y lo desarrollamos por etapas.</p>
+            <p class="lead">Cuatro momentos con algo concreto para revisar en cada uno. Sin sorpresas al final.</p>
           </div>
           <div class="sec-head__aside">
             <a class="link-arrow" href="como-trabajamos.html">
@@ -473,21 +681,32 @@
           </div>
         </div>
 
-        <div class="flow-steps">
-          <div class="flow-step reveal">
-            <h3>Diagnóstico</h3>
-            <p>Relevamos cómo trabaja tu empresa hoy: quién hace qué, con qué herramientas y dónde se traba el proceso.</p>
-            <p class="step-out">Diagnóstico escrito</p>
-          </div>
-          <div class="flow-step reveal" data-delay="1">
-            <h3>Propuesta</h3>
-            <p>Definimos qué se construye, qué queda afuera y en qué orden. Con alcance, tiempos y precio por escrito.</p>
-            <p class="step-out">Propuesta técnica y comercial</p>
-          </div>
-          <div class="flow-step reveal" data-delay="2">
-            <h3>Desarrollo y puesta en marcha</h3>
-            <p>Construimos por etapas, con entregas revisables. Probamos con datos reales antes de cerrar cada parte.</p>
-            <p class="step-out">Sistema funcionando</p>
+        <div class="rail reveal">
+          <div class="rail-steps">
+            <div class="rail-step">
+              <span class="rail-node" aria-hidden="true">01</span>
+              <h3>Diagnóstico</h3>
+              <p>Relevamos cómo trabaja tu empresa hoy: quién hace qué y dónde se traba el proceso.</p>
+              <span class="rail-owner" data-who="nosotros">Lo hacemos nosotros</span>
+            </div>
+            <div class="rail-step">
+              <span class="rail-node" aria-hidden="true">02</span>
+              <h3>Propuesta</h3>
+              <p>Qué se construye, qué queda afuera y en qué orden. Con alcance y precio por escrito.</p>
+              <span class="rail-owner" data-who="vos">La aprobás vos</span>
+            </div>
+            <div class="rail-step">
+              <span class="rail-node" aria-hidden="true">03</span>
+              <h3>Desarrollo por etapas</h3>
+              <p>Cada etapa se entrega para que la revises antes de seguir con la siguiente.</p>
+              <span class="rail-owner" data-who="nosotros">Lo hacemos nosotros</span>
+            </div>
+            <div class="rail-step">
+              <span class="rail-node" aria-hidden="true">04</span>
+              <h3>Puesta en marcha</h3>
+              <p>Se prueba con datos reales, se ajusta lo que aparece y recién después se pone en uso.</p>
+              <span class="rail-owner" data-who="vos">Validás la entrega</span>
+            </div>
           </div>
         </div>
       </div>
@@ -496,14 +715,14 @@
     <!-- ============ TOTEMBIZ ============ -->
     <section class="sec sec--tight sec--line" aria-labelledby="totembiz-title">
       <div class="container">
-        <div class="card reveal" style="max-width: 44rem;">
-          <p class="eyebrow">Producto independiente</p>
+        <div class="card reveal" style="max-width: 46rem;">
+          <p class="eyebrow">Producto propio</p>
           <h2 id="totembiz-title" style="font-size: clamp(1.5rem, 2.4vw, 2rem); margin-top: 0.6rem;">Totembiz</h2>
           <p>
             Totembiz es un producto de software con identidad y desarrollo propios. No forma parte de la
             oferta de servicios de CuantiLogic y se comunica por separado.
           </p>
-          <a class="card-more" href="proyectos.html#totembiz">
+          <a class="card-more" href="soluciones.html#totembiz">
             Ver ficha del producto
             <svg aria-hidden="true"><use href="assets/icons.svg#i-arrow"></use></svg>
           </a>
@@ -539,7 +758,7 @@
       <div class="footer-grid">
         <div class="footer-col">
           <a class="footer-brand" href="index.html">
-            <img src="assets/brand/logo-horizontal.svg" alt="CuantiLogic" width="762" height="139">
+            <img src="assets/brand/logo-horizontal.svg" alt="CuantiLogic" width="798" height="120">
           </a>
           <p>Ingeniería de software y soluciones tecnológicas. Desarrollo a medida, integraciones, automatización y datos para empresas y comercios.</p>
         </div>
@@ -557,7 +776,7 @@
           <ul>
             <li><a href="nosotros.html">Nosotros</a></li>
             <li><a href="como-trabajamos.html">Cómo trabajamos</a></li>
-            <li><a href="proyectos.html">Proyectos</a></li>
+            <li><a href="soluciones.html">Soluciones y demostraciones</a></li>
             <li><a href="contacto.html">Contacto</a></li>
           </ul>
         </div>
@@ -566,7 +785,7 @@
           <ul>
             <li><a href="contacto.html">Formulario de consulta</a></li>
             <li><a href="privacidad.html">Política de privacidad</a></li>
-            <li><a href="proyectos.html#totembiz">Totembiz</a></li>
+            <li><a href="soluciones.html#totembiz">Totembiz</a></li>
             <!-- Se completan desde js/site-config.js. Sin datos, quedan ocultos. -->
             <li hidden><a data-contact-email>Email</a></li>
             <li hidden><a data-contact-whatsapp>WhatsApp</a></li>
@@ -583,5 +802,6 @@
 
   <script src="js/site-config.js" defer></script>
   <script src="js/main.js" defer></script>
+  <script src="js/interactive.js" defer></script>
 </body>
 </html>
