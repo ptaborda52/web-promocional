@@ -203,9 +203,6 @@ p {
   padding-block: clamp(3.5rem, 7vw, 6.5rem);
 }
 
-.sec--tight {
-  padding-block: clamp(2.5rem, 4.5vw, 4rem);
-}
 
 .sec--line {
   border-top: 1px solid var(--line);
@@ -248,9 +245,6 @@ p {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
-.grid--4 {
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-}
 
 /* ---------- 4. Tipografía ---------- */
 .display,
@@ -322,9 +316,6 @@ h3 + .lead {
   margin-top: 0.9rem;
 }
 
-.muted {
-  color: var(--muted);
-}
 
 .small {
   font-size: 0.88rem;
@@ -784,11 +775,6 @@ h3 + .lead {
   opacity: 0.85;
 }
 
-.fig-line--violet {
-  stroke: var(--violeta);
-  stroke-width: 1.2;
-  opacity: 0.7;
-}
 
 .fig-box {
   fill: rgba(243, 248, 255, 0.035);
@@ -809,11 +795,6 @@ h3 + .lead {
   fill: var(--violeta);
 }
 
-.fig-node--hollow {
-  fill: var(--noche);
-  stroke: var(--cian);
-  stroke-width: 1.4;
-}
 
 .fig-text {
   fill: var(--blanco);
@@ -892,16 +873,7 @@ h3 + .lead {
   line-height: 1.65;
 }
 
-.card--link {
-  color: inherit;
-}
 
-.card--link:hover {
-  color: inherit;
-  transform: translateY(-4px);
-  border-color: var(--line-cyan);
-  box-shadow: var(--shadow-sm);
-}
 
 .card-icon {
   display: inline-flex;
@@ -924,62 +896,13 @@ h3 + .lead {
   fill: none;
 }
 
-.card-num {
-  position: absolute;
-  top: 1.35rem;
-  right: 1.4rem;
-  font-family: var(--mono);
-  font-size: 0.74rem;
-  letter-spacing: 0.1em;
-  font-variant-numeric: tabular-nums;
-  color: #7a8aa1;
-}
 
-.card-more {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.35rem;
-  margin-top: auto;
-  padding-top: 0.6rem;
-  min-height: 44px;
-  font-size: 0.86rem;
-  font-weight: 600;
-  color: var(--cian);
-}
 
-.card-more svg {
-  width: 14px;
-  height: 14px;
-  stroke: currentColor;
-  stroke-width: 2;
-  fill: none;
-  transition: transform var(--t-base) var(--ease);
-}
 
-.card--link:hover .card-more svg {
-  transform: translateX(4px);
-}
 
 /* Tarjeta con figura */
-.card--fig {
-  padding: 0;
-  overflow: hidden;
-}
 
-.card--fig .card-fig {
-  position: relative;
-  padding: 1.1rem 1.1rem 0;
-  border-bottom: 1px solid var(--line);
-  background: radial-gradient(ellipse 80% 100% at 50% 0%, rgba(24, 217, 232, 0.07), transparent 70%);
-}
 
-.card--fig .card-body {
-  padding: 1.1rem 1.25rem 1.35rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.55rem;
-  flex: 1;
-}
 
 /* ---------- 10. Problemas (inicio) ---------- */
 .problems {
@@ -1257,32 +1180,9 @@ h3 + .lead {
   color: #7a8aa1;
 }
 
-.mock-table {
-  display: grid;
-  grid-template-columns: minmax(0, 1.4fr) repeat(2, minmax(0, 0.8fr));
-  gap: 0.2rem 0.5rem;
-  align-items: center;
-  font-size: 0.74rem;
-}
 
-.mock-th {
-  font-family: var(--mono);
-  font-size: 0.54rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--muted-2);
-}
 
-.mock-td {
-  color: var(--muted);
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
 
-.mock-td--bad {
-  color: #ffb4b4;
-}
 
 .mock-app {
   border: 1px solid rgba(24, 217, 232, 0.22);
@@ -1368,11 +1268,6 @@ h3 + .lead {
   color: var(--violeta);
 }
 
-.mock-chip--bad {
-  border-color: rgba(255, 180, 180, 0.35);
-  background: rgba(255, 180, 180, 0.08);
-  color: #ffb4b4;
-}
 
 .mock-steps {
   display: grid;
@@ -2106,36 +2001,9 @@ h3 + .lead {
 }
 
 /* ---------- 18. Nota / aviso ---------- */
-.notice {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 0.8rem;
-  align-items: start;
-  padding: 1rem 1.15rem;
-  border: 1px solid rgba(24, 217, 232, 0.28);
-  border-radius: 12px;
-  background: rgba(24, 217, 232, 0.05);
-}
 
-.notice svg {
-  width: 18px;
-  height: 18px;
-  stroke: var(--cian);
-  stroke-width: 1.8;
-  fill: none;
-  margin-top: 0.15rem;
-}
 
-.notice p {
-  font-size: 0.92rem;
-  line-height: 1.65;
-  color: var(--muted);
-  max-width: 68ch;
-}
 
-.notice strong {
-  color: var(--fg);
-}
 
 
 /* Puntos de ventana y etiqueta de demostración */
@@ -2156,19 +2024,6 @@ h3 + .lead {
   background: rgba(24, 217, 232, 0.6);
 }
 
-.demo-tag {
-  margin-left: auto;
-  padding: 0.14rem 0.38rem;
-  border: 1px solid rgba(185, 166, 255, 0.32);
-  border-radius: 4px;
-  font-family: var(--mono);
-  font-size: 0.56rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--violeta);
-  white-space: nowrap;
-  flex: none;
-}
 
 /* ---------- 19. Demostraciones interactivas ---------- */
 .demo-shell {
@@ -2229,25 +2084,7 @@ h3 + .lead {
   line-height: 1.55;
 }
 
-.demo-note {
-  display: flex;
-  align-items: flex-start;
-  gap: 0.4rem;
-  margin-top: 0.6rem;
-  font-size: 0.72rem;
-  line-height: 1.45;
-  color: var(--muted-2);
-}
 
-.demo-note svg {
-  width: 13px;
-  height: 13px;
-  margin-top: 0.15rem;
-  stroke: var(--violeta);
-  stroke-width: 1.8;
-  fill: none;
-  flex: none;
-}
 
 /* Controles dentro de las demos */
 .demo-toolbar {
@@ -2789,31 +2626,9 @@ h3 + .lead {
 }
 
 /* Ficha de producto (Totembiz) */
-.product-panel {
-  position: relative;
-  padding: clamp(1.4rem, 3vw, 2.2rem);
-  border: 1px solid rgba(185, 166, 255, 0.24);
-  border-radius: var(--radius-lg);
-  background:
-    radial-gradient(ellipse 70% 90% at 12% 0%, rgba(185, 166, 255, 0.1), transparent 62%),
-    rgba(13, 21, 40, 0.7);
-  overflow: hidden;
-}
 
-.product-panel .eyebrow {
-  color: var(--violeta);
-}
 
-.product-panel .eyebrow::before {
-  background: var(--violeta);
-}
 
-.product-grid {
-  display: grid;
-  grid-template-columns: minmax(0, 1.25fr) minmax(0, 0.75fr);
-  gap: clamp(1.5rem, 3vw, 2.6rem);
-  align-items: start;
-}
 
 .product-facts {
   display: grid;
@@ -2871,14 +2686,6 @@ h3 + .lead {
   transform: rotate(-45deg);
 }
 
-.checklist--no li::before {
-  top: 0.72em;
-  width: 9px;
-  height: 1.6px;
-  border: 0;
-  background: var(--muted-2);
-  transform: none;
-}
 
 /* Stack técnico */
 .stack {
@@ -2916,34 +2723,9 @@ h3 + .lead {
   letter-spacing: -0.01em;
 }
 
-.spec {
-  display: grid;
-  gap: 0;
-  border-top: 1px solid var(--line);
-}
 
-.spec div {
-  display: grid;
-  grid-template-columns: minmax(8rem, 0.4fr) minmax(0, 1fr);
-  gap: 1rem;
-  padding: 0.85rem 0;
-  border-bottom: 1px solid var(--line);
-  font-size: 0.92rem;
-}
 
-.spec dt {
-  font-family: var(--mono);
-  font-size: 0.72rem;
-  letter-spacing: 0.11em;
-  text-transform: uppercase;
-  color: var(--muted-2);
-  padding-top: 0.2rem;
-}
 
-.spec dd {
-  margin: 0;
-  color: var(--muted);
-}
 
 /* ---------- 21. Footer ---------- */
 .footer {
@@ -3758,10 +3540,6 @@ h3 + .lead {
 }
 
 /* ---------- 28. Diagnóstico guiado ---------- */
-.wizard {
-  display: grid;
-  gap: 1.1rem;
-}
 
 .wizard-top {
   display: flex;
@@ -4067,10 +3845,6 @@ html.js .reveal[data-delay="5"].is-in {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .grid--4 {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
   .groups {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -4193,8 +3967,7 @@ html.js .reveal[data-delay="5"].is-in {
 
 @media (max-width: 760px) {
   .grid--2,
-  .grid--3,
-  .grid--4 {
+  .grid--3 {
     grid-template-columns: 1fr;
   }
 
@@ -5020,9 +4793,6 @@ html.js .reveal[data-delay="5"].is-in {
     display: none;
   }
 
-  .bwire {
-    animation: none;
-  }
 }
 
 /* ---------- 33. Impresión ---------- */
