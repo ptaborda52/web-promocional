@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Contacto — CuantiLogic</title>
-  <meta name="description" content="Contanos qué proceso querés ordenar. Escribí el problema con tus palabras y te respondemos con los próximos pasos.">
+  <meta name="description" content="Contanos qué proceso querés ordenar. Diagnóstico guiado de tres pasos o formulario directo, con la misma privacidad y consentimiento.">
   <link rel="canonical" href="https://cuantilogic.tech/contacto.html">
   <meta name="theme-color" content="#0B1224">
   <meta name="color-scheme" content="dark">
@@ -15,16 +15,15 @@
   <meta property="og:site_name" content="CuantiLogic">
   <meta property="og:locale" content="es_AR">
   <meta property="og:title" content="Contacto — CuantiLogic">
-  <meta property="og:description" content="Describí el problema con tus palabras. Te respondemos con los próximos pasos.">
+  <meta property="og:description" content="Diagnóstico guiado de tres pasos o formulario directo. Contanos qué te está frenando.">
   <meta property="og:url" content="https://cuantilogic.tech/contacto.html">
   <meta property="og:image" content="https://cuantilogic.tech/assets/brand/og-cover.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
-
+  <noscript><style>[data-contact-form],.wizard-progress,.wizard-mode,.wizard-nav{display:none!important}</style></noscript>
   <link rel="stylesheet" href="css/styles.css">
   <script>document.documentElement.classList.add('js');</script>
-  <noscript><style>[data-submit]{display:none}</style></noscript>
 </head>
 <body>
   <a class="skip-link" href="#main">Saltar al contenido</a>
@@ -32,20 +31,23 @@
   <nav class="nav" aria-label="Navegación principal">
     <div class="container nav-inner">
       <a class="brand" href="index.html">
-        <img src="assets/brand/logo-horizontal.svg" alt="CuantiLogic" width="762" height="139">
+        <img src="assets/brand/logo-horizontal.svg" alt="CuantiLogic" width="798" height="120">
       </a>
+
       <ul class="nav-links" id="nav-links">
         <li><a href="index.html">Inicio</a></li>
         <li><a href="servicios.html">Servicios</a></li>
         <li><a href="como-trabajamos.html">Cómo trabajamos</a></li>
-        <li><a href="proyectos.html">Proyectos</a></li>
+        <li><a href="soluciones.html">Soluciones</a></li>
         <li><a href="nosotros.html">Nosotros</a></li>
         <li class="nav-only-mobile"><a href="contacto.html" aria-current="page">Contacto</a></li>
       </ul>
+
       <a class="nav-cta" href="contacto.html">
         Hablemos
         <svg aria-hidden="true"><use href="assets/icons.svg#i-arrow"></use></svg>
       </a>
+
       <a class="nav-toggle" href="#nav-links" aria-expanded="false" aria-controls="nav-links" aria-label="Abrir menú de navegación">
         <svg class="icon-menu" aria-hidden="true"><use href="assets/icons.svg#i-menu"></use></svg>
         <svg class="icon-close" aria-hidden="true"><use href="assets/icons.svg#i-close"></use></svg>
@@ -54,14 +56,13 @@
   </nav>
 
   <main id="main">
-
     <header class="page-head">
       <div class="container">
         <p class="breadcrumb"><a href="index.html">Inicio</a> / Contacto</p>
         <h1 class="display">Contanos qué te está frenando.</h1>
         <p class="lead">
-          No necesitás un pliego técnico ni saber qué sistema querés. Describí el problema con tus
-          palabras: con eso alcanza para la primera conversación.
+          No necesitás un pliego técnico ni saber qué sistema querés. Con tres datos alcanza para la
+          primera conversación; si preferís escribir de corrido, también está el formulario completo.
         </p>
       </div>
     </header>
@@ -70,83 +71,135 @@
       <div class="container">
         <div class="grid grid--2" style="align-items: start; gap: clamp(1.5rem, 3vw, 2.5rem);">
 
-          <div class="card reveal">
-            <h2 style="font-size: clamp(1.4rem, 2.2vw, 1.75rem);">Formulario de consulta</h2>
-            <p style="margin-top: 0.5rem; color: var(--muted); font-size: 0.88rem;">
-              Cuatro datos y una descripción. Nada más.
-            </p>
-
-            <form class="form" data-contact-form data-endpoint="" method="post" novalidate style="margin-top: 1.5rem;">
-              <div class="field">
-                <label for="nombre">Nombre y apellido <span class="req" aria-hidden="true">*</span></label>
-                <input class="input" id="nombre" name="nombre" type="text" autocomplete="name" placeholder="Cómo te llamás" data-required aria-describedby="nombre-error">
-                <span class="field-error" id="nombre-error" role="alert"></span>
+          <div class="card reveal" data-wizard>
+            <div class="wizard-top">
+              <h2>Tu consulta</h2>
+              <div class="wizard-mode" role="group" aria-label="Cómo querés completar el formulario">
+                <button type="button" data-mode="guiado" aria-pressed="true">Guiado</button>
+                <button type="button" data-mode="directo" aria-pressed="false">Escribir directamente</button>
               </div>
+            </div>
+            <p class="small" style="margin-top:.5rem;">Tres pasos cortos. Podés cambiarte al formulario completo cuando quieras.</p>
 
-              <div class="field">
-                <label for="negocio">Negocio o empresa <span class="req" aria-hidden="true">*</span></label>
-                <input class="input" id="negocio" name="negocio" type="text" autocomplete="organization" placeholder="Nombre del comercio o empresa" data-required aria-describedby="negocio-error">
-                <span class="field-error" id="negocio-error" role="alert"></span>
-              </div>
+            <ol class="wizard-progress" data-progress aria-hidden="true">
+              <li data-state="current">Rubro</li>
+              <li>Problema</li>
+              <li>Contacto</li>
+            </ol>
 
-              <div class="field">
-                <label for="email">Correo electrónico <span class="req" aria-hidden="true">*</span></label>
-                <input class="input" id="email" name="email" type="email" autocomplete="email" placeholder="tu@correo.com" data-required aria-describedby="email-error">
-                <span class="field-error" id="email-error" role="alert"></span>
-              </div>
+            <p class="sr-only" role="status" data-wizard-status></p>
 
-              <div class="field">
-                <label for="telefono">Teléfono o WhatsApp <span class="hint">(opcional)</span></label>
-                <input class="input" id="telefono" name="telefono" type="tel" autocomplete="tel" placeholder="Con código de área" aria-describedby="telefono-hint">
-                <span class="hint" id="telefono-hint">Si preferís que te escribamos por ahí.</span>
-              </div>
+            <form class="form" data-contact-form data-endpoint="" method="post" novalidate style="margin-top:1rem;">
 
-              <div class="field">
-                <label for="mensaje">Qué necesitás resolver <span class="req" aria-hidden="true">*</span></label>
-                <textarea class="textarea" id="mensaje" name="mensaje" placeholder="Ejemplo: tomo pedidos por WhatsApp y los paso a mano al sistema; se me pierden ventas y no sé cuánto stock real tengo." data-required aria-describedby="mensaje-error mensaje-hint"></textarea>
-                <span class="hint" id="mensaje-hint">No hace falta que sea técnico. Contá qué pasa hoy y qué te gustaría que pase.</span>
-                <span class="field-error" id="mensaje-error" role="alert"></span>
-              </div>
-
-              <div class="field">
-                <div class="check">
-                  <input type="checkbox" id="consentimiento" name="consentimiento" value="Acepto el tratamiento y la transferencia internacional según la política de privacidad" data-required aria-describedby="consentimiento-error">
-                  <label for="consentimiento">Leí la política de privacidad y acepto el tratamiento de mis datos, incluida su transferencia a Estados Unidos y otros países donde operan Formspree y Zoho Mail. <span aria-hidden="true">*</span></label>
+              <fieldset class="wizard-step" data-step="1" data-required-group id="paso-rubro" aria-describedby="paso-rubro-error">
+                <legend>¿A qué se dedica tu negocio?</legend>
+                <p class="hint">Una sola opción. Nos ayuda a leer el resto de la consulta con contexto.</p>
+                <div class="radio-cards">
+                  <label class="radio-card"><input type="radio" name="rubro" value="Comercio minorista"><span>Comercio minorista</span></label>
+                  <label class="radio-card"><input type="radio" name="rubro" value="Distribución o mayorista"><span>Distribución o mayorista</span></label>
+                  <label class="radio-card"><input type="radio" name="rubro" value="Servicios profesionales"><span>Servicios profesionales</span></label>
+                  <label class="radio-card"><input type="radio" name="rubro" value="Industria o producción"><span>Industria o producción</span></label>
+                  <label class="radio-card"><input type="radio" name="rubro" value="Gastronomía"><span>Gastronomía</span></label>
+                  <label class="radio-card"><input type="radio" name="rubro" value="Otro"><span>Otro rubro</span></label>
                 </div>
-                <a class="check-link" href="privacidad.html">Leer la política completa</a>
-                <span class="field-error" id="consentimiento-error" role="alert"></span>
-              </div>
+                <span class="field-error" id="paso-rubro-error" role="alert"></span>
+              </fieldset>
 
-              <div class="form-status" data-form-status role="status" aria-live="polite"></div>
+              <fieldset class="wizard-step" data-step="2" data-required-group id="paso-problema" aria-describedby="paso-problema-error" hidden>
+                <legend>¿Qué querés resolver primero?</legend>
+                <p class="hint">Elegí el que más te molesta hoy. Si hay varios, el diagnóstico los ordena.</p>
+                <div class="radio-cards">
+                  <label class="radio-card"><input type="radio" name="problema" value="Pedidos y ventas"><span>Pedidos y ventas</span></label>
+                  <label class="radio-card"><input type="radio" name="problema" value="Stock e inventario"><span>Stock e inventario</span></label>
+                  <label class="radio-card"><input type="radio" name="problema" value="Facturación y administración"><span>Facturación y administración</span></label>
+                  <label class="radio-card"><input type="radio" name="problema" value="Reportes y datos"><span>Reportes y datos</span></label>
+                  <label class="radio-card"><input type="radio" name="problema" value="Venta online"><span>Venta online</span></label>
+                  <label class="radio-card"><input type="radio" name="problema" value="No lo tengo claro"><span>No lo tengo claro</span></label>
+                </div>
+                <span class="field-error" id="paso-problema-error" role="alert"></span>
+              </fieldset>
 
-              <!-- Campos especiales de Formspree: no se muestran al visitante -->
-              <input type="hidden" name="_subject" value="Nueva consulta desde cuantilogic.tech">
-              <div class="hp" aria-hidden="true">
-                <label for="_gotcha">No completar este campo</label>
-                <input type="text" id="_gotcha" name="_gotcha" tabindex="-1" autocomplete="off">
-              </div>
+              <fieldset class="wizard-step" data-step="3" hidden>
+                <legend>Tus datos de contacto</legend>
 
-              <button class="btn btn--primary btn--block" type="submit" data-submit>
-                Enviar consulta
-                <svg aria-hidden="true"><use href="assets/icons.svg#i-arrow"></use></svg>
-              </button>
+                <div class="field" style="margin-top:.7rem;">
+                  <label for="nombre">Nombre y apellido <span class="req" aria-hidden="true">*</span></label>
+                  <input class="input" id="nombre" name="nombre" type="text" autocomplete="name" placeholder="Cómo te llamás" data-required aria-describedby="nombre-error">
+                  <span class="field-error" id="nombre-error" role="alert"></span>
+                </div>
 
-              <p class="form-note">
-                <strong>Responsable:</strong> Pablo Alberto Taborda Carime (CuantiLogic) ·
-                <strong>Finalidad:</strong> responder tu consulta y elaborar una propuesta ·
-                <strong>Destinatarios:</strong> Formspree y Zoho Mail, con tratamiento en Estados Unidos
-                y otros países donde operan, según la <a href="privacidad.html">política de privacidad</a> ·
-                Podés ejercer tus derechos de acceso, rectificación y supresión escribiendo a
-                <a href="mailto:contacto@cuantilogic.tech">contacto@cuantilogic.tech</a>.
-              </p>
+                <div class="field">
+                  <label for="negocio">Negocio o empresa <span class="req" aria-hidden="true">*</span></label>
+                  <input class="input" id="negocio" name="negocio" type="text" autocomplete="organization" placeholder="Nombre del comercio o empresa" data-required aria-describedby="negocio-error">
+                  <span class="field-error" id="negocio-error" role="alert"></span>
+                </div>
 
-              <noscript>
-                <p class="form-note" style="color: var(--error);">
-                  Este formulario necesita JavaScript para enviarse. Sin él no se envía nada:
-                  preferimos no hacer viajar tus datos por la barra de direcciones.
+                <div class="field">
+                  <label for="email">Correo electrónico <span class="req" aria-hidden="true">*</span></label>
+                  <input class="input" id="email" name="email" type="email" autocomplete="email" placeholder="tu@correo.com" data-required aria-describedby="email-error">
+                  <span class="field-error" id="email-error" role="alert"></span>
+                </div>
+
+                <div class="field">
+                  <label for="telefono">Teléfono o WhatsApp <span class="hint">(opcional)</span></label>
+                  <input class="input" id="telefono" name="telefono" type="tel" autocomplete="tel" placeholder="Con código de área" aria-describedby="telefono-hint">
+                  <span class="hint" id="telefono-hint">Si preferís que te escribamos por ahí.</span>
+                </div>
+
+                <div class="field">
+                  <label for="mensaje">Algo más que quieras contarnos</label>
+                  <textarea class="textarea" id="mensaje" name="mensaje" placeholder="Ejemplo: tomo pedidos por WhatsApp y los paso a mano al sistema; se me pierden ventas y no sé cuánto stock real tengo." aria-describedby="mensaje-error mensaje-hint"></textarea>
+                  <span class="hint" id="mensaje-hint">Opcional. Podés agregar el detalle que quieras.</span>
+                  <span class="field-error" id="mensaje-error" role="alert"></span>
+                </div>
+
+                <div class="field">
+                  <div class="check">
+                    <input type="checkbox" id="consentimiento" name="consentimiento" value="Acepto el tratamiento y la transferencia internacional según la política de privacidad" data-required aria-describedby="consentimiento-error">
+                    <label for="consentimiento">Leí la política de privacidad y acepto el tratamiento de mis datos, incluida su transferencia a Estados Unidos y otros países donde operan Formspree y Zoho Mail. <span aria-hidden="true">*</span></label>
+                  </div>
+                  <a class="check-link" href="privacidad.html">Leer la política completa</a>
+                  <span class="field-error" id="consentimiento-error" role="alert"></span>
+                </div>
+
+                <div class="form-status" data-form-status role="status" aria-live="polite"></div>
+
+                <!-- Campos especiales de Formspree: no se muestran al visitante -->
+                <input type="hidden" name="_subject" value="Nueva consulta desde cuantilogic.tech">
+                <div class="hp" aria-hidden="true">
+                  <label for="_gotcha">No completar este campo</label>
+                  <input type="text" id="_gotcha" name="_gotcha" tabindex="-1" autocomplete="off">
+                </div>
+
+                <button class="btn btn--primary btn--block" type="submit" data-submit>
+                  Enviar consulta
+                  <svg aria-hidden="true"><use href="assets/icons.svg#i-arrow"></use></svg>
+                </button>
+
+                <p class="form-note">
+                  <strong>Responsable:</strong> Pablo Alberto Taborda Carime (CuantiLogic) ·
+                  <strong>Finalidad:</strong> responder tu consulta y elaborar una propuesta ·
+                  <strong>Destinatarios:</strong> Formspree y Zoho Mail, con tratamiento en Estados Unidos
+                  y otros países donde operan, según la <a href="privacidad.html">política de privacidad</a> ·
+                  Podés ejercer tus derechos de acceso, rectificación y supresión escribiendo a
+                  <a href="mailto:contacto@cuantilogic.tech">contacto@cuantilogic.tech</a>.
                 </p>
-              </noscript>
+
+              </fieldset>
+
+              <div class="wizard-nav">
+                <button class="btn btn--ghost" type="button" data-wizard-back hidden>Atrás</button>
+                <button class="btn btn--primary" type="button" data-wizard-next>Siguiente</button>
+                <span class="mono">Tus datos no se envían hasta que confirmes el envío</span>
+              </div>
             </form>
+            <noscript>
+              <p class="form-note" style="color: var(--error); margin-top:1rem;">
+                Este formulario necesita JavaScript para enviarse. Sin él no se envía nada:
+                preferimos no hacer viajar tus datos por la barra de direcciones. Podés escribirnos
+                directamente a <a href="mailto:contacto@cuantilogic.tech">contacto@cuantilogic.tech</a>.
+              </p>
+            </noscript>
           </div>
 
           <div>
@@ -161,7 +214,7 @@
               </ul>
             </div>
 
-            <div class="card reveal" data-delay="2" style="margin-top: 1rem;">
+            <div class="card reveal" data-delay="2" style="margin-top:1rem;">
               <span class="card-icon" aria-hidden="true"><svg><use href="assets/icons.svg#i-info"></use></svg></span>
               <h3>Para que la consulta sea útil</h3>
               <ul class="checklist">
@@ -169,12 +222,12 @@
                 <li>Con qué herramientas lo hacés hoy</li>
                 <li>Qué pasa cuando ese proceso falla</li>
               </ul>
-              <p class="small" style="margin-top: 1rem;">
+              <p class="small" style="margin-top:1rem;">
                 Con esos tres datos podemos decirte bastante en la primera respuesta.
               </p>
             </div>
 
-            <div class="card reveal" data-delay="3" style="margin-top: 1rem;">
+            <div class="card reveal" data-delay="3" style="margin-top:1rem;">
               <span class="card-icon" aria-hidden="true"><svg><use href="assets/icons.svg#i-clock"></use></svg></span>
               <h3>Tiempo de respuesta</h3>
               <p class="small">
@@ -195,7 +248,7 @@
       <div class="footer-grid">
         <div class="footer-col">
           <a class="footer-brand" href="index.html">
-            <img src="assets/brand/logo-horizontal.svg" alt="CuantiLogic" width="762" height="139">
+            <img src="assets/brand/logo-horizontal.svg" alt="CuantiLogic" width="798" height="120">
           </a>
           <p>Ingeniería de software y soluciones tecnológicas. Desarrollo a medida, integraciones, automatización y datos para empresas y comercios.</p>
         </div>
@@ -213,7 +266,7 @@
           <ul>
             <li><a href="nosotros.html">Nosotros</a></li>
             <li><a href="como-trabajamos.html">Cómo trabajamos</a></li>
-            <li><a href="proyectos.html">Proyectos</a></li>
+            <li><a href="soluciones.html">Soluciones y demostraciones</a></li>
             <li><a href="contacto.html">Contacto</a></li>
           </ul>
         </div>
@@ -222,7 +275,8 @@
           <ul>
             <li><a href="contacto.html">Formulario de consulta</a></li>
             <li><a href="privacidad.html">Política de privacidad</a></li>
-            <li><a href="proyectos.html#totembiz">Totembiz</a></li>
+            <li><a href="soluciones.html#totembiz">Totembiz</a></li>
+            <!-- Se completan desde js/site-config.js. Sin datos, quedan ocultos. -->
             <li hidden><a data-contact-email>Email</a></li>
             <li hidden><a data-contact-whatsapp>WhatsApp</a></li>
           </ul>
@@ -238,5 +292,6 @@
 
   <script src="js/site-config.js" defer></script>
   <script src="js/main.js" defer></script>
+  <script src="js/interactive.js" defer></script>
 </body>
 </html>
