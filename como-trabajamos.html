@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Cómo trabajamos — CuantiLogic</title>
-  <meta name="description" content="Cinco etapas con entregables revisables: diagnóstico, propuesta, desarrollo por etapas, pruebas y acompañamiento. Alcance y precio por escrito antes de empezar.">
+  <meta name="description" content="Cinco etapas con entregables y validaciones: diagnóstico, propuesta, desarrollo por etapas, puesta en marcha y acompañamiento. Quién hace qué, en cada paso.">
   <link rel="canonical" href="https://cuantilogic.tech/como-trabajamos.html">
   <meta name="theme-color" content="#0B1224">
   <meta name="color-scheme" content="dark">
@@ -15,7 +15,7 @@
   <meta property="og:site_name" content="CuantiLogic">
   <meta property="og:locale" content="es_AR">
   <meta property="og:title" content="Cómo trabajamos — CuantiLogic">
-  <meta property="og:description" content="Cinco etapas, cinco entregables. El trabajo empieza por escrito y avanza por etapas revisables.">
+  <meta property="og:description" content="Cinco etapas, entregables concretos y un punto de validación en cada una. Así trabajamos.">
   <meta property="og:url" content="https://cuantilogic.tech/como-trabajamos.html">
   <meta property="og:image" content="https://cuantilogic.tech/assets/brand/og-cover.png">
   <meta property="og:image:width" content="1200">
@@ -31,20 +31,23 @@
   <nav class="nav" aria-label="Navegación principal">
     <div class="container nav-inner">
       <a class="brand" href="index.html">
-        <img src="assets/brand/logo-horizontal.svg" alt="CuantiLogic" width="762" height="139">
+        <img src="assets/brand/logo-horizontal.svg" alt="CuantiLogic" width="798" height="120">
       </a>
+
       <ul class="nav-links" id="nav-links">
         <li><a href="index.html">Inicio</a></li>
         <li><a href="servicios.html">Servicios</a></li>
         <li><a href="como-trabajamos.html" aria-current="page">Cómo trabajamos</a></li>
-        <li><a href="proyectos.html">Proyectos</a></li>
+        <li><a href="soluciones.html">Soluciones</a></li>
         <li><a href="nosotros.html">Nosotros</a></li>
         <li class="nav-only-mobile"><a href="contacto.html">Contacto</a></li>
       </ul>
+
       <a class="nav-cta" href="contacto.html">
         Hablemos
         <svg aria-hidden="true"><use href="assets/icons.svg#i-arrow"></use></svg>
       </a>
+
       <a class="nav-toggle" href="#nav-links" aria-expanded="false" aria-controls="nav-links" aria-label="Abrir menú de navegación">
         <svg class="icon-menu" aria-hidden="true"><use href="assets/icons.svg#i-menu"></use></svg>
         <svg class="icon-close" aria-hidden="true"><use href="assets/icons.svg#i-close"></use></svg>
@@ -53,14 +56,13 @@
   </nav>
 
   <main id="main">
-
     <header class="page-head">
       <div class="container">
         <p class="breadcrumb"><a href="index.html">Inicio</a> / Cómo trabajamos</p>
-        <h1 class="display">Un proceso corto, con entregables en cada etapa.</h1>
+        <h1 class="display">Cinco etapas. Un entregable en cada una.</h1>
         <p class="lead">
           La mayoría de los proyectos de software fallan por alcance mal definido, no por tecnología.
-          Por eso el trabajo empieza por escrito y avanza por etapas revisables.
+          Por eso cada etapa cierra con algo concreto que podés revisar antes de que sigamos.
         </p>
       </div>
     </header>
@@ -70,106 +72,134 @@
         <div class="sec-head">
           <div>
             <p class="eyebrow">El proceso</p>
-            <h2 id="proceso-title">Cinco etapas, cinco entregables.</h2>
-            <p class="lead">Cada etapa cierra con algo concreto que podés revisar antes de que sigamos con la siguiente.</p>
+            <h2 id="proceso-title">De la conversación al sistema en uso.</h2>
+            <p class="lead">El riel muestra qué pasa en cada etapa, quién la lidera y qué se valida antes de avanzar.</p>
           </div>
         </div>
 
-        <div class="timeline">
-          <div class="tl-item reveal">
-            <span class="tl-num" aria-hidden="true">01</span>
-            <div class="tl-body">
+        <div class="rail reveal">
+          <div class="rail-steps">
+            <div class="rail-step">
+              <span class="rail-node" aria-hidden="true">01</span>
               <h3>Diagnóstico</h3>
-              <p>
-                Relevamos cómo funciona hoy el proceso: quién interviene, con qué herramientas, dónde se
-                pierde información y qué se hace a mano. Escuchamos antes de proponer.
-              </p>
-              <p class="step-out">Diagnóstico escrito del proceso actual</p>
+              <p>Relevamos el proceso: quién interviene, con qué herramientas y dónde se pierde información.</p>
+              <dl class="rail-meta">
+                <div><dt>Entregable</dt><dd>Diagnóstico escrito del proceso actual</dd></div>
+                <div><dt>Validación</dt><dd><b>Vos</b> confirmás que el relevamiento refleja la realidad</dd></div>
+              </dl>
+              <span class="rail-owner" data-who="nosotros">Lidera CuantiLogic</span>
             </div>
-          </div>
 
-          <div class="tl-item reveal">
-            <span class="tl-num" aria-hidden="true">02</span>
-            <div class="tl-body">
+            <div class="rail-step">
+              <span class="rail-node" aria-hidden="true">02</span>
               <h3>Propuesta</h3>
-              <p>
-                Definimos qué se construye, qué queda afuera y en qué orden. El documento incluye alcance,
-                etapas, tiempos estimados y precio. Si algo no se puede estimar con criterio, se dice.
-              </p>
-              <p class="step-out">Propuesta técnica y comercial por escrito</p>
+              <p>Qué se construye, qué queda afuera y en qué orden. Con alcance, etapas y precio.</p>
+              <dl class="rail-meta">
+                <div><dt>Entregable</dt><dd>Propuesta técnica y comercial por escrito</dd></div>
+                <div><dt>Validación</dt><dd><b>Vos</b> aprobás el alcance antes de empezar</dd></div>
+              </dl>
+              <span class="rail-owner" data-who="ambos">Deciden ambos</span>
             </div>
-          </div>
 
-          <div class="tl-item reveal">
-            <span class="tl-num" aria-hidden="true">03</span>
-            <div class="tl-body">
+            <div class="rail-step">
+              <span class="rail-node" aria-hidden="true">03</span>
               <h3>Desarrollo por etapas</h3>
-              <p>
-                Cada etapa se entrega para que la revises antes de seguir. No se acumulan tres meses de
-                trabajo para mostrar todo junto al final.
-              </p>
-              <p class="step-out">Versión funcionando de cada etapa</p>
+              <p>Cada etapa se entrega funcionando. No se acumulan meses de trabajo para mostrar todo al final.</p>
+              <dl class="rail-meta">
+                <div><dt>Entregable</dt><dd>Versión funcionando de cada etapa</dd></div>
+                <div><dt>Validación</dt><dd><b>Vos</b> probás y aprobás antes de la siguiente</dd></div>
+              </dl>
+              <span class="rail-owner" data-who="nosotros">Lidera CuantiLogic</span>
             </div>
-          </div>
 
-          <div class="tl-item reveal">
-            <span class="tl-num" aria-hidden="true">04</span>
-            <div class="tl-body">
-              <h3>Pruebas y puesta en marcha</h3>
-              <p>
-                Probamos con datos reales del negocio, no con ejemplos de laboratorio. Ajustamos lo que
-                aparece en la prueba y recién después se pone en uso.
-              </p>
-              <p class="step-out">Sistema probado y en operación</p>
+            <div class="rail-step">
+              <span class="rail-node" aria-hidden="true">04</span>
+              <h3>Puesta en marcha</h3>
+              <p>Se prueba con datos reales del negocio, se ajusta lo que aparece y recién después se pone en uso.</p>
+              <dl class="rail-meta">
+                <div><dt>Entregable</dt><dd>Sistema probado y en operación</dd></div>
+                <div><dt>Validación</dt><dd><b>Ambos</b> verifican el circuito completo</dd></div>
+              </dl>
+              <span class="rail-owner" data-who="ambos">Deciden ambos</span>
             </div>
-          </div>
 
-          <div class="tl-item reveal">
-            <span class="tl-num" aria-hidden="true">05</span>
-            <div class="tl-body">
+            <div class="rail-step">
+              <span class="rail-node" aria-hidden="true">05</span>
               <h3>Acompañamiento</h3>
-              <p>
-                Después de la entrega queda la documentación y un período de acompañamiento acordado en
-                la propuesta. Los cambios posteriores se cotizan aparte.
-              </p>
-              <p class="step-out">Documentación y soporte según lo acordado</p>
+              <p>Queda la documentación y un período de acompañamiento acordado en la propuesta.</p>
+              <dl class="rail-meta">
+                <div><dt>Entregable</dt><dd>Documentación y soporte según lo acordado</dd></div>
+                <div><dt>Validación</dt><dd><b>Vos</b> definís cuándo el sistema queda a cargo de tu equipo</dd></div>
+              </dl>
+              <span class="rail-owner" data-who="nosotros">Lidera CuantiLogic</span>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="sec sec--line" aria-labelledby="condiciones-title">
+    <section class="sec sec--line" aria-labelledby="roles-title">
       <div class="container">
         <div class="sec-head">
           <div>
-            <p class="eyebrow">Condiciones</p>
-            <h2 id="condiciones-title">Cómo es trabajar con nosotros.</h2>
-            <p class="lead">Lo que hace falta de tu lado y lo que queda explícitamente fuera del servicio.</p>
+            <p class="eyebrow">Responsabilidades</p>
+            <h2 id="roles-title">Quién hace qué.</h2>
+            <p class="lead">El trabajo sale mejor cuando cada lado sabe qué se espera de él. Esto es lo que ponemos nosotros y lo que necesitamos de tu lado.</p>
           </div>
         </div>
 
-        <div class="grid grid--2">
-          <div class="card reveal">
-            <span class="card-icon" aria-hidden="true"><svg><use href="assets/icons.svg#i-users"></use></svg></span>
-            <h3>Qué necesitamos de vos</h3>
-            <ul class="checklist">
-              <li>Una persona que conozca el proceso de punta a punta</li>
-              <li>Acceso a los datos o sistemas actuales, si existen</li>
-              <li>Disponibilidad para revisar cada entrega</li>
-              <li>Una decisión: quién aprueba el alcance</li>
+        <div class="lanes reveal">
+          <div class="lane lane--us">
+            <p class="lane-head lane-head--us"><i aria-hidden="true"></i> CuantiLogic</p>
+            <ul>
+              <li><b>Relevar y proponer.</b> Entender el proceso y escribir qué se va a construir.</li>
+              <li><b>Construir y probar.</b> Desarrollar por etapas y probar con datos reales.</li>
+              <li><b>Documentar.</b> Dejar el sistema explicado para quien lo use y lo mantenga.</li>
+              <li><b>Advertir a tiempo.</b> Si algo no se puede estimar o no conviene, decirlo antes, no después.</li>
             </ul>
           </div>
 
-          <div class="card reveal" data-delay="1">
-            <span class="card-icon" aria-hidden="true"><svg><use href="assets/icons.svg#i-shield"></use></svg></span>
-            <h3>Qué no hacemos</h3>
-            <ul class="checklist checklist--no">
-              <li>No vendemos licencias ni hacemos de intermediarios de proveedores</li>
-              <li>No gestionamos publicidad ni redes sociales</li>
-              <li>No tomamos decisiones comerciales por vos</li>
-              <li>No prometemos resultados de venta: construimos la herramienta</li>
+          <div class="lane lane--you">
+            <p class="lane-head lane-head--you"><i aria-hidden="true"></i> Tu empresa</p>
+            <ul>
+              <li><b>Una persona de referencia.</b> Alguien que conozca el proceso de punta a punta.</li>
+              <li><b>Acceso a los datos.</b> A los sistemas actuales, si existen, y a una muestra real.</li>
+              <li><b>Tiempo para revisar.</b> Cada entrega necesita una devolución concreta.</li>
+              <li><b>Una decisión.</b> Quién aprueba el alcance y quién valida cada etapa.</li>
             </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec sec--line" aria-labelledby="compromisos-title">
+      <div class="container">
+        <div class="sec-head">
+          <div>
+            <p class="eyebrow">Compromisos</p>
+            <h2 id="compromisos-title">Tres cosas que quedan por escrito.</h2>
+            <p class="lead">No son promesas de resultado: son condiciones del trabajo, verificables en cualquier momento.</p>
+          </div>
+        </div>
+
+        <div class="grid grid--3">
+          <div class="principle reveal">
+            <span class="principle-num">01</span>
+            <h3>Alcance antes de empezar</h3>
+            <p>La propuesta dice qué se construye, qué queda afuera, en qué orden y a qué precio. Si algo no se puede estimar con criterio, se dice.</p>
+            <p class="gain"><b>Qué gana tu negocio:</b> podés decidir con el número y el alcance a la vista, no con una promesa.</p>
+          </div>
+          <div class="principle reveal" data-delay="1">
+            <span class="principle-num">02</span>
+            <h3>Entregas revisables</h3>
+            <p>Cada etapa termina en algo que podés ver funcionando y aprobar o rechazar antes de que sigamos con la siguiente.</p>
+            <p class="gain"><b>Qué gana tu negocio:</b> el riesgo se reparte en tramos cortos en lugar de aparecer todo al final.</p>
+          </div>
+          <div class="principle reveal" data-delay="2">
+            <span class="principle-num">03</span>
+            <h3>Documentación y traspaso</h3>
+            <p>El sistema se entrega documentado. La titularidad del código y los derechos de uso se definen en el contrato, según el tipo de servicio.</p>
+            <p class="gain"><b>Qué gana tu negocio:</b> no queda dependiendo de una sola persona para entender lo que tiene.</p>
           </div>
         </div>
       </div>
@@ -199,7 +229,7 @@
           </details>
           <details>
             <summary>¿Necesito saber de tecnología?</summary>
-            <p>No. Necesitás saber cómo funciona tu negocio, que es lo difícil. Nosotros traducimos ese proceso a un sistema. Las explicaciones técnicas se dan en el nivel que necesites.</p>
+            <p>No. Necesitás saber cómo funciona tu negocio, que es lo difícil. Nosotros traducimos ese proceso a un sistema. Las explicaciones técnicas se dan en el nivel que necesites, y el detalle queda disponible si alguien de tu equipo quiere profundizar.</p>
           </details>
           <details>
             <summary>¿Qué pasa si el proyecto se complica a mitad de camino?</summary>
@@ -208,10 +238,6 @@
           <details>
             <summary>¿Trabajan de forma remota?</summary>
             <p>Sí. Las reuniones son por videollamada y el trabajo se coordina a distancia. Si el proyecto requiere presencia física en el local, se acuerda en la propuesta.</p>
-          </details>
-          <details>
-            <summary>¿Qué pasa con los datos de mi empresa?</summary>
-            <p>Los datos quedan en la infraestructura que se defina con vos. Si el proyecto usa servicios de terceros, la propuesta indica cuáles son y para qué se usan, antes de empezar.</p>
           </details>
         </div>
       </div>
@@ -241,7 +267,7 @@
       <div class="footer-grid">
         <div class="footer-col">
           <a class="footer-brand" href="index.html">
-            <img src="assets/brand/logo-horizontal.svg" alt="CuantiLogic" width="762" height="139">
+            <img src="assets/brand/logo-horizontal.svg" alt="CuantiLogic" width="798" height="120">
           </a>
           <p>Ingeniería de software y soluciones tecnológicas. Desarrollo a medida, integraciones, automatización y datos para empresas y comercios.</p>
         </div>
@@ -259,7 +285,7 @@
           <ul>
             <li><a href="nosotros.html">Nosotros</a></li>
             <li><a href="como-trabajamos.html">Cómo trabajamos</a></li>
-            <li><a href="proyectos.html">Proyectos</a></li>
+            <li><a href="soluciones.html">Soluciones y demostraciones</a></li>
             <li><a href="contacto.html">Contacto</a></li>
           </ul>
         </div>
@@ -268,7 +294,8 @@
           <ul>
             <li><a href="contacto.html">Formulario de consulta</a></li>
             <li><a href="privacidad.html">Política de privacidad</a></li>
-            <li><a href="proyectos.html#totembiz">Totembiz</a></li>
+            <li><a href="soluciones.html#totembiz">Totembiz</a></li>
+            <!-- Se completan desde js/site-config.js. Sin datos, quedan ocultos. -->
             <li hidden><a data-contact-email>Email</a></li>
             <li hidden><a data-contact-whatsapp>WhatsApp</a></li>
           </ul>
@@ -284,5 +311,6 @@
 
   <script src="js/site-config.js" defer></script>
   <script src="js/main.js" defer></script>
+  <script src="js/interactive.js" defer></script>
 </body>
 </html>

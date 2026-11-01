@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Servicios — CuantiLogic</title>
-  <meta name="description" content="Software a medida, ERP y CRM, automatización, integraciones, datos, comercio electrónico, mantenimiento e IA aplicada. Diez servicios de ingeniería para empresas y comercios.">
+  <meta name="description" content="Diez servicios de ingeniería agrupados en cuatro problemas de negocio: sistemas, operación, venta y evolución. Elegí qué necesitás resolver.">
   <link rel="canonical" href="https://cuantilogic.tech/servicios.html">
   <meta name="theme-color" content="#0B1224">
   <meta name="color-scheme" content="dark">
@@ -15,7 +15,7 @@
   <meta property="og:site_name" content="CuantiLogic">
   <meta property="og:locale" content="es_AR">
   <meta property="og:title" content="Servicios — CuantiLogic">
-  <meta property="og:description" content="Diez servicios de ingeniería agrupados en cuatro frentes: sistemas, operación, venta y evolución.">
+  <meta property="og:description" content="Cuatro grupos de problemas, diez servicios. Elegí qué necesitás resolver y mirá qué lo resuelve.">
   <meta property="og:url" content="https://cuantilogic.tech/servicios.html">
   <meta property="og:image" content="https://cuantilogic.tech/assets/brand/og-cover.png">
   <meta property="og:image:width" content="1200">
@@ -31,20 +31,23 @@
   <nav class="nav" aria-label="Navegación principal">
     <div class="container nav-inner">
       <a class="brand" href="index.html">
-        <img src="assets/brand/logo-horizontal.svg" alt="CuantiLogic" width="762" height="139">
+        <img src="assets/brand/logo-horizontal.svg" alt="CuantiLogic" width="798" height="120">
       </a>
+
       <ul class="nav-links" id="nav-links">
         <li><a href="index.html">Inicio</a></li>
         <li><a href="servicios.html" aria-current="page">Servicios</a></li>
         <li><a href="como-trabajamos.html">Cómo trabajamos</a></li>
-        <li><a href="proyectos.html">Proyectos</a></li>
+        <li><a href="soluciones.html">Soluciones</a></li>
         <li><a href="nosotros.html">Nosotros</a></li>
         <li class="nav-only-mobile"><a href="contacto.html">Contacto</a></li>
       </ul>
+
       <a class="nav-cta" href="contacto.html">
         Hablemos
         <svg aria-hidden="true"><use href="assets/icons.svg#i-arrow"></use></svg>
       </a>
+
       <a class="nav-toggle" href="#nav-links" aria-expanded="false" aria-controls="nav-links" aria-label="Abrir menú de navegación">
         <svg class="icon-menu" aria-hidden="true"><use href="assets/icons.svg#i-menu"></use></svg>
         <svg class="icon-close" aria-hidden="true"><use href="assets/icons.svg#i-close"></use></svg>
@@ -53,26 +56,147 @@
   </nav>
 
   <main id="main">
-
     <header class="page-head">
       <div class="container">
         <p class="breadcrumb"><a href="index.html">Inicio</a> / Servicios</p>
         <h1 class="display">Lo que construimos y para qué sirve.</h1>
         <p class="lead">
-          Diez servicios agrupados en cuatro frentes. No se contratan todos: se elige el que resuelve
+          Cuatro grupos de problemas y diez servicios. No se contratan todos: se elige el que resuelve
           el problema. Si el problema no está acá, escribinos igual.
         </p>
       </div>
     </header>
 
-    <section class="sec">
+    <section class="sec" aria-labelledby="solver-title">
       <div class="container">
 
+        <div class="solver reveal" data-solver>
+          <div class="solver-head">
+            <h2 id="solver-title">¿Qué necesitás resolver?</h2>
+            <button class="demo-btn" type="button" data-problem-clear style="margin-left:auto;">Ver todos</button>
+          </div>
+
+          <div class="solver-body">
+            <div class="chips" role="group" aria-labelledby="solver-title">
+              <button class="chip" type="button" data-problem="pedidos" aria-pressed="false">
+                <svg aria-hidden="true"><use href="assets/icons.svg#i-chat"></use></svg> Se pierden pedidos
+              </button>
+              <button class="chip" type="button" data-problem="stock" aria-pressed="false">
+                <svg aria-hidden="true"><use href="assets/icons.svg#i-box"></use></svg> No sé mi stock real
+              </button>
+              <button class="chip" type="button" data-problem="doble" aria-pressed="false">
+                <svg aria-hidden="true"><use href="assets/icons.svg#i-refresh"></use></svg> Cargo todo dos veces
+              </button>
+              <button class="chip" type="button" data-problem="reportes" aria-pressed="false">
+                <svg aria-hidden="true"><use href="assets/icons.svg#i-chart"></use></svg> El reporte llega tarde
+              </button>
+              <button class="chip" type="button" data-problem="online" aria-pressed="false">
+                <svg aria-hidden="true"><use href="assets/icons.svg#i-cart"></use></svg> Quiero vender online
+              </button>
+              <button class="chip" type="button" data-problem="viejo" aria-pressed="false">
+                <svg aria-hidden="true"><use href="assets/icons.svg#i-tool"></use></svg> Mi sistema quedó viejo
+              </button>
+            </div>
+
+            <div class="solver-panel solver-panel--empty" data-problem-empty>
+              <h3>Elegí el problema que más te molesta hoy</h3>
+              <p>
+                Cada opción resalta los servicios que lo resuelven y muestra un caso de uso ilustrativo.
+                Si ninguno encaja, escribinos: el diagnóstico es el primer paso igual.
+              </p>
+            </div>
+
+            <div class="solver-panel" data-problem-panel="pedidos" data-solve="software integraciones automatizacion">
+              <h3>Que el pedido entre una sola vez</h3>
+              <p>
+                Capturamos el pedido donde llega, lo validamos y lo registramos. El stock se descuenta en
+                el mismo movimiento y queda el historial de quién lo tomó.
+              </p>
+              <div class="solver-links">
+                <a href="#software">Software a medida</a>
+                <a href="#integraciones">Integraciones</a>
+                <a href="#automatizacion">Automatización</a>
+              </div>
+              <p class="solver-case"><b>Ejemplo ilustrativo</b>Un comercio que toma pedidos por WhatsApp y los pasa a mano al sistema.</p>
+            </div>
+
+            <div class="solver-panel" data-problem-panel="stock" data-solve="software integraciones datos" hidden>
+              <h3>Una sola cifra de stock, por depósito</h3>
+              <p>
+                El inventario se actualiza con cada movimiento y avisa antes de que falte. El conteo deja
+                de ser un evento mensual y pasa a ser un dato que siempre está al día.
+              </p>
+              <div class="solver-links">
+                <a href="#software">Software a medida</a>
+                <a href="#integraciones">Integraciones</a>
+                <a href="#datos">Datos y tableros</a>
+              </div>
+              <p class="solver-case"><b>Ejemplo ilustrativo</b>Una distribuidora con dos depósitos y una planilla compartida por tres personas.</p>
+            </div>
+
+            <div class="solver-panel" data-problem-panel="doble" data-solve="integraciones automatizacion erp" hidden>
+              <h3>Cargar una vez y que se propague</h3>
+              <p>
+                Conectamos los sistemas que ya usás para que el dato viaje solo. Sin exportar, sin copiar
+                y pegar, sin depender de que alguien se acuerde de actualizar la otra planilla.
+              </p>
+              <div class="solver-links">
+                <a href="#integraciones">Integraciones</a>
+                <a href="#automatizacion">Automatización</a>
+                <a href="#sistemas">ERP y gestión</a>
+              </div>
+              <p class="solver-case"><b>Ejemplo ilustrativo</b>Un negocio que carga el mismo producto en el ERP y en la tienda online.</p>
+            </div>
+
+            <div class="solver-panel" data-problem-panel="reportes" data-solve="datos automatizacion" hidden>
+              <h3>El número disponible el mismo día</h3>
+              <p>
+                Un tablero que se actualiza con la operación, en lugar de un reporte que se arma a mano
+                cruzando planillas. La misma cifra para todas las áreas.
+              </p>
+              <div class="solver-links">
+                <a href="#datos">Datos y tableros</a>
+                <a href="#automatizacion">Automatización</a>
+              </div>
+              <p class="solver-case"><b>Ejemplo ilustrativo</b>Una empresa que cierra el mes cruzando tres fuentes distintas.</p>
+            </div>
+
+            <div class="solver-panel" data-problem-panel="online" data-solve="ecommerce integraciones software" hidden>
+              <h3>Vender online sin duplicar trabajo</h3>
+              <p>
+                La tienda comparte stock, precios y administración con el mostrador. Un pedido online es
+                un pedido más, no una tarea aparte.
+              </p>
+              <div class="solver-links">
+                <a href="#venta">Comercio electrónico</a>
+                <a href="#integraciones">Integraciones</a>
+                <a href="#software">Software a medida</a>
+              </div>
+              <p class="solver-case"><b>Ejemplo ilustrativo</b>Un local que quiere abrir su canal online sin sumar otra planilla al circuito.</p>
+            </div>
+
+            <div class="solver-panel" data-problem-panel="viejo" data-solve="mantenimiento ia erp" hidden>
+              <h3>Modernizar sin detener la operación</h3>
+              <p>
+                Reemplazamos por partes, con entregas parciales y documentación. Lo que funciona se
+                conserva; lo que traba se reemplaza primero.
+              </p>
+              <div class="solver-links">
+                <a href="#evolucion">Mantenimiento</a>
+                <a href="#evolucion">IA aplicada</a>
+                <a href="#sistemas">ERP y gestión</a>
+              </div>
+              <p class="solver-case"><b>Ejemplo ilustrativo</b>Un sistema que funciona pero nadie quiere tocar porque no está documentado.</p>
+            </div>
+
+          </div>
+        </div>
+
         <!-- ===== 01 SISTEMAS ===== -->
-        <article class="svc-block reveal" id="sistemas">
+        <article class="svc-block reveal" id="sistemas" style="margin-top: clamp(2.5rem, 5vw, 4rem);">
           <div class="svc-head">
             <div class="svc-head__text">
-              <p class="svc-kicker">01 — SISTEMAS</p>
+              <p class="svc-kicker">01 — SISTEMAS · 3 SERVICIOS</p>
               <h2>El núcleo de la operación.</h2>
               <p class="lead">
                 El sistema donde vive la información del negocio. Cuando falta, o cuando quedó chico,
@@ -80,220 +204,256 @@
               </p>
             </div>
             <figure style="margin:0;">
-              <svg class="fig" viewBox="0 0 300 168" role="img" aria-label="Esquema de un sistema central con cuatro módulos conectados: ventas, stock, clientes y administración.">
-                <rect class="fig-box" x="106" y="58" width="88" height="46" rx="8"/>
-                <text class="fig-text" x="150" y="78" text-anchor="middle" font-size="11.5">Sistema</text>
-                <text class="fig-sub" x="150" y="91" text-anchor="middle">central</text>
+              <svg viewBox="0 0 320 168" role="img" aria-label="Esquema de un sistema central con cuatro módulos conectados: ventas, stock, clientes y administración.">
+                <rect class="fig-box" x="112" y="58" width="96" height="46" rx="8"/>
+                <text class="fig-text" x="160" y="78" text-anchor="middle">Sistema</text>
+                <text class="fig-sub" x="160" y="92" text-anchor="middle">central</text>
 
                 <g class="fig-line fig-line--cyan" opacity=".5">
-                  <path d="M106 70 H74 V32 H46"/>
-                  <path d="M106 92 H74 V136 H46"/>
-                  <path d="M194 70 H226 V32 H254"/>
-                  <path d="M194 92 H226 V136 H254"/>
+                  <path d="M112 70 H84 V32 H58"/>
+                  <path d="M112 92 H84 V136 H58"/>
+                  <path d="M208 70 H236 V32 H262"/>
+                  <path d="M208 92 H236 V136 H262"/>
                 </g>
 
-                <rect class="fig-box" x="0" y="18" width="46" height="28" rx="6"/>
-                <text class="fig-mono" x="23" y="36" text-anchor="middle" font-size="9.5">VENTAS</text>
+                <rect class="fig-box" x="2" y="18" width="56" height="28" rx="6"/>
+                <text class="fig-mono" x="30" y="36" text-anchor="middle">VENTAS</text>
 
-                <rect class="fig-box" x="0" y="122" width="46" height="28" rx="6"/>
-                <text class="fig-mono" x="23" y="140" text-anchor="middle" font-size="9.5">STOCK</text>
+                <rect class="fig-box" x="2" y="122" width="56" height="28" rx="6"/>
+                <text class="fig-mono" x="30" y="140" text-anchor="middle">STOCK</text>
 
-                <rect class="fig-box" x="254" y="18" width="46" height="28" rx="6"/>
-                <text class="fig-mono" x="277" y="36" text-anchor="middle" font-size="9.5">CLIENTES</text>
+                <rect class="fig-box" x="262" y="18" width="56" height="28" rx="6"/>
+                <text class="fig-mono" x="290" y="36" text-anchor="middle">CLIENTE</text>
 
-                <rect class="fig-box" x="254" y="122" width="46" height="28" rx="6"/>
-                <text class="fig-mono" x="277" y="140" text-anchor="middle" font-size="9.5">ADMIN.</text>
+                <rect class="fig-box" x="262" y="122" width="56" height="28" rx="6"/>
+                <text class="fig-mono" x="290" y="140" text-anchor="middle">ADMIN.</text>
 
-                <circle class="fig-node fig-pulse" cx="150" cy="58" r="3"/>
-                <circle class="fig-node--violet" cx="150" cy="104" r="2.5"/>
+                <circle class="fig-node fig-pulse" cx="160" cy="58" r="3"/>
+                <circle class="fig-node--violet" cx="160" cy="104" r="2.5"/>
               </svg>
             </figure>
           </div>
 
           <div class="svc-list">
-            <div class="svc-item" id="software">
+            <div class="svc-item" id="software" data-service="software">
               <h3><svg aria-hidden="true"><use href="assets/icons.svg#i-code"></use></svg> Software a medida</h3>
               <p>Cuando el sistema que usás no cubre el proceso, y adaptarlo cuesta más que construirlo bien.</p>
               <div class="tags"><span class="tag">web</span><span class="tag">escritorio</span><span class="tag">apis</span></div>
             </div>
-            <div class="svc-item">
+            <div class="svc-item" data-service="erp">
               <h3><svg aria-hidden="true"><use href="assets/icons.svg#i-db"></use></svg> ERP y gestión</h3>
               <p>Implementación y adaptación de sistemas de gestión, o módulos a medida sobre el ERP que ya tenés.</p>
               <div class="tags"><span class="tag">migración</span><span class="tag">módulos</span></div>
             </div>
-            <div class="svc-item">
+            <div class="svc-item" data-service="crm">
               <h3><svg aria-hidden="true"><use href="assets/icons.svg#i-users"></use></svg> CRM y seguimiento comercial</h3>
               <p>Para que la cartera de clientes no viva en la cabeza del vendedor ni en una libreta.</p>
               <div class="tags"><span class="tag">oportunidades</span><span class="tag">roles</span></div>
             </div>
           </div>
+
+          <details class="svc-detail">
+            <summary>Cómo se hace, si te interesa el detalle técnico</summary>
+            <p>
+              Modelado de datos relacional, API propia y migración desde el sistema anterior. Cuando el
+              ERP actual lo permite, se trabaja por módulos y por integración antes que por reemplazo
+              total. El alcance y el orden se fijan en la propuesta.
+            </p>
+          </details>
         </article>
 
         <!-- ===== 02 OPERACIÓN ===== -->
         <article class="svc-block reveal" id="operacion">
           <div class="svc-head">
             <div class="svc-head__text">
-              <p class="svc-kicker">02 — OPERACIÓN</p>
+              <p class="svc-kicker">02 — OPERACIÓN · 3 SERVICIOS</p>
               <h2>Que las cosas pasen solas.</h2>
               <p class="lead">
                 Todo lo que hoy depende de que alguien se acuerde, se ejecute y quede registrado.
               </p>
             </div>
             <figure style="margin:0;">
-              <svg class="fig" viewBox="0 0 300 168" role="img" aria-label="Esquema de una automatización: un evento dispara tres pasos encadenados y deja un registro.">
-                <circle cx="26" cy="84" r="16" class="fig-box fig-box--accent"/>
-                <path d="M26 76 v8 l-4 4" class="fig-line fig-line--cyan" stroke-width="1.6"/>
-                <text class="fig-mono" x="26" y="116" text-anchor="middle" font-size="9">EVENTO</text>
+              <svg viewBox="0 0 320 168" role="img" aria-label="Esquema de una automatización: un evento dispara tres pasos encadenados y deja un registro.">
+                <circle cx="30" cy="84" r="18" class="fig-box fig-box--accent"/>
+                <path d="M30 76 v9 l-4 4" class="fig-line fig-line--cyan" stroke-width="1.6"/>
+                <text class="fig-mono" x="30" y="120" text-anchor="middle">EVENTO</text>
 
-                <path class="fig-line fig-line--cyan fig-flow" d="M42 84 H68"/>
-                <rect class="fig-box" x="68" y="66" width="56" height="36" rx="7"/>
-                <text class="fig-mono" x="96" y="82" text-anchor="middle" font-size="9">VALIDA</text>
-                <text class="fig-mono" x="96" y="92" text-anchor="middle" font-size="9">DATOS</text>
+                <path class="fig-line fig-line--cyan fig-flow" d="M48 84 H76"/>
+                <rect class="fig-box" x="76" y="64" width="58" height="40" rx="7"/>
+                <text class="fig-mono" x="105" y="81" text-anchor="middle">VALIDA</text>
+                <text class="fig-mono" x="105" y="93" text-anchor="middle">DATOS</text>
 
-                <path class="fig-line fig-line--cyan fig-flow" d="M124 84 H150"/>
-                <rect class="fig-box" x="150" y="66" width="56" height="36" rx="7"/>
-                <text class="fig-mono" x="178" y="82" text-anchor="middle" font-size="9">EJECUTA</text>
-                <text class="fig-mono" x="178" y="92" text-anchor="middle" font-size="9">TAREA</text>
+                <path class="fig-line fig-line--cyan fig-flow" d="M134 84 H162"/>
+                <rect class="fig-box" x="162" y="64" width="58" height="40" rx="7"/>
+                <text class="fig-mono" x="191" y="81" text-anchor="middle">EJECUTA</text>
+                <text class="fig-mono" x="191" y="93" text-anchor="middle">TAREA</text>
 
-                <path class="fig-line fig-line--cyan fig-flow" d="M206 84 H232"/>
-                <rect class="fig-box fig-box--accent" x="232" y="66" width="56" height="36" rx="7"/>
-                <text class="fig-mono" x="260" y="82" text-anchor="middle" font-size="9">REGISTRA</text>
-                <text class="fig-mono" x="260" y="92" text-anchor="middle" font-size="9">RESULTADO</text>
+                <path class="fig-line fig-line--cyan fig-flow" d="M220 84 H246"/>
+                <rect class="fig-box fig-box--accent" x="246" y="64" width="72" height="40" rx="7"/>
+                <text class="fig-mono" x="282" y="81" text-anchor="middle">REGISTRA</text>
+                <text class="fig-mono" x="282" y="93" text-anchor="middle">RESULTADO</text>
 
-                <path class="fig-line fig-line--dash" d="M96 130 H260"/>
-                <text class="fig-mono" x="96" y="146" font-size="9">SIN INTERVENCIÓN MANUAL</text>
-                <circle class="fig-node fig-pulse" cx="26" cy="84" r="2.6"/>
+                <path class="fig-line fig-line--dash" d="M105 134 H282"/>
+                <text class="fig-mono" x="105" y="150">SIN INTERVENCIÓN MANUAL</text>
+                <circle class="fig-node fig-pulse" cx="30" cy="84" r="2.6"/>
               </svg>
             </figure>
           </div>
 
           <div class="svc-list">
-            <div class="svc-item" id="automatizacion">
+            <div class="svc-item" id="automatizacion" data-service="automatizacion">
               <h3><svg aria-hidden="true"><use href="assets/icons.svg#i-bolt"></use></svg> Automatización de procesos</h3>
               <p>Tareas que hoy dependen de que alguien se acuerde, se ejecutan solas y quedan registradas.</p>
               <div class="tags"><span class="tag">reglas</span><span class="tag">agenda</span><span class="tag">alertas</span></div>
             </div>
-            <div class="svc-item" id="integraciones">
+            <div class="svc-item" id="integraciones" data-service="integraciones">
               <h3><svg aria-hidden="true"><use href="assets/icons.svg#i-plug"></use></svg> Integración entre sistemas</h3>
               <p>El mismo dato cargado una sola vez, aunque lo usen cuatro sistemas distintos.</p>
               <div class="tags"><span class="tag">api</span><span class="tag">webhooks</span><span class="tag">sync</span></div>
             </div>
-            <div class="svc-item" id="datos">
+            <div class="svc-item" id="datos" data-service="datos">
               <h3><svg aria-hidden="true"><use href="assets/icons.svg#i-chart"></use></svg> Datos, reportes y tableros</h3>
               <p>La información de la operación disponible el mismo día, no cuando alguien la arma a mano.</p>
               <div class="tags"><span class="tag">tableros</span><span class="tag">exportación</span></div>
             </div>
           </div>
+
+          <details class="svc-detail">
+            <summary>Cómo se hace, si te interesa el detalle técnico</summary>
+            <p>
+              Reglas de negocio, trabajos programados y colas de reintento. Las integraciones se hacen
+              contra las APIs disponibles de cada plataforma, con registro de errores y alertas. Si un
+              sistema no expone una API, se evalúa la alternativa antes de prometerla.
+            </p>
+          </details>
         </article>
 
         <!-- ===== 03 VENTA ===== -->
         <article class="svc-block reveal" id="venta">
           <div class="svc-head">
             <div class="svc-head__text">
-              <p class="svc-kicker">03 — VENTA</p>
+              <p class="svc-kicker">03 — VENTA · 2 SERVICIOS</p>
               <h2>Vender sin duplicar trabajo.</h2>
               <p class="lead">
                 La tienda y el mostrador comparten el mismo stock y la misma administración.
               </p>
             </div>
             <figure style="margin:0;">
-              <svg class="fig" viewBox="0 0 300 168" role="img" aria-label="Esquema de una tienda: el catálogo alimenta el pedido, el pago confirma la venta y el stock se descuenta en el sistema.">
-                <rect class="fig-box" x="0" y="24" width="104" height="76" rx="8"/>
-                <rect x="0" y="24" width="104" height="14" rx="8" fill="rgba(243,248,255,.05)"/>
-                <circle cx="10" cy="31" r="2" fill="rgba(24,217,232,.7)"/>
-                <circle cx="18" cy="31" r="2" fill="rgba(243,248,255,.2)"/>
-                <rect class="fig-box" x="10" y="48" width="24" height="20" rx="3"/>
-                <rect class="fig-box" x="40" y="48" width="24" height="20" rx="3"/>
-                <rect class="fig-box" x="70" y="48" width="24" height="20" rx="3"/>
-                <rect class="fig-box" x="10" y="76" width="24" height="20" rx="3"/>
-                <rect class="fig-box" x="40" y="76" width="24" height="20" rx="3"/>
-                <text class="fig-mono" x="0" y="118" font-size="9">CATÁLOGO</text>
+              <svg viewBox="0 0 320 168" role="img" aria-label="Esquema de una tienda: el catálogo alimenta el pedido, el pago confirma la venta y el stock se descuenta en el sistema.">
+                <rect class="fig-box" x="2" y="24" width="104" height="76" rx="8"/>
+                <rect x="2" y="24" width="104" height="14" rx="8" fill="rgba(243,248,255,.05)"/>
+                <circle cx="12" cy="31" r="2" fill="rgba(24,217,232,.7)"/>
+                <circle cx="20" cy="31" r="2" fill="rgba(243,248,255,.2)"/>
+                <rect class="fig-box" x="12" y="48" width="24" height="20" rx="3"/>
+                <rect class="fig-box" x="42" y="48" width="24" height="20" rx="3"/>
+                <rect class="fig-box" x="72" y="48" width="24" height="20" rx="3"/>
+                <rect class="fig-box" x="12" y="76" width="24" height="20" rx="3"/>
+                <rect class="fig-box" x="42" y="76" width="24" height="20" rx="3"/>
+                <text class="fig-mono" x="2" y="118">CATÁLOGO</text>
 
-                <path class="fig-line fig-line--cyan fig-flow" d="M104 62 H136"/>
+                <path class="fig-line fig-line--cyan fig-flow" d="M106 62 H134"/>
                 <circle class="fig-node" cx="120" cy="62" r="2.4"/>
 
-                <rect class="fig-box fig-box--accent" x="136" y="42" width="66" height="40" rx="7"/>
-                <text class="fig-mono" x="169" y="58" text-anchor="middle" font-size="9">PEDIDO</text>
-                <text class="fig-mono" x="169" y="68" text-anchor="middle" font-size="9">+ PAGO</text>
+                <rect class="fig-box fig-box--accent" x="134" y="42" width="66" height="40" rx="7"/>
+                <text class="fig-mono" x="167" y="58" text-anchor="middle">PEDIDO</text>
+                <text class="fig-mono" x="167" y="70" text-anchor="middle">+ PAGO</text>
 
-                <path class="fig-line fig-line--cyan fig-flow" d="M202 62 H234"/>
-                <circle class="fig-node" cx="218" cy="62" r="2.4"/>
+                <path class="fig-line fig-line--cyan fig-flow" d="M200 62 H230"/>
+                <circle class="fig-node" cx="215" cy="62" r="2.4"/>
 
-                <rect class="fig-box" x="234" y="24" width="66" height="28" rx="7"/>
-                <text class="fig-mono" x="267" y="42" text-anchor="middle" font-size="9">STOCK</text>
+                <rect class="fig-box" x="230" y="22" width="66" height="26" rx="7"/>
+                <text class="fig-mono" x="263" y="39" text-anchor="middle">STOCK</text>
 
-                <rect class="fig-box" x="234" y="60" width="66" height="28" rx="7"/>
-                <text class="fig-mono" x="267" y="78" text-anchor="middle" font-size="9">FACTURA</text>
+                <rect class="fig-box" x="230" y="56" width="66" height="26" rx="7"/>
+                <text class="fig-mono" x="263" y="73" text-anchor="middle">FACTURA</text>
 
-                <rect class="fig-box" x="234" y="96" width="66" height="28" rx="7"/>
-                <text class="fig-mono" x="267" y="114" text-anchor="middle" font-size="9">ENVÍO</text>
+                <rect class="fig-box" x="230" y="90" width="66" height="26" rx="7"/>
+                <text class="fig-mono" x="263" y="107" text-anchor="middle">ENVÍO</text>
               </svg>
             </figure>
           </div>
 
           <div class="svc-list">
-            <div class="svc-item">
+            <div class="svc-item" id="ecommerce" data-service="ecommerce">
               <h3><svg aria-hidden="true"><use href="assets/icons.svg#i-cart"></use></svg> Comercio electrónico</h3>
               <p>Una tienda que descuenta stock real y no obliga a cargar el mismo pedido dos veces.</p>
               <div class="tags"><span class="tag">catálogo</span><span class="tag">pagos</span><span class="tag">envíos</span></div>
             </div>
-            <div class="svc-item">
+            <div class="svc-item" data-service="portales">
               <h3><svg aria-hidden="true"><use href="assets/icons.svg#i-grid"></use></svg> Plataformas y portales</h3>
               <p>Cuando la empresa necesita un espacio propio para clientes, proveedores o vendedores.</p>
               <div class="tags"><span class="tag">cuentas</span><span class="tag">permisos</span></div>
             </div>
           </div>
+
+          <details class="svc-detail">
+            <summary>Cómo se hace, si te interesa el detalle técnico</summary>
+            <p>
+              Catálogo con variantes, carrito y pasarela de pagos. La tienda se conecta al mismo origen
+              de stock y de facturación que el mostrador. El medio de pago y el de envío se definen con
+              vos: no integramos nada que no podamos verificar.
+            </p>
+          </details>
         </article>
 
         <!-- ===== 04 EVOLUCIÓN ===== -->
         <article class="svc-block reveal" id="evolucion">
           <div class="svc-head">
             <div class="svc-head__text">
-              <p class="svc-kicker">04 — EVOLUCIÓN</p>
+              <p class="svc-kicker">04 — EVOLUCIÓN · 2 SERVICIOS</p>
               <h2>Lo que ya funciona, mejor.</h2>
               <p class="lead">
-                Sistemas que sostienen la operación pero quedaron lentos, sin documentación o sin
-                quien los mantenga.
+                Sistemas que sostienen la operación pero quedaron lentos, sin documentación o sin quien
+                los mantenga.
               </p>
             </div>
             <figure style="margin:0;">
-              <svg class="fig" viewBox="0 0 300 168" role="img" aria-label="Esquema de modernización: un sistema antiguo y monolítico se transforma en módulos mantenibles con documentación.">
-                <rect class="fig-box" x="0" y="34" width="104" height="80" rx="8"/>
-                <path d="M52 34 v80" class="fig-line fig-line--dash" opacity=".35"/>
-                <path d="M30 60 l10 12 -10 12" class="fig-line" opacity=".45"/>
-                <text class="fig-mono" x="0" y="130" font-size="9">SISTEMA ANTIGUO</text>
-                <text class="fig-mono" x="0" y="142" font-size="9">SIN DOCUMENTAR</text>
+              <svg viewBox="0 0 320 168" role="img" aria-label="Esquema de modernización: un sistema antiguo y monolítico se transforma en módulos mantenibles con documentación.">
+                <rect class="fig-box" x="2" y="34" width="104" height="80" rx="8"/>
+                <path d="M54 34 v80" class="fig-line fig-line--dash" opacity=".35"/>
+                <path d="M32 60 l10 12 -10 12" class="fig-line" opacity=".45"/>
+                <text class="fig-mono" x="2" y="130">SISTEMA ANTIGUO</text>
+                <text class="fig-mono" x="2" y="144">SIN DOCUMENTAR</text>
 
-                <path class="fig-line fig-line--cyan" d="M104 74 H140" stroke-width="1.6"/>
+                <path class="fig-line fig-line--cyan" d="M106 74 H140" stroke-width="1.6"/>
                 <path d="M134 69 l7 5 -7 5" class="fig-line fig-line--cyan" stroke-width="1.6"/>
 
-                <rect class="fig-box fig-box--accent" x="148" y="24" width="152" height="24" rx="6"/>
-                <text class="fig-mono" x="160" y="39" font-size="9">MÓDULO 01 · DOCUMENTADO</text>
+                <rect class="fig-box fig-box--accent" x="148" y="22" width="166" height="24" rx="6"/>
+                <text class="fig-mono" x="158" y="38">MÓDULO 01 · DOCUMENTADO</text>
 
-                <rect class="fig-box fig-box--accent" x="148" y="56" width="152" height="24" rx="6"/>
-                <text class="fig-mono" x="160" y="71" font-size="9">MÓDULO 02 · PROBADO</text>
+                <rect class="fig-box fig-box--accent" x="148" y="56" width="166" height="24" rx="6"/>
+                <text class="fig-mono" x="158" y="72">MÓDULO 02 · PROBADO</text>
 
-                <rect class="fig-box fig-box--accent" x="148" y="88" width="152" height="24" rx="6"/>
-                <text class="fig-mono" x="160" y="103" font-size="9">MÓDULO 03 · MEDIBLE</text>
+                <rect class="fig-box fig-box--accent" x="148" y="90" width="166" height="24" rx="6"/>
+                <text class="fig-mono" x="158" y="106">MÓDULO 03 · MEDIBLE</text>
 
-                <text class="fig-mono" x="148" y="130" font-size="9">ENTREGAS PARCIALES</text>
-                <text class="fig-mono" x="148" y="142" font-size="9">SIN PARAR LA OPERACIÓN</text>
+                <text class="fig-mono" x="148" y="130">ENTREGAS PARCIALES</text>
+                <text class="fig-mono" x="148" y="144">SIN PARAR LA OPERACIÓN</text>
               </svg>
             </figure>
           </div>
 
           <div class="svc-list">
-            <div class="svc-item">
+            <div class="svc-item" id="mantenimiento" data-service="mantenimiento">
               <h3><svg aria-hidden="true"><use href="assets/icons.svg#i-tool"></use></svg> Mantenimiento y modernización</h3>
               <p>Sistemas que funcionan pero quedaron viejos, lentos o sin quien los mantenga.</p>
               <div class="tags"><span class="tag">refactor</span><span class="tag">migración</span><span class="tag">soporte</span></div>
             </div>
-            <div class="svc-item">
+            <div class="svc-item" data-service="ia">
               <h3><svg aria-hidden="true"><use href="assets/icons.svg#i-spark"></use></svg> Inteligencia artificial aplicada</h3>
               <p>IA donde resuelve algo concreto: clasificar, extraer datos de documentos, responder consultas repetitivas.</p>
               <div class="tags"><span class="tag">documentos</span><span class="tag">clasificación</span></div>
             </div>
           </div>
+
+          <details class="svc-detail">
+            <summary>Cómo se hace, si te interesa el detalle técnico</summary>
+            <p>
+              Se documenta lo que hay, se aísla lo que está en riesgo y se reemplaza por partes con
+              pruebas en cada entrega. En IA aplicada, el criterio es el mismo: un caso acotado, medible
+              y con revisión humana donde el error tenga consecuencias.
+            </p>
+          </details>
         </article>
 
       </div>
@@ -326,7 +486,7 @@
       <div class="footer-grid">
         <div class="footer-col">
           <a class="footer-brand" href="index.html">
-            <img src="assets/brand/logo-horizontal.svg" alt="CuantiLogic" width="762" height="139">
+            <img src="assets/brand/logo-horizontal.svg" alt="CuantiLogic" width="798" height="120">
           </a>
           <p>Ingeniería de software y soluciones tecnológicas. Desarrollo a medida, integraciones, automatización y datos para empresas y comercios.</p>
         </div>
@@ -344,7 +504,7 @@
           <ul>
             <li><a href="nosotros.html">Nosotros</a></li>
             <li><a href="como-trabajamos.html">Cómo trabajamos</a></li>
-            <li><a href="proyectos.html">Proyectos</a></li>
+            <li><a href="soluciones.html">Soluciones y demostraciones</a></li>
             <li><a href="contacto.html">Contacto</a></li>
           </ul>
         </div>
@@ -353,7 +513,8 @@
           <ul>
             <li><a href="contacto.html">Formulario de consulta</a></li>
             <li><a href="privacidad.html">Política de privacidad</a></li>
-            <li><a href="proyectos.html#totembiz">Totembiz</a></li>
+            <li><a href="soluciones.html#totembiz">Totembiz</a></li>
+            <!-- Se completan desde js/site-config.js. Sin datos, quedan ocultos. -->
             <li hidden><a data-contact-email>Email</a></li>
             <li hidden><a data-contact-whatsapp>WhatsApp</a></li>
           </ul>
@@ -369,5 +530,6 @@
 
   <script src="js/site-config.js" defer></script>
   <script src="js/main.js" defer></script>
+  <script src="js/interactive.js" defer></script>
 </body>
 </html>
