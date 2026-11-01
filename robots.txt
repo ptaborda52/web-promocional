@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://ptaborda52.github.io/web-promocional/sitemap.xml
+Sitemap: https://cuantilogic.tech/sitemap.xml
