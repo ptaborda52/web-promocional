@@ -5,6 +5,29 @@
 (function () {
   'use strict';
 
+  /* ---------- 0. Datos de contacto (js/site-config.js) ---------- */
+  var CFG = window.CUANTILOGIC || {};
+
+  (function aplicarContacto() {
+    var email = (CFG.email || '').trim();
+    var wa = (CFG.whatsapp || '').trim();
+
+    Array.prototype.forEach.call(document.querySelectorAll('[data-contact-email]'), function (el) {
+      if (!email) return;
+      el.setAttribute('href', 'mailto:' + email);
+      el.textContent = email;
+      var li = el.closest('li');
+      if (li) li.hidden = false;
+    });
+
+    Array.prototype.forEach.call(document.querySelectorAll('[data-contact-whatsapp]'), function (el) {
+      if (!wa) return;
+      el.setAttribute('href', 'https://wa.me/' + wa.replace(/\D/g, ''));
+      var li = el.closest('li');
+      if (li) li.hidden = false;
+    });
+  })();
+
   /* ---------- 1. Navegación móvil ---------- */
   var toggle = document.querySelector('.nav-toggle');
   var links = document.getElementById('nav-links');
@@ -81,7 +104,7 @@
 
   if (form) {
     var status = form.querySelector('[data-form-status]');
-    var endpoint = (form.getAttribute('data-endpoint') || '').trim();
+    var endpoint = (form.getAttribute('data-endpoint') || CFG.formEndpoint || '').trim();
 
     var MSG = {
       pending:

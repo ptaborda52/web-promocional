@@ -99,6 +99,10 @@ svg {
   max-width: 100%;
 }
 
+[hidden] {
+  display: none !important;
+}
+
 a {
   color: var(--cyan-soft);
   text-decoration: none;
@@ -1140,9 +1144,11 @@ h3 {
   gap: 2.5rem;
 }
 
-.footer-col h4 {
+.footer-col h3 {
   font-family: var(--font-mono);
   font-size: 0.62rem;
+  font-weight: 400;
+  line-height: 1.65;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--muted-2);
