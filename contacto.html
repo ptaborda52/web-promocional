@@ -31,7 +31,7 @@
   <nav class="nav" aria-label="Navegación principal">
     <div class="container nav-inner">
       <a class="brand" href="index.html">
-        <img src="assets/brand/logo-horizontal.svg" alt="CuantiLogic" width="798" height="120">
+        <img src="assets/brand/logo-horizontal.svg" alt="CuantiLogic" width="798" height="150">
       </a>
 
       <ul class="nav-links" id="nav-links">
@@ -172,10 +172,16 @@
                   <input type="text" id="_gotcha" name="_gotcha" tabindex="-1" autocomplete="off">
                 </div>
 
-                <button class="btn btn--primary btn--block" type="submit" data-submit>
-                  Enviar consulta
-                  <svg aria-hidden="true"><use href="assets/icons.svg#i-arrow"></use></svg>
-                </button>
+                <div class="wizard-final">
+                  <button class="btn btn--ghost" type="button" data-wizard-back-final>
+                    <svg class="icon-back" aria-hidden="true"><use href="assets/icons.svg#i-arrow"></use></svg>
+                    Anterior
+                  </button>
+                  <button class="btn btn--primary" type="submit" data-submit>
+                    Enviar consulta
+                    <svg aria-hidden="true"><use href="assets/icons.svg#i-arrow"></use></svg>
+                  </button>
+                </div>
 
                 <p class="form-note">
                   <strong>Responsable:</strong> Pablo Alberto Taborda Carime (CuantiLogic) ·
@@ -189,9 +195,18 @@
               </fieldset>
 
               <div class="wizard-nav">
-                <button class="btn btn--ghost" type="button" data-wizard-back hidden>Atrás</button>
-                <button class="btn btn--primary" type="button" data-wizard-next>Siguiente</button>
-                <span class="mono">Tus datos no se envían hasta que confirmes el envío</span>
+                <div class="wizard-nav__row">
+                  <button class="btn btn--ghost" type="button" data-wizard-back hidden>
+                    <svg class="icon-back" aria-hidden="true"><use href="assets/icons.svg#i-arrow"></use></svg>
+                    Anterior
+                  </button>
+                  <button class="btn btn--primary" type="button" data-wizard-next aria-describedby="wizard-hint">
+                    <span data-next-label>Siguiente: elegir problema</span>
+                    <svg aria-hidden="true"><use href="assets/icons.svg#i-arrow"></use></svg>
+                  </button>
+                </div>
+                <p class="wizard-hint" id="wizard-hint" data-wizard-hint>Elegí una opción para continuar.</p>
+                <p class="wizard-privacy">Tus datos no se envían hasta que confirmes el envío.</p>
               </div>
             </form>
             <noscript>
@@ -211,7 +226,7 @@
                 <li>Leemos la consulta y te respondemos por el medio que nos indicaste.</li>
                 <li>Coordinamos una conversación para entender el proceso en detalle.</li>
                 <li>Si hay algo que podamos resolver, recibís una propuesta con alcance y precio.</li>
-                <li>Si no es nuestro terreno, te lo decimos.</li>
+                <li>Te orientamos sobre las alternativas más adecuadas para tu necesidad.</li>
               </ul>
             </div>
 
@@ -249,7 +264,7 @@
       <div class="footer-grid">
         <div class="footer-col">
           <a class="footer-brand" href="index.html">
-            <img src="assets/brand/logo-horizontal.svg" alt="CuantiLogic" width="798" height="120">
+            <img src="assets/brand/logo-horizontal.svg" alt="CuantiLogic" width="798" height="150">
           </a>
           <p>Ingeniería de software y soluciones tecnológicas. Desarrollo a medida, integraciones, automatización y datos para empresas y comercios.</p>
         </div>

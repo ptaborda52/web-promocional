@@ -1791,6 +1791,38 @@ h3 + .lead {
   overflow: hidden;
 }
 
+/* Escala de plazos de la respuesta «¿Cuánto tarda?» */
+.faq-scale {
+  display: grid;
+  gap: 0;
+  margin: 0.8rem 0 1rem;
+  padding: 0;
+  list-style: none;
+}
+
+.faq-scale li {
+  display: grid;
+  grid-template-columns: 12.5rem minmax(0, 1fr);
+  gap: 1rem;
+  padding: 0.55rem 0;
+  border-bottom: 1px solid var(--line);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.faq-scale li:first-child {
+  border-top: 1px solid var(--line);
+}
+
+.faq-scale b {
+  color: var(--fg);
+  font-weight: 600;
+}
+
+.faq-scale span {
+  color: var(--muted);
+}
+
 /* ---------- 15. FAQ ---------- */
 .faq {
   border-top: 1px solid var(--line);
@@ -3640,17 +3672,76 @@ h3 + .lead {
 }
 
 .wizard-nav {
+  display: grid;
+  gap: 0.45rem;
+  margin-top: 0.7rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--line);
+}
+
+.wizard-nav__row {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
   align-items: center;
 }
 
-.wizard-nav .mono {
-  margin-left: auto;
-  font-size: 0.58rem;
-  letter-spacing: 0.06em;
-  text-transform: none;
+.wizard-nav__row [data-wizard-next] {
+  flex: 1 1 15rem;
+  justify-content: center;
+}
+
+.wizard-nav .icon-back,
+.wizard-final .icon-back {
+  transform: rotate(180deg);
+}
+
+.wizard-hint,
+.wizard-privacy {
+  margin: 0;
+  font-size: 0.74rem;
+  line-height: 1.45;
+}
+
+.wizard-hint {
+  color: var(--cian);
+}
+
+.wizard-privacy {
+  color: var(--muted-2);
+}
+
+.wizard-final {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+
+.wizard-final [data-submit] {
+  flex: 1 1 15rem;
+  justify-content: center;
+}
+
+/* Avance bloqueado: tiene que leerse «todavía no», no «cargando». */
+.wizard-nav [data-wizard-next]:disabled {
+  cursor: not-allowed;
+  opacity: 1;
+  background: rgba(243, 248, 255, 0.05);
+  color: var(--muted-2);
+  box-shadow: inset 0 0 0 1px var(--line-strong);
+}
+
+.wizard-nav [data-wizard-next]:disabled svg {
+  opacity: 0.35;
+}
+
+/* El foco programático sobre el título del paso tiene que verse. */
+.wizard-step legend:focus {
+  outline: 2px solid var(--cian);
+  outline-offset: 5px;
+  border-radius: 3px;
 }
 
 .radio-cards {
@@ -4261,6 +4352,32 @@ html.js .reveal[data-delay="5"].is-in {
   }
 }
 
+
+/* Enlace contextual del selector de problemas */
+.solver-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: 0.75rem;
+  min-height: 32px;
+  font-size: 0.84rem;
+  font-weight: 600;
+  color: var(--cian);
+}
+
+.solver-cta svg {
+  width: 13px;
+  height: 13px;
+  stroke: currentColor;
+  stroke-width: 2;
+  fill: none;
+  transition: transform var(--t-base) var(--ease);
+}
+
+.solver-cta:hover svg {
+  transform: translateX(3px);
+}
+
 /* ---------- 33. Aviso único de demostración ---------- */
 .demo-banner {
   display: flex;
@@ -4750,6 +4867,25 @@ html.js .reveal[data-delay="5"].is-in {
 
   .product-kpis span {
     font-size: 0.44rem;
+  }
+}
+
+@media (max-width: 620px) {
+  .wizard-nav__row [data-wizard-next],
+  .wizard-final [data-submit] {
+    flex: 1 1 100%;
+    width: 100%;
+  }
+
+  .wizard-nav__row [data-wizard-back],
+  .wizard-final [data-wizard-back-final] {
+    flex: 1 1 100%;
+    justify-content: center;
+  }
+
+  .faq-scale li {
+    grid-template-columns: 1fr;
+    gap: 0.1rem;
   }
 }
 

@@ -528,7 +528,10 @@
     var steps = $$('[data-step]', wizard);
     var progress = $$('[data-progress] li', wizard);
     var backBtn = $('[data-wizard-back]', wizard);
+    var backFinal = $('[data-wizard-back-final]', wizard);
     var nextBtn = $('[data-wizard-next]', wizard);
+    var nextLabel = $('[data-next-label]', wizard);
+    var navHint = $('[data-wizard-hint]', wizard);
     var modeBtns = $$('[data-mode]', wizard);
     var status = $('[data-wizard-status]', wizard);
     var message = $('#mensaje', wizard);
@@ -536,8 +539,38 @@
     var current = 1;
     var mode = 'guiado';
 
+    var NEXT_LABEL = {
+      1: 'Siguiente: elegir problema',
+      2: 'Siguiente: tus datos'
+    };
+
+    var HINT = {
+      1: 'Elegí el rubro para continuar.',
+      2: 'Elegí el problema para continuar.'
+    };
+
     function announce(text) {
       if (status) status.textContent = text;
+    }
+
+    /* Un paso con opciones obligatorias no habilita el avance hasta tener selección. */
+    function stepReady(step) {
+      if (!step || !step.hasAttribute('data-required-group')) return true;
+      return !!step.querySelector('input[type="radio"]:checked');
+    }
+
+    function updateNav() {
+      var ready = stepReady(steps[current - 1]);
+
+      if (nextBtn) {
+        nextBtn.disabled = !ready;
+        nextBtn.setAttribute('aria-disabled', String(!ready));
+      }
+      if (nextLabel) nextLabel.textContent = NEXT_LABEL[current] || 'Siguiente';
+      if (navHint) {
+        navHint.hidden = ready;
+        navHint.textContent = HINT[current] || '';
+      }
     }
 
     function showStep(n, focus) {
@@ -549,8 +582,10 @@
         var idx = i + 1;
         li.dataset.state = idx === n ? 'current' : idx < n ? 'done' : '';
       });
-      if (backBtn) backBtn.hidden = n === 1;
+      /* En el paso 3 el «Anterior» vive junto al botón de envío. */
+      if (backBtn) backBtn.hidden = n === 1 || n === 3;
       if (nextBtn) nextBtn.hidden = n === 3;
+      updateNav();
       announce('Paso ' + n + ' de 3');
       if (focus) {
         var legend = $('legend', steps[n - 1]);
@@ -566,18 +601,23 @@
       modeBtns.forEach(function (b) {
         b.setAttribute('aria-pressed', String(b.dataset.mode === next));
       });
+
       var guided = next === 'guiado';
       if (progress.length) progress[0].parentNode.hidden = !guided;
+
       steps.forEach(function (step) {
         var n = Number(step.dataset.step);
-        if (guided) {
-          step.hidden = n !== current;
-        } else {
-          step.hidden = n !== 3;
-        }
+        step.hidden = guided ? n !== current : n !== 3;
       });
-      if (backBtn) backBtn.hidden = true;
-      if (nextBtn) nextBtn.hidden = true;
+
+      if (guided) {
+        showStep(current);
+      } else {
+        if (backBtn) backBtn.hidden = true;
+        if (nextBtn) nextBtn.hidden = true;
+        if (navHint) navHint.hidden = true;
+      }
+
       if (message) {
         if (guided) {
           message.removeAttribute('data-required');
@@ -587,6 +627,7 @@
           if (messageHint) messageHint.textContent = 'Contá qué pasa hoy y qué te gustaría que pase.';
         }
       }
+
       announce(guided ? 'Diagnóstico guiado, paso ' + current + ' de 3' : 'Formulario directo');
     }
 
@@ -607,11 +648,33 @@
       });
     }
 
-    if (backBtn) {
-      backBtn.addEventListener('click', function () {
+    [backBtn, backFinal].forEach(function (btn) {
+      if (!btn) return;
+      btn.addEventListener('click', function () {
         showStep(Math.max(current - 1, 1), true);
       });
-    }
+    });
+
+    /* Elegir una opción habilita el avance sin tener que buscar el botón. */
+    steps.forEach(function (step) {
+      step.addEventListener('change', function () {
+        if (mode === 'guiado') updateNav();
+      });
+    });
+
+    /* Nada sale del navegador mientras el visitante no esté en el paso de contacto. */
+    document.addEventListener(
+      'submit',
+      function (e) {
+        if (e.target !== form) return;
+        if (mode === 'guiado' && current !== 3) {
+          e.preventDefault();
+          e.stopPropagation();
+          updateNav();
+        }
+      },
+      true
+    );
 
     setMode('guiado');
     showStep(1);
@@ -632,16 +695,28 @@
     /* CTA de una demostración: preselecciona el motivo y salta al paso de contacto. */
     var MOTIVOS = {
       pedidos: 'Pedidos y ventas',
-      reportes: 'Reportes y datos',
+      stock: 'Stock e inventario',
       conectados: 'Sistemas conectados',
-      stock: 'Stock e inventario'
+      reportes: 'Reportes y datos',
+      venta: 'Venta online',
+      modernizar: null
     };
     var motivo = params.get('motivo');
 
-    if (motivo && MOTIVOS[motivo]) {
+    if (motivo && motivo in MOTIVOS) {
       var valor = MOTIVOS[motivo];
-      var radio = document.querySelector('input[name="problema"][value="' + valor + '"]');
+      var radio = valor
+        ? document.querySelector('input[name="problema"][value="' + valor + '"]')
+        : null;
       if (radio) radio.checked = true;
+
+      /* Sin equivalente en la lista de motivos: el contexto viaja en el mensaje. */
+      if (!valor) {
+        var caja = document.getElementById('mensaje');
+        if (caja && !caja.value) {
+          caja.value = 'Vengo de Servicios: quiero modernizar un sistema que ya está en uso.';
+        }
+      }
 
       var wiz = document.querySelector('[data-wizard]');
       if (wiz && wiz.__goToStep) wiz.__goToStep(3);
@@ -651,7 +726,10 @@
         var aviso = document.createElement('p');
         aviso.className = 'small';
         aviso.style.marginTop = '0.8rem';
-        aviso.textContent = 'Tomamos el motivo de tu consulta: ' + valor + '. Solo faltan tus datos.';
+        aviso.textContent =
+          'Tomamos el motivo de tu consulta: ' +
+          (valor || 'modernización de un sistema en uso') +
+          '. Solo faltan tus datos.';
         var formEl = panel.querySelector('[data-contact-form]');
         if (formEl) panel.insertBefore(aviso, formEl);
       }
