@@ -1,0 +1,28 @@
+<svg viewBox="0 0 300 96" role="img" aria-label="La tienda online y el mostrador escriben sobre el mismo stock y la misma facturación.">
+  <rect class="fig-box" x="2" y="10" width="86" height="30" rx="7"/>
+  <use href="../icons.svg#i-cart" x="10" y="19" width="11" height="11" color="#18D9E8"/>
+  <text class="fig-mono fig-mono--xs" x="26" y="29">TIENDA</text>
+
+  <rect class="fig-box" x="2" y="56" width="86" height="30" rx="7"/>
+  <use href="../icons.svg#i-grid" x="10" y="65" width="11" height="11" color="#18D9E8"/>
+  <text class="fig-mono fig-mono--xs" x="26" y="75">MOSTRADOR</text>
+
+  <g class="fig-line fig-line--cyan" opacity=".55">
+    <path d="M88 25 H126 V48 H150"/>
+    <path d="M88 71 H126 V48 H150"/>
+  </g>
+
+  <circle class="fig-node" cx="126" cy="48" r="3"/>
+
+  <rect class="fig-box fig-box--accent" x="150" y="30" width="72" height="36" rx="7"/>
+  <text class="fig-mono fig-mono--xs" x="186" y="45" text-anchor="middle">STOCK</text>
+  <text class="fig-mono fig-mono--xs" x="186" y="57" text-anchor="middle" opacity=".7">ÚNICO</text>
+
+  <path class="fig-line fig-line--cyan fig-flow" d="M222 48 H236"/>
+  <rect class="fig-box" x="236" y="30" width="62" height="36" rx="7"/>
+  <use href="../icons.svg#i-receipt" x="243" y="39" width="10" height="10" color="#18D9E8"/>
+  <text class="fig-mono fig-mono--xs" x="257" y="46">FACTURA</text>
+  <text class="fig-mono fig-mono--xs" x="243" y="59" opacity=".65">UNA SOLA</text>
+
+  <circle class="fig-node--violet" cx="126" cy="48" r="2.4"/>
+</svg>

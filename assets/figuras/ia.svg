@@ -1,0 +1,28 @@
+<svg viewBox="0 0 300 96" role="img" aria-label="Los datos de la operación alimentan un modelo que propone una respuesta, y una persona la revisa antes de que se use.">
+  <g class="fig-line fig-line--cyan" opacity=".6">
+    <rect class="fig-box" x="10" y="58" width="8" height="20" rx="2"/>
+    <rect class="fig-box" x="24" y="46" width="8" height="32" rx="2"/>
+    <rect class="fig-box" x="38" y="34" width="8" height="44" rx="2"/>
+  </g>
+  <text class="fig-mono fig-mono--xs" x="10" y="92">DATOS</text>
+
+  <path class="fig-line fig-line--cyan fig-flow" d="M52 52 H72"/>
+
+  <rect class="fig-box fig-box--accent" x="72" y="30" width="80" height="44" rx="8"/>
+  <text class="fig-mono fig-mono--xs" x="112" y="48" text-anchor="middle">MODELO</text>
+  <text class="fig-mono fig-mono--xs" x="112" y="61" text-anchor="middle" opacity=".7">PROPUESTA</text>
+
+  <path class="fig-line fig-line--cyan fig-flow" d="M152 52 H172"/>
+
+  <rect class="fig-box" x="172" y="30" width="74" height="44" rx="8"/>
+  <use href="../icons.svg#i-check" x="180" y="39" width="11" height="11" color="#18D9E8"/>
+  <text class="fig-mono fig-mono--xs" x="196" y="47">REVISIÓN</text>
+  <text class="fig-mono fig-mono--xs" x="180" y="62" opacity=".7">HUMANA</text>
+
+  <path class="fig-line fig-line--cyan fig-flow" d="M246 52 H260"/>
+  <circle class="fig-node" cx="266" cy="52" r="5"/>
+  <circle class="fig-node--violet" cx="266" cy="52" r="2"/>
+
+  <path class="fig-line fig-line--dash" d="M72 74 H246"/>
+  <text class="fig-mono fig-mono--xs" x="72" y="89" opacity=".8">NADA SE EJECUTA SIN CONTROL</text>
+</svg>

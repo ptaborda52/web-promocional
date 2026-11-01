@@ -1,0 +1,26 @@
+<svg viewBox="0 0 300 96" role="img" aria-label="Un evento dispara tres pasos encadenados y deja un registro, sin intervención manual.">
+  <circle cx="22" cy="46" r="16" class="fig-box fig-box--accent"/>
+  <use href="../icons.svg#i-bolt" x="15" y="39" width="14" height="14" color="#18D9E8"/>
+  <text class="fig-mono fig-mono--xs" x="22" y="78" text-anchor="middle">EVENTO</text>
+
+  <path class="fig-line fig-line--cyan fig-flow" d="M38 46 H52"/>
+  <rect class="fig-box" x="52" y="26" width="64" height="40" rx="7"/>
+  <use href="../icons.svg#i-check" x="59" y="35" width="10" height="10" color="#18D9E8"/>
+  <text class="fig-mono fig-mono--xs" x="73" y="43">VALIDA</text>
+  <text class="fig-mono fig-mono--xs" x="59" y="58" opacity=".65">DATOS</text>
+
+  <path class="fig-line fig-line--cyan fig-flow" d="M116 46 H126"/>
+  <rect class="fig-box" x="126" y="26" width="64" height="40" rx="7"/>
+  <use href="../icons.svg#i-flow" x="133" y="35" width="10" height="10" color="#18D9E8"/>
+  <text class="fig-mono fig-mono--xs" x="147" y="43">EJECUTA</text>
+  <text class="fig-mono fig-mono--xs" x="133" y="58" opacity=".65">TAREA</text>
+
+  <path class="fig-line fig-line--cyan fig-flow" d="M190 46 H200"/>
+  <rect class="fig-box fig-box--accent" x="200" y="26" width="80" height="40" rx="7"/>
+  <use href="../icons.svg#i-receipt" x="207" y="35" width="10" height="10" color="#18D9E8"/>
+  <text class="fig-mono fig-mono--xs" x="221" y="43">REGISTRA</text>
+  <text class="fig-mono fig-mono--xs" x="207" y="58" opacity=".65">RESULTADO</text>
+
+  <path class="fig-line fig-line--dash" d="M52 74 H280"/>
+  <text class="fig-mono fig-mono--xs" x="52" y="89" opacity=".8">SIN INTERVENCIÓN MANUAL</text>
+</svg>

@@ -86,8 +86,10 @@
 
     var CANON = ['whatsapp', 'planillas', 'tienda', 'inventario', 'facturacion', 'crm'];
     var DEFAULT = ['whatsapp', 'planillas'];
+    var LIMIT = 4;
     var state = DEFAULT.slice();
     var previous = [];
+    var expanded = false;
 
     var colSources = $('[data-col="sources"]', builder);
     var colSteps = $('[data-col="steps"]', builder);
@@ -95,6 +97,7 @@
     var readout = $('[data-readout]', builder);
     var cta = $('[data-builder-cta]', builder);
     var hint = $('[data-builder-hint]', builder);
+    var moreBtn = $('[data-flow-more]', builder);
 
     function listNames(items) {
       if (items.length === 1) return items[0];
@@ -129,8 +132,10 @@
         });
       });
 
-      var shown = outs.slice(0, 4);
-      var extra = outs.length - shown.length;
+      var shown = expanded ? outs : outs.slice(0, LIMIT);
+      /* La lectura siempre nombra los primeros cuatro y resume el resto,
+         se vean o no todos los nodos. */
+      var rest = Math.max(0, outs.length - LIMIT);
 
       var steps = [stepFor('capture'), stepFor('control'), stepFor('close')];
 
@@ -154,31 +159,44 @@
         })
         .join('');
 
-      colOutputs.innerHTML =
-        shown
-          .map(function (o) {
-            var isNew = !colOutputs.dataset.last || colOutputs.dataset.last.indexOf(o) === -1;
-            return (
-              '<div class="fnode fnode--out' + (isNew && colOutputs.dataset.last ? ' is-new' : '') + '">' +
-              '<i aria-hidden="true"></i><span>' + OUTPUTS[o] + '</span></div>'
-            );
-          })
-          .join('') +
-        (extra > 0 ? '<div class="flowmap-empty">+ ' + extra + ' resultado' + (extra > 1 ? 's' : '') + ' más</div>' : '');
+      colOutputs.innerHTML = shown
+        .map(function (o) {
+          var isNew = !colOutputs.dataset.last || colOutputs.dataset.last.indexOf(o) === -1;
+          return (
+            '<div class="fnode fnode--out' + (isNew && colOutputs.dataset.last ? ' is-new' : '') + '">' +
+            '<i aria-hidden="true"></i><span>' + OUTPUTS[o] + '</span></div>'
+          );
+        })
+        .join('');
 
       colOutputs.dataset.last = shown.join(',');
 
       var labels = picked.map(function (p) {
         return p.data.label;
       });
-      var outLabels = shown.map(function (o) {
+      var outLabels = outs.slice(0, LIMIT).map(function (o) {
         return OUTPUTS[o].toLowerCase();
       });
 
       readout.innerHTML =
         '<p>Con <b>' + listNames(labels) + '</b> el circuito ' +
         lower(steps[0][0]) + ', ' + lower(steps[1][0]) + ' y ' + lower(steps[2][0]) +
-        '. Quedan al día ' + listNames(outLabels) + ' sin volver a escribirlo.</p>';
+        '. Quedan al día ' + listNames(outLabels) +
+        (rest > 0 ? ' y ' + rest + ' resultado' + (rest > 1 ? 's' : '') + ' más' : '') +
+        ' sin volver a escribirlo.</p>';
+
+      if (moreBtn) {
+        if (outs.length > LIMIT) {
+          moreBtn.hidden = false;
+          moreBtn.setAttribute('aria-expanded', String(expanded));
+          moreBtn.textContent = expanded
+            ? 'Mostrar menos'
+            : 'Ver los ' + outs.length + ' resultados';
+        } else {
+          moreBtn.hidden = true;
+          moreBtn.setAttribute('aria-expanded', 'false');
+        }
+      }
 
       if (cta) cta.setAttribute('href', 'contacto.html?flujo=' + state.join(','));
 
@@ -213,11 +231,20 @@
       });
     });
 
+    if (moreBtn) {
+      moreBtn.addEventListener('click', function () {
+        expanded = !expanded;
+        colOutputs.dataset.last = '';
+        render();
+      });
+    }
+
     var reset = $('[data-reset]', builder);
     if (reset) {
       reset.addEventListener('click', function () {
         state = DEFAULT.slice();
         previous = [];
+        expanded = false;
         colOutputs.dataset.last = '';
         render();
         var first = $('[data-source]', builder);
