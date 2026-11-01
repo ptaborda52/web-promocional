@@ -118,6 +118,13 @@
 
               <div class="form-status" data-form-status role="status" aria-live="polite"></div>
 
+              <!-- Campos especiales de Formspree: no se muestran al visitante -->
+              <input type="hidden" name="_subject" value="Nueva consulta desde cuantilogic.tech">
+              <div class="hp" aria-hidden="true">
+                <label for="_gotcha">No completar este campo</label>
+                <input type="text" id="_gotcha" name="_gotcha" tabindex="-1" autocomplete="off">
+              </div>
+
               <button class="btn btn--primary btn--block" type="submit" data-submit>
                 Enviar consulta
                 <svg aria-hidden="true"><use href="assets/icons.svg#i-arrow"></use></svg>

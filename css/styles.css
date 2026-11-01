@@ -1012,6 +1012,15 @@ h3 {
   line-height: 1.6;
 }
 
+/* Trampa antispam: fuera de pantalla, fuera del foco y del árbol accesible. */
+.hp {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
 /* ---------- 13. FAQ ---------- */
 .faq {
   display: grid;

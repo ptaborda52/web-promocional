@@ -2,60 +2,51 @@
    CuantiLogic — configuración de contacto
    --------------------------------------------------------------------------
    Este archivo es el ÚNICO lugar donde se cargan los datos de contacto.
-   Mientras un valor esté vacío, el elemento correspondiente NO se muestra:
-   no se generan enlaces rotos ni datos de ejemplo.
+   Si un valor queda vacío, el elemento correspondiente NO se muestra.
 
-   1) email
-      Dirección real de contacto comercial. Ejemplo de formato: "hola@midominio.com"
-      Se usa para el enlace mailto del pie.
-
-   2) whatsapp
-      SOLO dígitos, con código de país y sin "+", espacios ni guiones.
-      Ejemplo de formato: "5493511234567"
-      Se usa para construir https://wa.me/<número>
-
-   3) formEndpoint
-      URL del servicio que recibe el formulario. Debe aceptar POST con
-      FormData y devolver un estado 2xx. Mientras esté vacío, el formulario
-      NO envía nada y lo informa en pantalla.
+   1) email       → enlace mailto del pie.
+   2) whatsapp    → SOLO dígitos, con código de país, sin "+" ni espacios.
+                    Se usa para construir https://wa.me/<número>
+   3) formEndpoint → URL que recibe el formulario por POST.
 
    ---------------------------------------------------------------------------
-   PARA INTEGRAR UN PROVEEDOR DE FORMULARIOS HACE FALTA:
+   ESTADO ACTUAL (2026-11-01)
+   - email: contacto@cuantilogic.tech
+   - formEndpoint: Formspree, formulario mljjpnao
+   - whatsapp: SIN DEFINIR — el enlace permanece oculto a propósito.
 
-   a) Una cuenta en el proveedor (Formspree, Netlify Forms, Basin, o un
-      endpoint propio). Es un servicio externo: implica aceptar sus términos
-      y, si aloja datos fuera del país, una transferencia internacional que
-      debe figurar en la política de privacidad.
-
-   b) La URL del endpoint, con estas características:
-      - acepta POST con multipart/form-data
-      - responde 2xx en el éxito (el código considera éxito cualquier 2xx)
-      - devuelve CORS habilitado para el origen del sitio, o acepta el envío
-        sin preflight (FormData simple no dispara preflight)
-
-   c) Protección contra spam del lado del proveedor (honeypot o captcha
-      invisible). No hay protección en el cliente y no corresponde agregarla
-      acá: un honeypot en JS no frena un bot que no ejecuta JS.
-
-   d) Completar el campo formEndpoint de este archivo.
+   El envío usa fetch con FormData y cabecera Accept: application/json,
+   que es el modo AJAX documentado por Formspree. No se agregó SDK.
 
    ---------------------------------------------------------------------------
-   PRUEBA OBLIGATORIA ANTES DE PUBLICAR (no se puede simular):
+   AJUSTES QUE DEPENDEN DEL PANEL DE FORMSPREE (no del código)
 
-   1. Cargar formEndpoint con la URL real.
-   2. Enviar el formulario desde el sitio con datos de prueba propios.
-   3. Confirmar tres cosas:
-      - el mensaje en pantalla pasa a "Mensaje enviado"
-      - el envío aparece en el panel del proveedor
-      - el correo de notificación llega a la casilla configurada
-   4. Repetir con un email inválido y con campos vacíos para verificar que
-      el cliente bloquea antes de enviar (no debe llegar nada al proveedor).
-   5. Verificar el caso de error: desactivar el endpoint o usar una URL
-      inexistente y confirmar que se muestra "No pudimos enviar el mensaje"
-      y que NO se muestra un éxito falso.
+   a) Allowed domains: restringir los orígenes autorizados a
+      cuantilogic.tech y www.cuantilogic.tech.
+      Mientras el sitio se pruebe en GitHub Pages, el origen
+      ptaborda52.github.io también debe estar permitido; conviene quitarlo
+      después del lanzamiento.
+
+   b) Protección antispam: activar reCAPTCHA en el panel o dejar actuar al
+      honeypot _gotcha que ya incluye el formulario.
+      No se agregó captcha en el cliente: eso obligaría a cargar un script
+      externo y rompería la regla de cero dependencias.
+
+   c) Autoresponder (opcional): si se activa, cada persona recibe una
+      confirmación automática. Hoy no está activado.
+
+   ---------------------------------------------------------------------------
+   PRUEBA DE ACEPTACIÓN (repetir si se cambia el endpoint)
+
+   1. Campos vacíos → el cliente bloquea, no se envía nada.
+   2. Email inválido → el cliente bloquea, no se envía nada.
+   3. Datos válidos → POST 200 y mensaje de éxito en pantalla.
+   4. El envío aparece en Submissions del panel de Formspree.
+   5. Llega la notificación a contacto@cuantilogic.tech.
+   6. Endpoint inexistente → mensaje de error, nunca un éxito falso.
    ========================================================================== */
 window.CUANTILOGIC = {
-  email: '',
+  email: 'contacto@cuantilogic.tech',
   whatsapp: '',
-  formEndpoint: ''
+  formEndpoint: 'https://formspree.io/f/mljjpnao'
 };

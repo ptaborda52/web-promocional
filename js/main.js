@@ -110,7 +110,10 @@
       pending:
         'El envío del formulario todavía no está habilitado: falta configurar su destino. No se envió ningún dato.',
       error: 'Revisá los campos marcados y volvé a intentar.',
-      network: 'No pudimos enviar el mensaje. Probá de nuevo en unos minutos.',
+      network: 'No pudimos enviar el mensaje. Revisá tu conexión y probá de nuevo.',
+      rejected: 'El servicio rechazó el envío. Probá de nuevo en unos minutos.',
+      rate: 'Recibimos varios envíos seguidos. Esperá unos minutos antes de volver a intentar.',
+      server: 'El servicio de envío no está respondiendo. Probá de nuevo más tarde.',
       ok: 'Mensaje enviado. Te vamos a responder por el medio que nos indicaste.'
     };
 
@@ -133,6 +136,7 @@
     };
 
     var fields = Array.prototype.slice.call(form.querySelectorAll('[data-required]'));
+    var sending = false;
 
     fields.forEach(function (field) {
       field.addEventListener('input', function () {
@@ -142,6 +146,9 @@
 
     form.addEventListener('submit', function (e) {
       e.preventDefault();
+
+      /* Evita envíos duplicados mientras hay una solicitud en curso. */
+      if (sending) return;
 
       var firstInvalid = null;
 
@@ -171,10 +178,12 @@
       }
 
       var submitBtn = form.querySelector('[type="submit"]');
+      sending = true;
       if (submitBtn) {
         submitBtn.disabled = true;
         submitBtn.setAttribute('aria-busy', 'true');
       }
+      setStatus('info', 'Enviando…');
 
       fetch(endpoint, {
         method: 'POST',
@@ -182,14 +191,54 @@
         body: new FormData(form)
       })
         .then(function (res) {
-          if (!res.ok) throw new Error('HTTP ' + res.status);
-          form.reset();
-          setStatus('ok', MSG.ok);
+          return res
+            .json()
+            .catch(function () {
+              return {};
+            })
+            .then(function (data) {
+              return { res: res, data: data };
+            });
+        })
+        .then(function (r) {
+          var status = r.res.status;
+          var data = r.data || {};
+
+          /* Éxito solo si el proveedor confirma: 2xx y sin ok:false explícito. */
+          if (r.res.ok && data.ok !== false) {
+            form.reset();
+            fields.forEach(clearError);
+            setStatus('ok', MSG.ok);
+            return;
+          }
+
+          if (status === 422 && data.errors && data.errors.length) {
+            data.errors.forEach(function (err) {
+              if (!err || !err.field) return;
+              var target = form.querySelector('[name="' + err.field + '"]');
+              if (target) setError(target, 'Revisá este dato.');
+            });
+            setStatus('error', 'El servicio no aceptó algunos datos. Revisá los campos marcados.');
+            return;
+          }
+
+          if (status === 429) {
+            setStatus('error', MSG.rate);
+            return;
+          }
+
+          if (status >= 500) {
+            setStatus('error', MSG.server);
+            return;
+          }
+
+          setStatus('error', MSG.rejected);
         })
         .catch(function () {
-          setStatus('network', MSG.network);
+          setStatus('error', MSG.network);
         })
         .then(function () {
+          sending = false;
           if (submitBtn) {
             submitBtn.disabled = false;
             submitBtn.removeAttribute('aria-busy');
