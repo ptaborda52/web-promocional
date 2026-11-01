@@ -16,7 +16,9 @@
       document.body.style.overflow = open ? 'hidden' : '';
     };
 
-    toggle.addEventListener('click', function () {
+    toggle.addEventListener('click', function (e) {
+      /* Con JS el menú lo controla la clase; el href="#nav-links" es el fallback sin JS. */
+      e.preventDefault();
       setOpen(toggle.getAttribute('aria-expanded') !== 'true');
     });
 

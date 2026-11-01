@@ -450,6 +450,7 @@ h3 {
   border-radius: 0.6rem;
   color: var(--fg);
   cursor: pointer;
+  text-decoration: none;
 }
 
 .nav-toggle svg {
@@ -1272,6 +1273,10 @@ html.js .reveal.is-in {
   margin-top: 2.2rem;
 }
 
+.prose > :first-child {
+  margin-top: 0;
+}
+
 .prose p {
   margin-top: 0.8rem;
   color: var(--muted);
@@ -1343,6 +1348,13 @@ html.js .reveal.is-in {
   }
 
   .nav-links.is-open {
+    opacity: 1;
+    transform: none;
+    visibility: visible;
+  }
+
+  /* Fallback sin JavaScript: el menú se abre por :target */
+  .nav-links:target {
     opacity: 1;
     transform: none;
     visibility: visible;
