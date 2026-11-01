@@ -116,6 +116,15 @@
                 <span class="field-error" id="mensaje-error" role="alert"></span>
               </div>
 
+              <div class="field">
+                <div class="check">
+                  <input type="checkbox" id="consentimiento" name="consentimiento" value="Acepto la política de privacidad" data-required aria-describedby="consentimiento-error">
+                  <label for="consentimiento">Leí y acepto la política de privacidad <span aria-hidden="true">*</span></label>
+                </div>
+                <a class="check-link" href="privacidad.html">Leer la política completa</a>
+                <span class="field-error" id="consentimiento-error" role="alert"></span>
+              </div>
+
               <div class="form-status" data-form-status role="status" aria-live="polite"></div>
 
               <!-- Campos especiales de Formspree: no se muestran al visitante -->
@@ -131,8 +140,12 @@
               </button>
 
               <p class="form-note">
-                Los datos se usan únicamente para responder tu consulta. No se comparten con terceros
-                ni se usan para envíos publicitarios.
+                <strong>Responsable:</strong> Pablo Alberto Taborda Carime (CuantiLogic) ·
+                <strong>Finalidad:</strong> responder tu consulta y elaborar una propuesta ·
+                <strong>Destinatarios:</strong> Formspree y Zoho Mail, según la
+                <a href="privacidad.html">política de privacidad</a> ·
+                Podés ejercer tus derechos de acceso, rectificación y supresión escribiendo a
+                <a href="mailto:contacto@cuantilogic.tech">contacto@cuantilogic.tech</a>.
               </p>
 
               <noscript>
@@ -208,6 +221,7 @@
           <h3>Contacto</h3>
           <ul>
             <li><a href="contacto.html">Formulario de consulta</a></li>
+            <li><a href="privacidad.html">Política de privacidad</a></li>
             <li><a href="proyectos.html#totembiz">Totembiz</a></li>
             <!-- Se completan desde js/site-config.js. Sin datos, quedan ocultos. -->
             <li hidden><a href="#" data-contact-email>Email</a></li>

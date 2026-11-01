@@ -139,9 +139,11 @@
     var sending = false;
 
     fields.forEach(function (field) {
-      field.addEventListener('input', function () {
+      var onChange = function () {
         clearError(field);
-      });
+      };
+      field.addEventListener('input', onChange);
+      field.addEventListener('change', onChange);
     });
 
     form.addEventListener('submit', function (e) {
@@ -153,6 +155,17 @@
       var firstInvalid = null;
 
       fields.forEach(function (field) {
+        /* Casilla de consentimiento: no se valida por valor sino por estado. */
+        if (field.type === 'checkbox') {
+          if (!field.checked) {
+            setError(field, 'Tenés que aceptar la política de privacidad para enviar.');
+            if (!firstInvalid) firstInvalid = field;
+          } else {
+            clearError(field);
+          }
+          return;
+        }
+
         var value = (field.value || '').trim();
         if (!value) {
           setError(field, 'Este campo es obligatorio.');
