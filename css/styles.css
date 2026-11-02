@@ -5070,6 +5070,181 @@ html.js .reveal[data-delay="5"].is-in {
   }
 }
 
+/* ---------- Página de marca ---------- */
+.logo-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.logo-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.1rem;
+  margin: 0;
+  padding: clamp(1.4rem, 3.4vw, 2.6rem) clamp(1.2rem, 3vw, 2.2rem);
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius);
+}
+
+.logo-panel--dark {
+  background: var(--noche);
+}
+
+.logo-panel--light {
+  background: #f3f8ff;
+  border-color: rgba(17, 28, 51, 0.14);
+}
+
+.logo-panel img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+}
+
+.logo-panel--tall img {
+  max-width: 232px;
+}
+
+.logo-panel figcaption {
+  font-family: var(--mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted-2);
+}
+
+.logo-panel--light figcaption {
+  color: #5a6a80;
+}
+
+.logo-grid--c {
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+}
+
+.favicons {
+  display: grid;
+  gap: 1rem;
+  align-content: center;
+  padding: clamp(1.2rem, 2.6vw, 1.9rem);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: rgba(20, 32, 58, 0.42);
+}
+
+.favicons-cap {
+  font-family: var(--mono);
+  font-size: 0.58rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted-2);
+}
+
+.favicons-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 1.3rem;
+}
+
+.favicons-row figure {
+  margin: 0;
+  display: grid;
+  justify-items: center;
+  gap: 0.45rem;
+}
+
+.favicons-row img {
+  border-radius: 4px;
+}
+
+.favicons-row figcaption {
+  font-family: var(--mono);
+  font-size: 0.52rem;
+  letter-spacing: 0.06em;
+  color: var(--muted-2);
+}
+
+.apps {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) repeat(2, minmax(0, 0.8fr));
+  gap: 1rem;
+}
+
+.app-card {
+  display: grid;
+  gap: 0.9rem;
+  align-content: start;
+  margin: 0;
+  padding: clamp(1rem, 2.4vw, 1.5rem);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: rgba(20, 32, 58, 0.45);
+}
+
+.app-card img {
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+}
+
+.app-card--tight {
+  justify-items: center;
+  text-align: center;
+}
+
+.app-card figcaption {
+  display: grid;
+  gap: 0.2rem;
+}
+
+.app-card figcaption b {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--fg);
+}
+
+.app-card figcaption span {
+  font-size: 0.74rem;
+  line-height: 1.4;
+  color: var(--muted-2);
+}
+
+@media (max-width: 900px) {
+  .logo-grid--c {
+    grid-template-columns: 1fr;
+  }
+
+  .apps {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .app-card:first-child {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 620px) {
+  .logo-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .logo-panel--tall img {
+    max-width: 168px;
+  }
+
+  .apps {
+    grid-template-columns: 1fr;
+  }
+
+  .app-card:first-child {
+    grid-column: auto;
+  }
+}
+
 /* ---------- 32. Movimiento reducido ---------- */
 @media (prefers-reduced-motion: reduce) {
   html {
